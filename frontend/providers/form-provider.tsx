@@ -1,82 +1,52 @@
 import { useContext } from "react";
 import React from "react";
+import { FormInterface } from "../interfaces/form-interface";
 
-interface Main {
-  name: string;
-  surname: string;
-  profession: string;
-}
-
-interface Details {
-  mobile: string;
-  email: string;
-  address: string;
-  postalCode: string;
-  city: string;
-  linkedin: string;
-  website: string;
-  license: string;
-  nationality: string;
-}
-
-interface Education {
-  id: number,
-  title: string;
-  startDate: string;
-  endDate: string;
-  place: string;
-  location: string;
-  description: string;
-}
-
-interface Experience {
-  id: number,
-  title: string;
-  startDate: string;
-  endDate: string;
-  place: string;
-  location: string;
-  description: string;
-}
-
-interface Reference {
-  id: number,
-  name: string;
-  place: string;
-  details: Details;
-  description: string;
-}
-
-interface FormInterface {
-  main: Main;
-  description: string;
-  details: Details;
-  education: Education[];
-  experience: Experience[];
-  references: Reference[];
-  skills: string[];
-  languages: string[];
-}
 
 function formReducer(state: FormInterface, action: { type: string; name: string; value: any; }) {
-  if (action.type === "main") {
-    return {
-      ...state,
-      main: {
-        ...state.main,
-        [action.name]: action.value
-      }
-    };
-  } else if (action.type === "details") {
-    return {
-      ...state,
-      details: {
-        ...state.details,
-        [action.name]: action.value
-      }
-    };
+  switch (action.type) {
+    case "main":
+      return {
+        ...state,
+        main: {
+          ...state.main,
+          [action.name]: action.value
+        }
+      };
+    case "details":
+      return {
+        ...state,
+        details: {
+          ...state.details,
+          [action.name]: action.value
+        }
+      };
+    case "description":
+      return {
+        ...state,
+        description: action.value
+      };
+    case "addToArray":
+      return {
+        ...state,
+        [action.name]: [...state[action.name], action.value]
+      };
+    case "deleteFromArray":
+      const newArr = state[action.name].filter((e) => e.id !== action.value.id);
+      return {
+        ...state,
+        [action.name]: newArr
+      };
+    case "updateArray":
+      return {
+        ...state,
+        [action.name]: [...state[action.name].filter((e) => e.id !== action.value.id), action.value]
+      };
+    default:
+      throw new Error('That action does not exist');
   }
 }
+
 
 const initialState: FormInterface = {
   main: {

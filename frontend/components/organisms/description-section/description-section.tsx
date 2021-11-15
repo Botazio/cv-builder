@@ -7,12 +7,29 @@ import SectionFooter from '../../atoms/section-footer/section-footer';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import { Collapse, Grid } from '@mui/material';
 import SectionButton from '../../atoms/section-button/section-button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useForm } from '../../../providers/form-provider';
 
 
 export default function DescriptionSection() {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState<boolean>(true);
+  const [currentDescrip, setCurrentDescrip] = useState<string>("");
 
+  const { state, dispatch } = useForm();
+
+  const savedDescrip: string = state.description;
+
+  useEffect(() => {
+    setCurrentDescrip(savedDescrip);
+  }, [savedDescrip]);
+
+  const handleChange: Function = (e) => {
+    setCurrentDescrip(e.target.value);
+  };
+
+  const handleSubmit: Function = () => {
+    dispatch({ type: "description", value: currentDescrip });
+  };
 
   return (
     <section>
@@ -21,12 +38,13 @@ export default function DescriptionSection() {
       <Collapse in={active}>
         <SectionBody>
           <InputWrapper label="description" labelPlaceHolder="Description">
-            <MultilineTextField name="description" />
+            <MultilineTextField name="description" value={currentDescrip} handleChange={(e) => handleChange(e)} />
           </InputWrapper>
+
           <SectionFooter>
             <Grid container spacing={2} direction="row-reverse">
               <Grid item xs={12} sm={3}>
-                <SectionButton startIcon={<SaveRoundedIcon />} type="primary">
+                <SectionButton startIcon={<SaveRoundedIcon />} type="primary" handleClick={() => handleSubmit()}>
                   Save
                 </SectionButton>
               </Grid>

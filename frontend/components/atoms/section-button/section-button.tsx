@@ -3,7 +3,7 @@ import styles from './section-button.module.css';
 import React from 'react';
 import cn from 'classnames';
 
-export default function SectionButton({ children, startIcon, type }: { children: React.ReactNode, startIcon: React.ReactNode, type: string; }) {
+export default function SectionButton({ children, startIcon, type, handleClick }: { children: React.ReactNode, startIcon: React.ReactNode, type: string, handleClick?: any; }) {
 
   return (
     <Button className={cn({
@@ -11,6 +11,7 @@ export default function SectionButton({ children, startIcon, type }: { children:
       [styles.primary]: type === "primary",
       [styles.secondary]: type === "secondary"
     })}
+      onClick={handleClick}
       variant="outlined"
       sx={{ width: "150px" }}
       startIcon={startIcon}>
