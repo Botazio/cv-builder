@@ -1,0 +1,16 @@
+
+.header {
+  width: 100%;
+  background-color: var(--background-primary);
+  color: var(--background-primary-font-color);
+}
+
+.container {
+  width: calc(100% - 50px);
+    height: 72px;
+    margin: auto;
+    display: flex;
+    max-width: 1030px;
+    align-items: center;
+    justify-content: space-between;
+}

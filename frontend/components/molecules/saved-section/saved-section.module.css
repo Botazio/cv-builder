@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--divider-space);
+  color: var(--input-field-label);
+}
+.info > h4 {
+  margin: 5px 0px;
+}
+.info > p {
+  margin: 5px 0px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.buttons > div {
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.buttons > div:hover {
+  background-color: var(--input-field-background);
+}
+.divider {
+  padding: 0px var(--divider-space);
+}

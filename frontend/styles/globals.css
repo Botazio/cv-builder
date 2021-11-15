@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  min-height: 100%;
+  background-color: var(--background-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.form {
+  width: 820px;
+  max-width: 90%;
+  box-shadow: var(--custom-box-shadow);
+  border-radius: 0 0 var(--custom-border-radius) var(--custom-border-radius);
+  background-color: var(--secondary);
+  color: var(--inactive-font-color);
+}
+
+.input_field {
+  height: 48px;
+  padding: 14px 14px 14px 16px;
+  box-sizing: border-box;
+  line-height: 19px;
+  border-radius: var(--custom-border-radius);
+  font-size: 15px;
+  font-family: var(--font-family);
+  width: 100%;
+}
+
+.btn {
+  height: 48px;
+  padding: 14px 14px 14px 16px;
+  box-sizing: border-box;
+  line-height: 19px;
+  border-radius: var(--custom-border-radius);
+  font-size: 15px;
+  font-family: var(--font-family);
+}
+
+/* Global variables shared across all the components */
+:root {
+  --font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --primary: #006BE9;
+  --primary-font-color: white;
+
+  --secondary: white;
+  --secondary-font-color: #0E1E25;
+
+  --tertiary: #23C197;
+  --tertiary-font-color: white;
+  --tertiary-hover: #00B38A;
+
+  --danger: #FE4256;
+  --danger-font-color: white;
+  --danger-hover: #FFBABD;
+
+  --background-primary: #0E1E25;
+  --background-primary-font-color: white;
+
+  --background-secondary: #fafafa;
+
+  --divider-color: rgb(234, 234, 234);
+  --divider-space: 30px;
+
+  --input-field-background: #E9E9E9;
+  --input-field-hover:#dddddd;
+  --input-field-label: #8E8E8E;
+
+  --custom-box-shadow: 4px 4px 24px rgb(139 140 165 / 20%);
+  --custom-border-radius: 12px;
+}

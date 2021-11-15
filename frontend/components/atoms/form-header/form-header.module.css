@@ -1,0 +1,13 @@
+.container {
+  width: 820px;
+  max-width: 90%;
+  background-color: var(--secondary);
+  color: var(--secondary-font-color);
+  border-radius: var(--custom-border-radius) var(--custom-border-radius) 0 0;
+}
+
+.container > h2 {
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-weight: bold;
+}

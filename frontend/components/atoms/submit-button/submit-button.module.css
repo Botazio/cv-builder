@@ -1,0 +1,12 @@
+.btn {
+  composes: input_field from global;
+  background-color: var(--tertiary);
+  color: var(--tertiary-font-color);
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 200px;
+}
+.btn:hover {
+  background-color: var(--tertiary-hover);
+}

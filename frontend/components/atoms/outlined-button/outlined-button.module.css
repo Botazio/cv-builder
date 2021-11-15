@@ -1,0 +1,10 @@
+.btn {
+  composes: btn from global;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-transform:none;
+  font-weight: 500;
+}
+.btn::first-letter {
+  text-transform: uppercase;
+}
