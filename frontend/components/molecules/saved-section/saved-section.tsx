@@ -8,18 +8,18 @@ import LineDivider from '../../atoms/line-divider/line-divider';
  * been saved
  */
 
-export default function SavedSection({ id, title, startDate, endDate }: { id?: string, title: string, startDate: string, endDate: string; }) {
+export default function SavedSection({ id, title, description, handleDelete, handleEdit }: { id?: string, title: string, description: string, handleDelete: any; handleEdit: any; }) {
   return (
     <>
       <div id={id} className={styles.container}>
         <div className={styles.info}>
-          <h4>{title ? title : "Title/Position"}</h4>
-          <p>{startDate ? startDate : "Dec 1999"} - {endDate ? endDate : "Dec 1999"}</p>
+          <h4>{title ? title : "Title"}</h4>
+          <p>{description}</p>
         </div>
 
         <div className={styles.buttons}>
-          <div><CloseRoundedIcon /></div>
-          <div><EditRoundedIcon /></div>
+          <div onClick={handleDelete}><CloseRoundedIcon /></div>
+          <div onClick={handleEdit}><EditRoundedIcon /></div>
         </div>
 
       </div>

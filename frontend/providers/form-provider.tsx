@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import React from "react";
 import { FormInterface } from "../interfaces/form-interface";
 
@@ -84,9 +84,25 @@ export function FormProvider({ children }) {
     initialState
   );
 
+  const [formError, setFormError] = useState(false);
+
+  function validateForm(): boolean {
+    if (state.main.name === "" || state.main.surname === "") {
+      setFormError(true);
+      return true;
+    }
+    else {
+      setFormError(false);
+      return false;
+    }
+
+  }
+
   const value = {
     state,
-    dispatch
+    dispatch,
+    formError,
+    validateForm
   };
 
   return <FormContext.Provider value={value}>{children}</FormContext.Provider>;

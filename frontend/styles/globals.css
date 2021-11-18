@@ -56,6 +56,7 @@ a {
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --primary: #006BE9;
   --primary-font-color: white;
+  --primary-hover: #0058D2;
 
   --secondary: white;
   --secondary-font-color: #0E1E25;

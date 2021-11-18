@@ -5,28 +5,31 @@ import SubmitButton from '../../components/atoms/submit-button/submit-button';
 import LayoutBuilder from '../../components/layouts/layout-builder/layout-builder';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import Link from 'next/link';
-import ExperienceForm from '../../components/organisms/experience-form/experience-form';
 import BackButton from '../../components/atoms/back-button/back-button';
+import ExperienceForm from '../../components/templates/experience-form/experience-form';
+import PrivateRoute from '../../components/molecules/private-route/private-route';
 
 /**
   * Second page of the builder. Ask the user for his experience information.
   */
 export default function Experience() {
   return (
-    <LayoutBuilder header={<FormHeader title="Experience" />}>
-      <ExperienceForm />
-      <SpaceDivider />
-      <Link href="/builder/template">
-        <a>
-          <SubmitButton label="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
-        </a>
-      </Link>
-      <SpaceDivider />
-      <Link href="/builder/personal">
-        <a>
-          <BackButton />
-        </a>
-      </Link>
-    </LayoutBuilder>
+    <PrivateRoute>
+      <LayoutBuilder header={<FormHeader title="Experience" />}>
+        <ExperienceForm />
+        <SpaceDivider variant="large" />
+        <Link href="/builder/template">
+          <a>
+            <SubmitButton label="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
+          </a>
+        </Link>
+        <SpaceDivider variant="small" />
+        <Link href="/builder/personal">
+          <a>
+            <BackButton />
+          </a>
+        </Link>
+      </LayoutBuilder>
+    </PrivateRoute>
   );
 }

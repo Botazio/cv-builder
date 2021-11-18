@@ -1,14 +1,14 @@
-import SectionHeader from '../../atoms/section-header/section-header';
+import SectionHeader from '../../../atoms/section-header/section-header';
 import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
-import InputWrapper from '../../atoms/input-wrapper/input-wrapper';
-import MultilineTextField from '../../atoms/multiline-text-field/multiline-text-field';
-import SectionBody from '../../atoms/section-body/section-body';
-import SectionFooter from '../../atoms/section-footer/section-footer';
+import InputWrapper from '../../../atoms/input-wrapper/input-wrapper';
+import MultilineTextField from '../../../atoms/multiline-text-field/multiline-text-field';
+import SectionBody from '../../../atoms/section-body/section-body';
+import SectionFooter from '../../../atoms/section-footer/section-footer';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import { Collapse, Grid } from '@mui/material';
-import SectionButton from '../../atoms/section-button/section-button';
+import SectionButton from '../../../atoms/section-button/section-button';
 import { useEffect, useState } from 'react';
-import { useForm } from '../../../providers/form-provider';
+import { useForm } from '../../../../providers/form-provider';
 
 
 export default function DescriptionSection() {

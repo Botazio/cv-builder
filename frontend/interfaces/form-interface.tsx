@@ -1,8 +1,10 @@
 import { Details } from "./details-interface";
 import { Education } from "./education-interface";
 import { Experience } from "./experience-interface";
+import { Languages } from "./languages-interface";
 import { Main } from "./main-interface";
 import { Reference } from "./reference-interface";
+import { Skills } from "./skills-interface";
 
 export interface FormInterface {
   main: Main;
@@ -11,6 +13,6 @@ export interface FormInterface {
   education: Education[];
   experience: Experience[];
   references: Reference[];
-  skills: string[];
-  languages: string[];
+  skills: Skills[];
+  languages: Languages[];
 }

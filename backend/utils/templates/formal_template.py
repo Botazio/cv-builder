@@ -101,7 +101,7 @@ class FormalTemplate(BaseTemplate):
                     self.left_margin + self.width / 3, self.bottom_margin, self.width_right, self.height, id="right")
 
         # Return the pdf data
-        return canv.getpdfdata()
+        return canv.save()
 
     def _add_name(self, prop):
         """

@@ -4,6 +4,9 @@
   background-color: var(--secondary);
   color: var(--secondary-font-color);
   border-radius: var(--custom-border-radius) var(--custom-border-radius) 0 0;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
 }
 
 .container > h2 {
