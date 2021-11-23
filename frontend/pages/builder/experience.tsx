@@ -7,29 +7,26 @@ import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRound
 import Link from 'next/link';
 import BackButton from '../../components/atoms/back-button/back-button';
 import ExperienceForm from '../../components/templates/experience-form/experience-form';
-import PrivateRoute from '../../components/molecules/private-route/private-route';
 
 /**
   * Second page of the builder. Ask the user for his experience information.
   */
 export default function Experience() {
   return (
-    <PrivateRoute>
-      <LayoutBuilder header={<FormHeader title="Experience" />}>
-        <ExperienceForm />
-        <SpaceDivider variant="large" />
-        <Link href="/builder/template">
-          <a>
-            <SubmitButton label="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
-          </a>
-        </Link>
-        <SpaceDivider variant="small" />
-        <Link href="/builder/personal">
-          <a>
-            <BackButton />
-          </a>
-        </Link>
-      </LayoutBuilder>
-    </PrivateRoute>
+    <LayoutBuilder header={<FormHeader title="Experience" />}>
+      <ExperienceForm />
+      <SpaceDivider variant="large" />
+      <Link href="/builder/template">
+        <a>
+          <SubmitButton label="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
+        </a>
+      </Link>
+      <SpaceDivider variant="small" />
+      <Link href="/builder/personal">
+        <a>
+          <BackButton />
+        </a>
+      </Link>
+    </LayoutBuilder>
   );
 }

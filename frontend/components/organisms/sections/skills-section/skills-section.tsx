@@ -3,7 +3,7 @@ import BuildOutlinedIcon from '@mui/icons-material/BuildOutlined';
 import SkillsSectionForm from '../../../molecules/sections-forms/skills-section-form/skills-section-form';
 import { Skills } from '../../../../interfaces/skills-interface';
 
-function handleDefaultForm(id: number): Skills {
+function handleDefaultForm(id: string): Skills {
   return (
     {
       id: id,

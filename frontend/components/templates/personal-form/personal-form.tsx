@@ -36,9 +36,6 @@ export default function PersonalForm() {
                   name="name"
                   value={state.main.name}
                   handleChange={(e) => dispatch({ type: "main", name: e.target.name, value: e.target.value })}
-                  required
-                  min={2}
-                  max={50}
                 />
               </InputWrapper>
             </Grid>
@@ -49,9 +46,6 @@ export default function PersonalForm() {
                   name="surname"
                   value={state.main.surname}
                   handleChange={(e) => dispatch({ type: "main", name: e.target.name, value: e.target.value })}
-                  required
-                  min={2}
-                  max={50}
                 />
               </InputWrapper>
             </Grid>
@@ -62,7 +56,6 @@ export default function PersonalForm() {
                   name="profession"
                   value={state.main.profession}
                   handleChange={(e) => dispatch({ type: "main", name: e.target.name, value: e.target.value })}
-                  max={50}
                 />
               </InputWrapper>
             </Grid>
@@ -73,7 +66,6 @@ export default function PersonalForm() {
                   name="mobile"
                   value={state.details.mobile}
                   handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                  max={50}
                 />
               </InputWrapper>
             </Grid>
@@ -84,7 +76,6 @@ export default function PersonalForm() {
                   name="email"
                   value={state.details.email}
                   handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                  max={50}
                 />
               </InputWrapper>
             </Grid>
@@ -95,7 +86,6 @@ export default function PersonalForm() {
                   name="address"
                   value={state.details.address}
                   handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                  max={50}
                 />
               </InputWrapper>
             </Grid>
@@ -106,7 +96,6 @@ export default function PersonalForm() {
                   name="postalCode"
                   value={state.details.postalCode}
                   handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                  max={50}
                 />
               </InputWrapper>
             </Grid>
@@ -117,7 +106,6 @@ export default function PersonalForm() {
                   name="city"
                   value={state.details.city}
                   handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                  max={50}
                 />
               </InputWrapper>
             </Grid>
@@ -133,7 +121,7 @@ export default function PersonalForm() {
                         name="linkedin"
                         value={state.details.linkedin}
                         handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                        max={50}
+
                       />
                     </InputWrapper>
                   </Grid>
@@ -144,7 +132,7 @@ export default function PersonalForm() {
                         name="website"
                         value={state.details.website}
                         handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                        max={50}
+
                       />
                     </InputWrapper>
                   </Grid>
@@ -155,7 +143,7 @@ export default function PersonalForm() {
                         name="license"
                         value={state.details.license}
                         handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                        max={50}
+
                       />
                     </InputWrapper>
                   </Grid>
@@ -166,7 +154,7 @@ export default function PersonalForm() {
                         name="nationality"
                         value={state.details.nationality}
                         handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-                        max={50}
+
                       />
                     </InputWrapper>
                   </Grid>

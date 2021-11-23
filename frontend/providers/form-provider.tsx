@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import React from "react";
 import { FormInterface } from "../interfaces/form-interface";
+import { storageAvailable } from "../utils/functions";
+import { arrayMoveImmutable } from 'array-move';
 
 
 function formReducer(state: FormInterface, action: { type: string; name: string; value: any; }) {
@@ -31,17 +33,44 @@ function formReducer(state: FormInterface, action: { type: string; name: string;
         ...state,
         [action.name]: [...state[action.name], action.value]
       };
-    case "deleteFromArray":
+    case "deleteFromArray": {
       const newArr = state[action.name].filter((e) => e.id !== action.value.id);
       return {
         ...state,
         [action.name]: newArr
       };
-    case "updateArray":
+    }
+    case "updateArray": {
+      const newArr = state[action.name].map((e) => {
+        if (e.id === action.value.id) {
+          e = action.value;
+        }
+        return e;
+      });
+
       return {
         ...state,
-        [action.name]: [...state[action.name].filter((e) => e.id !== action.value.id), action.value]
+        [action.name]: newArr
       };
+    }
+    case "moveElementUpInArray": {
+      const index = state[action.name].indexOf(action.value);
+      const newArr = arrayMoveImmutable(state[action.name], index, index - 1);
+
+      return {
+        ...state,
+        [action.name]: newArr
+      };
+    }
+    case "moveElementDownInArray": {
+      const index = state[action.name].indexOf(action.value);
+      const newArr = arrayMoveImmutable(state[action.name], index, index + 1);
+
+      return {
+        ...state,
+        [action.name]: newArr
+      };
+    }
     default:
       throw new Error('That action does not exist');
   }
@@ -70,7 +99,12 @@ const initialState: FormInterface = {
   experience: [],
   references: [],
   skills: [],
-  languages: []
+  languages: [],
+  templateStyles: {
+    type: 'london',
+    primary: 'black',
+    secondary: 'black'
+  }
 };
 
 const FormContext = React.createContext(null);
@@ -81,28 +115,34 @@ export function useForm() {
 export function FormProvider({ children }) {
   const [state, dispatch] = React.useReducer(
     formReducer,
-    initialState
+    getFormFromStorage()
   );
 
-  const [formError, setFormError] = useState(false);
+  function saveForm() {
+    if (storageAvailable('localStorage')) {
+      localStorage.setItem('formBuilder', JSON.stringify(state));
+    }
+  }
 
-  function validateForm(): boolean {
-    if (state.main.name === "" || state.main.surname === "") {
-      setFormError(true);
-      return true;
+  function getFormFromStorage(): FormInterface {
+    if (storageAvailable('localStorage')) {
+      const state = JSON.parse(localStorage.getItem('formBuilder'));
+      if (state) {
+        return state;
+      }
+      else {
+        return initialState;
+      }
     }
     else {
-      setFormError(false);
-      return false;
+      return initialState;
     }
-
   }
 
   const value = {
     state,
     dispatch,
-    formError,
-    validateForm
+    saveForm
   };
 
   return <FormContext.Provider value={value}>{children}</FormContext.Provider>;

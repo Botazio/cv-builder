@@ -1,6 +1,6 @@
 
 export interface Reference {
-  id: number,
+  id: string,
   name: string;
   place: string;
   phone: string;

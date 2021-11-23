@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 html,
-body {
+body,
+#__next {
   padding: 0;
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  scroll-behavior: smooth;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: var(--background-secondary);
 }
 
@@ -29,7 +29,7 @@ a {
   color: var(--inactive-font-color);
 }
 
-.input_field {
+.MuiInput-input {
   height: 48px;
   padding: 14px 14px 14px 16px;
   box-sizing: border-box;
@@ -38,6 +38,20 @@ a {
   font-size: 15px;
   font-family: var(--font-family);
   width: 100%;
+  background-color: var(--input-field-background);
+  color: var(--secondary-font-color);
+  caret-color: var(--secondary-font-color);
+  outline: none;
+  border: none;
+  resize: none;
+}
+.MuiInput-input:hover, .MuiInput-input:focus {
+  background-color: var(--input-field-hover);
+  box-sizing: border-box;
+  transition: background-color 0.25s ease-in-out;
+}
+.MuiInput-multiline {
+  height: 150px;
 }
 
 .btn {

@@ -5,6 +5,7 @@ import SavedSection from '../../../molecules/saved-section/saved-section';
 import React, { cloneElement, useState } from 'react';
 import { Collapse } from '@mui/material';
 import { useForm } from '../../../../providers/form-provider';
+import { v4 as uuidv4 } from 'uuid';
 
 interface TemplateInterface {
   type: string;
@@ -16,19 +17,24 @@ interface TemplateInterface {
   form: React.ReactElement;
 }
 
+/**
+ * This function controls the logic for each section that 
+ * is an array in the provider. Messy way of doing it, this code should be refactor
+ */
 export default function TemplateSection({ type, title, icon, footerButton, bottomDivider, handleDefaultForm, form }: TemplateInterface) {
   const [active, setActive] = useState<boolean>(true);
   const [activeForm, setActiveForm] = useState<any | null>();
 
   const { state, dispatch } = useForm();
 
-
-  function handleAdd(arr: any[], name: string) {
-    const max = arr.reduce((a: { id: number; }, b: { id: number; }) => (a.id > b.id) ? a.id : b.id, 0);
-    setActiveForm(handleDefaultForm(max + 1));
-    handleSave(name, handleDefaultForm(max + 1));
+  // Add a new element to the array. Generates a unique id for each element
+  function handleAdd(name: string) {
+    const id: string = uuidv4();
+    setActiveForm(handleDefaultForm(id));
+    handleSave(name, handleDefaultForm(id));
   };
 
+  // Updates or adds an element into the provider
   function handleSave(name: string, element: any) {
     const filteredArray = state[name].filter((item) => item.id === element.id);
     if (filteredArray.length === 1) {
@@ -42,17 +48,27 @@ export default function TemplateSection({ type, title, icon, footerButton, botto
     }
   };
 
+  // Delete an element from the provider
+  function handleDelete(name: string, element: any) {
+    dispatch({ type: "deleteFromArray", name: name, value: element });
+  };
+
+  function handleUp(name: string, element: any) {
+    dispatch({ type: "moveElementUpInArray", name: name, value: element });
+  }
+
+  function handleDown(name: string, element: any) {
+    dispatch({ type: "moveElementDownInArray", name: name, value: element });
+  }
+
+  // Updates the state locally when a change occurs
   function handleChange(e: any) {
     const name: string = e.target.name;
     const value: string = e.target.value;
     setActiveForm({ ...activeForm, [name]: value });
   };
 
-  function handleDelete(name: string, element: any) {
-    dispatch({ type: "deleteFromArray", name: name, value: element });
-
-  };
-
+  // Updates the state locally to set up the active form to be the element property
   function handleEdit(element: any) {
     setActiveForm(element);
   };
@@ -64,18 +80,21 @@ export default function TemplateSection({ type, title, icon, footerButton, botto
 
       <Collapse in={active}>
 
-        {state[type].sort((a: { id: number; }, b: { id: number; }) => a.id - b.id).map((element) => {
-          if (!activeForm || element.id !== activeForm.id) {
+        {state[type].map((element) => {
+          if (element.id !== activeForm?.id) {
             return (
               <SavedSection
                 key={type + element.id}
                 title={element.title}
                 description={(element.description ? element.description.slice(0, 30) + "..." : "")}
                 handleDelete={() => handleDelete(type, element)}
-                handleEdit={() => handleEdit(element)} />
+                handleEdit={() => handleEdit(element)}
+                handleUp={() => handleUp(type, element)}
+                handleDown={() => handleDown(type, element)}
+              />
             );
           }
-          else if (activeForm && element.id === activeForm.id) {
+          else if (element.id === activeForm?.id) {
             return (
               cloneElement(form, {
                 key: type + element.id,
@@ -96,7 +115,7 @@ export default function TemplateSection({ type, title, icon, footerButton, botto
           topDivider={false}
           bottomDivider={bottomDivider}
           fullWidth={true}
-          onClick={() => handleAdd(state[type], type)}>
+          onClick={() => handleAdd(type)}>
           {footerButton}
         </FormFooter>
 

@@ -3,4 +3,5 @@
   min-height: 150px;
   background-color: #35454D;
   color: var(--background-primary-font-color);
+  margin-top: auto
 }

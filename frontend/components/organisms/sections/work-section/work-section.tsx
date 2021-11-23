@@ -3,7 +3,7 @@ import { Experience } from '../../../../interfaces/experience-interface';
 import TemplateSection from '../template-section/template-section';
 import WorkOutlineRoundedIcon from '@mui/icons-material/WorkOutlineRounded';
 
-function handleDefaultForm(id: number): Experience {
+function handleDefaultForm(id: string): Experience {
   return (
     {
       id: id,

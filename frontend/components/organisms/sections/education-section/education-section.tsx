@@ -3,7 +3,7 @@ import { Education } from '../../../../interfaces/education-interface';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import EducationSectionForm from '../../../molecules/sections-forms/education-section-form/education-section-form';
 
-function handleDefaultForm(id: number): Education {
+function handleDefaultForm(id: string): Education {
   return (
     {
       id: id,

@@ -1,4 +1,4 @@
 export interface Languages {
-  id: number,
+  id: string,
   title: string;
 }

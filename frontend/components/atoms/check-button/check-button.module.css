@@ -1,0 +1,6 @@
+.outline {
+  color: var(--input-field-label);
+}
+.filled {
+  color: var(--primary);
+}

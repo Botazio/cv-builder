@@ -5,6 +5,7 @@ import { Languages } from "./languages-interface";
 import { Main } from "./main-interface";
 import { Reference } from "./reference-interface";
 import { Skills } from "./skills-interface";
+import { TemplateStyles } from "./template-styles-interface";
 
 export interface FormInterface {
   main: Main;
@@ -15,4 +16,5 @@ export interface FormInterface {
   references: Reference[];
   skills: Skills[];
   languages: Languages[];
+  templateStyles: TemplateStyles;
 }

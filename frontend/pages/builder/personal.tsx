@@ -11,6 +11,7 @@ import Link from 'next/link';
   * First page of the builder. Ask the user for personal information.
   */
 export default function Personal() {
+
   return (
     <LayoutBuilder header={<FormHeader title="Personal information" />}>
       <PersonalForm />

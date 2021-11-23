@@ -3,6 +3,9 @@ import styles from './section-button.module.css';
 import React from 'react';
 import cn from 'classnames';
 
+/**
+ * Buttons used to save and to cancel in the form experience
+ */
 export default function SectionButton({ children, startIcon, type, handleClick }: { children: React.ReactNode, startIcon: React.ReactNode, type: string, handleClick?: any; }) {
 
   return (

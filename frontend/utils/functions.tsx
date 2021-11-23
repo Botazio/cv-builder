@@ -1,27 +1,23 @@
-export function handleAdd(arr: any[], setActiveForm: Function, handleDefaultForm: Function): void {
-  const max = arr.reduce((a: { id: number; }, b: { id: number; }) => (a.id > b.id) ? a.id : b.id, 0);
-  setActiveForm(handleDefaultForm(max + 1));
-};
-
-export function handleSave(name: string, dispatch: Function, activeForm: any, setActiveForm: Function): void {
-  if (!activeForm) return;
-
-  dispatch({ type: "addToArray", name: name, value: activeForm });
-  setActiveForm(null);
-};
-
-export function handleChange(e: any, activeForm: any, setActiveForm: Function): void {
-  const name: string = e.target.name;
-  const value: string = e.target.value;
-  setActiveForm({ ...activeForm, [name]: value });
-};
-
-export function handleDelete(name: string, element: any, dispatch: Function): void {
-  dispatch({ type: "deleteFromArray", name: name, value: element });
-};
-
-export function handleEdit(name: string, element: any, dispatch: Function, activeForm: any, setActiveForm: Function): void {
-  handleSave(name, dispatch, activeForm, setActiveForm);
-  dispatch({ type: "deleteFromArray", name: name, value: element });
-  setActiveForm(element);
-};
+export function storageAvailable(type) {
+  try {
+    var storage: any = window[type],
+      x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  }
+  catch (e) {
+    return e && (
+      // everything except Firefox
+      e.code === 22 ||
+      // Firefox
+      e.code === 1014 ||
+      // test name field too, because code might not be present
+      // everything except Firefox
+      e.name === 'QuotaExceededError' ||
+      // Firefox
+      e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage.length !== 0;
+  }
+}

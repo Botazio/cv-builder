@@ -2,12 +2,10 @@ import SectionBody from '../../../atoms/section-body/section-body';
 import { Grid } from '@mui/material';
 import InputWrapper from '../../../atoms/input-wrapper/input-wrapper';
 import TextField from '../../../atoms/text-field/text-field';
-import MultilineTextField from '../../../atoms/multiline-text-field/multiline-text-field';
 import SectionFooter from '../../../atoms/section-footer/section-footer';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import SectionButton from '../../../atoms/section-button/section-button';
-import { Experience } from '../../../../interfaces/experience-interface';
 import { Reference } from '../../../../interfaces/reference-interface';
 
 export default function ReferencesSectionForm({ form, handleDelete, handleSave, handleChange }: { form?: Reference; handleDelete?: any; handleSave?: any; handleChange?: any; }) {

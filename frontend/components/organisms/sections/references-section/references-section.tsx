@@ -3,7 +3,7 @@ import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
 import { Reference } from '../../../../interfaces/reference-interface';
 import ReferencesSectionForm from '../../../molecules/sections-forms/references-section-form/references-section-form';
 
-function handleDefaultForm(id: number): Reference {
+function handleDefaultForm(id: string): Reference {
   return (
     {
       id: id,

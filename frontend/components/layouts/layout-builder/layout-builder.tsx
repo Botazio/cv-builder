@@ -1,7 +1,6 @@
 import SpaceDivider from '../../atoms/space-divider/space-divider';
-import Footer from '../../organisms/footer/footer';
-import Navbar from '../../organisms/navbar/navbar';
 import ProgressBar from '../../organisms/progress-bar/progress-bar';
+import LayoutDefault from '../layout-default/layout-default';
 import styles from './layout-builder.module.css';
 
 /**
@@ -9,8 +8,7 @@ import styles from './layout-builder.module.css';
   */
 export default function LayoutBuilder({ header, children }: { header?: React.ReactNode, children?: React.ReactNode; }) {
   return (
-    <>
-      <Navbar />
+    <LayoutDefault>
       <div className={styles.page_header}>
         <SpaceDivider />
         <ProgressBar />
@@ -20,7 +18,6 @@ export default function LayoutBuilder({ header, children }: { header?: React.Rea
       <div className={styles.builder}>
         {children}
       </div>
-      <Footer />
-    </>
+    </LayoutDefault>
   );
 }

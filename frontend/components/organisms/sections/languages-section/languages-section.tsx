@@ -3,7 +3,7 @@ import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
 import { Languages } from '../../../../interfaces/languages-interface';
 import LanguagesSectionForm from '../../../molecules/sections-forms/languages-section-form/languages-section-form';
 
-function handleDefaultForm(id: number): Languages {
+function handleDefaultForm(id: string): Languages {
   return (
     {
       id: id,
