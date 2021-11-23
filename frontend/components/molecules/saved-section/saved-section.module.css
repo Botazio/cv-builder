@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: calc(var(--divider-space) / 2) calc(var(--divider-space) * 3/2);
-  color: var(--input-field-label);
+  color: var(--divider-secondary-color);
 }
 .info {
   margin-right: var(--divider-space);

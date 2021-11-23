@@ -1,6 +1,3 @@
-.container {
-  composes: form from global;
-}
-.container > form {
+.form {
   padding: var(--divider-space);
 }

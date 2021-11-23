@@ -1,0 +1,8 @@
+.container {
+  width: var(--builder-width);
+  max-width: 90%;
+  box-shadow: var(--custom-box-shadow);
+  border-radius: 0 0 var(--custom-border-radius) var(--custom-border-radius);
+  background-color: var(--secondary);
+  color: var(--inactive-font-color);
+}

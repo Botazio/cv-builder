@@ -1,5 +1,5 @@
 .outline {
-  color: var(--input-field-label);
+  color: var(--divider-secondary-color);
 }
 .filled {
   color: var(--primary);

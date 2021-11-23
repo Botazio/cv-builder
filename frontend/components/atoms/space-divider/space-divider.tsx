@@ -5,7 +5,7 @@ import cn from 'classnames';
   * This component sets a space between sections.
   * The gap of the space is set in the global styles css file.
   */
-export default function SpaceDivider({ variant }: { variant?: string; }) {
+export default function SpaceDivider({ variant }: { variant?: "large" | "medium" | "small"; }) {
   return (
     <div className={cn({
       [styles.container]: true,

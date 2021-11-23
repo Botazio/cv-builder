@@ -8,6 +8,7 @@ import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRou
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
 import { useForm } from '../../../providers/form-provider';
 import FormFooter from '../../molecules/form-footer/form-footer';
+import BuilderBodyContainer from '../../atoms/builder-body-container/builder-body-container';
 
 /**
   * Form for the page personal. That page is the first page of the cv builder.
@@ -19,8 +20,8 @@ export default function PersonalForm() {
   const { state, dispatch } = useForm();
 
   return (
-    <div className={styles.container}>
-      <form>
+    <BuilderBodyContainer>
+      <form className={styles.form}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
             <InputWrapper label="photo" labelPlaceHolder="Photo">
@@ -176,6 +177,6 @@ export default function PersonalForm() {
         onClick={() => setActive(!active)}>
         Additional Information
       </FormFooter>
-    </div>
+    </BuilderBodyContainer>
   );
 }

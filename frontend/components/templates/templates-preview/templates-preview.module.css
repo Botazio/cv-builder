@@ -1,4 +1,3 @@
-.container {
-  composes: form from global;
+.preview {
   padding: var(--divider-space);
 }

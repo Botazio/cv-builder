@@ -7,5 +7,5 @@
   border: 1px solid var(--primary);
 }
 .unselected {
-  border: 1px solid var(--input-field-label);
+  border: 1px solid var(--divider-secondary-color);
 }
