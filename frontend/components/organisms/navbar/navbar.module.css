@@ -1,4 +1,3 @@
-
 .header {
   width: 100%;
   background-color: var(--background-primary);
@@ -6,11 +5,17 @@
 }
 
 .container {
-  width: calc(100% - 50px);
-    height: 72px;
-    margin: auto;
-    display: flex;
-    max-width: 1030px;
-    align-items: center;
-    justify-content: space-between;
+  width: calc((100% - var(--builder-width)) / 2);
+  min-width: 200px;
+  display: flex;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    justify-content: flex-start;
+  }
 }

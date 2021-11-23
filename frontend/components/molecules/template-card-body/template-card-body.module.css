@@ -1,5 +1,8 @@
 .container {
-  height: 280px;
   width: 100%;
-  margin-bottom: calc(var(--divider-space) / 2 + 5px);
+  aspect-ratio: 1 / 1.4142;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

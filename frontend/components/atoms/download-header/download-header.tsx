@@ -9,6 +9,7 @@ export default function DownloadHeader({ title }: { title: String; }) {
   return (
     <BuilderHeaderContainer position="center">
       <h1 className={styles.title}>{title}</h1>
+      <LineDivider />
     </BuilderHeaderContainer>
   );
 }

@@ -1,5 +1,5 @@
-import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
 import styles from './logo.module.css';
+import Image from 'next/image';
 
 /**
   * Logo for the web app.
@@ -7,8 +7,7 @@ import styles from './logo.module.css';
 export default function Logo() {
   return (
     <div className={styles.container}>
-      <DescriptionRoundedIcon fontSize="large" />
-      <h2>CV Builder</h2>
+      <Image src="/logo.svg" height={45} width={200} />
     </div>
   );
 }

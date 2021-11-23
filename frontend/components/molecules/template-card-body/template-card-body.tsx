@@ -1,27 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import styles from './template-card-body.module.css';
-import dynamic from "next/dynamic";
-import { LondonTemplate } from '../../templates/cv-templates/london-template/london-template';
-
-const NextPDFViewer = dynamic(() => import("../../organisms/next-pdf-viewer/next-pdf-viewer"), {
-  ssr: false
-});
+import TemplatePreview from '../template-preview/template-preview';
+import { useClientRect } from '../../../utils/hooks';
 
 
-
+/**
+ * Displays a small card with a cv template preview
+ */
 export default function TemplateCardBody({ document }: { document: any; }) {
-  const containerRef = useRef(null);
-  const [width, setWidth] = useState(null);
-  const [height, setHeight] = useState(null);
-
-  useEffect(() => {
-    setWidth(containerRef.current.clientWidth);
-    setHeight(containerRef.current.clientWidth);
-  }, [containerRef]);
+  const [rect, ref] = useClientRect();
 
   return (
-    <div ref={containerRef} className={styles.container}>
-      {width && height && <NextPDFViewer width={width} height={height} doc={LondonTemplate()} />}
+    <div ref={ref} className={styles.container}>
+      {rect !== null && <TemplatePreview rect={rect} />}
     </div>
   );
 }

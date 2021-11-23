@@ -11,7 +11,7 @@ export default function LayoutDownload({ children }: { children?: React.ReactNod
     <LayoutDefault>
       <div className={styles.page_header}>
         <SpaceDivider variant="large" />
-        <DownloadHeader title="Your professional CV is ready!" />
+        <DownloadHeader title="YOUR PROFESSIONAL CV IS READY!" />
       </div>
       <div className={styles.page_body}>
         {children}
