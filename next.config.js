@@ -4,9 +4,6 @@ module.exports = {
     webpack5: true
   },
   webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-    };
     // load worker files as a urls with `file-loader`
     config.module.rules.unshift({
       test: /pdf\.worker\.(min\.)?js/,
@@ -21,6 +18,11 @@ module.exports = {
         }
       ]
     });
+
+    config.resolve.alias = {
+      ...config.resolve.alias,
+    };
+
 
     return config;
   }
