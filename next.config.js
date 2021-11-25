@@ -1,6 +1,10 @@
 module.exports = {
   reactStrictMode: true,
   webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+    };
+
     // load worker files as a urls with `file-loader`
     config.module.rules.push({
       test: /pdf\.worker\.(min\.)?js/,
