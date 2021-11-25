@@ -187,7 +187,7 @@ const initialState: FormInterface = {
     nationality: "Spanish"
   },
   education: [{
-    id: 1,
+    id: 'afadaeaewq',
     title: "CEO and Co-Founder",
     startDate: "2019",
     endDate: "Present",
@@ -198,6 +198,11 @@ const initialState: FormInterface = {
   experience: [],
   references: [],
   skills: [],
-  languages: []
+  languages: [],
+  templateStyles: {
+    type: 'london',
+    primary: 'black',
+    secondary: 'black'
+  }
 };
 
