@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import React from "react";
-import { FormInterface } from "../interfaces/form-interface";
+import { FormInterface } from "../common/interfaces/form-interface";
 import { storageAvailable } from "../utils/functions";
 import { arrayMoveImmutable } from 'array-move';
 

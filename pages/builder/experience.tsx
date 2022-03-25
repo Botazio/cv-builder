@@ -1,19 +1,18 @@
 import React from 'react';
-import FormHeader from '../../components/atoms/form-header/form-header';
-import SpaceDivider from '../../components/atoms/space-divider/space-divider';
-import SubmitButton from '../../components/atoms/submit-button/submit-button';
-import LayoutBuilder from '../../components/layouts/layout-builder/layout-builder';
+import SpaceDivider from '../../common/components/atoms/dividers/space-divider/space-divider';
+import SubmitButton from '../../common/components/atoms/buttons/submit-button/submit-button';
+import LayoutBuilder from '../../common/components/layouts/layout-builder/layout-builder';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import Link from 'next/link';
-import BackButton from '../../components/atoms/back-button/back-button';
-import ExperienceForm from '../../components/templates/experience-form/experience-form';
+import BackButton from '../../common/components/atoms/buttons/back-button/back-button';
+import ExperienceForm from '../../modules/pages/builder/experience/experience-form/experience-form';
 
 /**
   * Second page of the builder. Ask the user for his experience information.
   */
 export default function Experience() {
   return (
-    <LayoutBuilder header={<FormHeader title="Experience" />}>
+    <LayoutBuilder>
       <ExperienceForm />
       <SpaceDivider variant="large" />
       <Link href="/builder/template">
