@@ -20,7 +20,7 @@ export default function PersonalForm() {
   const { state, dispatch } = useForm();
 
   return (
-    <BuilderBodyContainer>
+    <>
       <form className={styles.form}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
@@ -177,6 +177,6 @@ export default function PersonalForm() {
         onClick={() => setActive(!active)}>
         Additional Information
       </FormFooter>
-    </BuilderBodyContainer>
+    </>
   );
 }
