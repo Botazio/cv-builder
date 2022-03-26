@@ -8,7 +8,7 @@ import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRou
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
 import { useForm } from '../../../../../providers/form-provider';
 import FormFooter from '../../../../../common/components/molecules/form-footer/form-footer';
-import BuilderBodyContainer from '../../../../../common/components/layouts/layout-builder/builder-body-container/builder-body-container';
+import BuilderBodyContainer from '../../../../../common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
 
 /**
   * Form for the page personal. That page is the first page of the cv builder.

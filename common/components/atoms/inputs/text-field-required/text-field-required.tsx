@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import TextFieldError from '../../text-field-error/text-field-error';
+import TextFieldError from '../text-field-error/text-field-error';
 import styles from './text-field-required.module.css';
 import cn from 'classnames';
-import { useForm } from '../../../../../../providers/form-provider';
+import { useForm } from '../../../../../providers/form-provider';
 
 interface TextFieldErrorInterface {
   name: string;

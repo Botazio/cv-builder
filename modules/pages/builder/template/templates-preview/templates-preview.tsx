@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './templates-preview.module.css';
 import { Grid } from '@mui/material';
 import TemplateCard from '../../../../common/components/organisms/template-card/template-card';
-import BuilderBodyContainer from '../../../../../common/components/layouts/layout-builder/builder-body-container/builder-body-container';
+import BuilderBodyContainer from '../../../../../common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
 
 export default function TemplatesPreview() {
   const [selected, setSelected] = React.useState("london");

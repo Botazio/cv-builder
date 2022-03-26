@@ -1,4 +1,5 @@
-import { InputUnstyled } from '@mui/core';
+import styles from './text-field.module.css';
+
 
 interface TextFieldInterface {
   name: string;
@@ -11,7 +12,8 @@ export default function TextField({ name, value, required, handleChange }: TextF
 
   return (
     <div>
-      <InputUnstyled
+      <input
+        className={styles.input}
         required={required ? required : false}
         onChange={handleChange}
         value={value}

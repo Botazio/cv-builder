@@ -4,15 +4,16 @@ import SpaceDivider from "../../../../common/components/atoms/dividers/space-div
 import LayoutBuilder from "../../../../common/components/layouts/layout-builder/layout-builder";
 import PersonalForm from "./personal-form/personal-form";
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import BuilderBodyContainer from "../../../../common/components/layouts/layout-builder/builder-body-container/builder-body-container";
+import LayoutBuilderBody from "../../../../common/components/layouts/layout-builder/layout-builder-body/layout-builder-body";
+import LayoutBuilderHeader from "../../../../common/components/layouts/layout-builder/layout-builder-header/layout-builder-header";
 
 function PersonalTemplate() {
   return (
-    <LayoutBuilder>
+    <LayoutBuilder header={<LayoutBuilderHeader title="Personal information" />}>
 
-      <BuilderBodyContainer>
+      <LayoutBuilderBody>
         <PersonalForm />
-      </BuilderBodyContainer>
+      </LayoutBuilderBody>
 
       <SpaceDivider variant="large" />
 
@@ -22,7 +23,7 @@ function PersonalTemplate() {
         </a>
       </Link>
 
-    </LayoutBuilder>
+    </LayoutBuilder >
   );
 }
 
