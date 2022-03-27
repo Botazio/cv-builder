@@ -19,7 +19,7 @@ function PersonalTemplate() {
 
       <Link href="/builder/experience">
         <a>
-          <SubmitButton label="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
+          <SubmitButton label="Next" endIcon={<ArrowForwardIosRoundedIcon fontSize="small" />} />
         </a>
       </Link>
 

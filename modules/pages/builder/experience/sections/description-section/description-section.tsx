@@ -8,10 +8,16 @@ import { useState } from 'react';
 import SectionFooter from '../../sections-forms/section-footer/section-footer';
 import SectionHeader from '../../sections-forms/section-header/section-header';
 import TextArea from '../../../../../../common/components/atoms/inputs/text-area/text-area';
+import { useAppDispatch, useAppSelector } from '../../../../../../state/hooks';
+import { getDescription } from '../../experience.reducer';
+import { SET_DESCRIPTION } from '../../experience.actions';
 
 
 export default function DescriptionSection() {
   const [active, setActive] = useState<boolean>(true);
+
+  const state = useAppSelector(state => state.builder.experience);
+  const dispatch = useAppDispatch();
 
   return (
     <section>
@@ -20,7 +26,10 @@ export default function DescriptionSection() {
       <Collapse in={active}>
         <SectionBody>
           <InputWrapper label="description" labelPlaceHolder="Description">
-            <TextArea name="description" value="" />
+            <TextArea
+              name="description"
+              value={getDescription(state)}
+              handleChange={(e) => dispatch({ type: SET_DESCRIPTION, payload: e.target.value })} />
           </InputWrapper>
 
           <SectionFooter>

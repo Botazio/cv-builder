@@ -14,7 +14,7 @@ export function experienceReducer(state = initialState, action: EXPERIENCEaction
     case SET_DESCRIPTION:
       return {
         ...state,
-        name: action.payload
+        description: action.payload
       };
     default:
       return state;
