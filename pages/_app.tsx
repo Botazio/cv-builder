@@ -1,14 +1,15 @@
 import { AppProps } from 'next/app';
 import React from 'react';
-import { FormProvider } from '../providers/form-provider';
+import { Provider } from 'react-redux';
+import { store } from '../state/store';
 import '../styles/globals.css';
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <React.StrictMode>
-      <FormProvider>
+      <Provider store={store}>
         <Component {...pageProps} />
-      </FormProvider>
+      </Provider>
     </React.StrictMode>
   );
 }

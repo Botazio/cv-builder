@@ -6,9 +6,10 @@ import { Collapse, Grid } from '@mui/material';
 import React, { useState } from 'react';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
-import { useForm } from '../../../../../providers/form-provider';
 import FormFooter from '../../../../../common/components/molecules/form-footer/form-footer';
-import BuilderBodyContainer from '../../../../../common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
+import { useAppDispatch, useAppSelector } from '../../../../../state/hooks';
+import { SET_ADDRESS, SET_CITY, SET_EMAIL, SET_LICENSE, SET_LINKEDIN, SET_MOBILE, SET_NAME, SET_NATIONALITY, SET_POSTALCODE, SET_PROFESSION, SET_SURNAME, SET_WEBSITE } from '../personal.actions';
+import { getAddress, getCity, getEmail, getLicense, getLinkedin, getMobile, getName, getNationality, getPostalCode, getProfession, getSurname, getWebsite } from '../personal.reducer';
 
 /**
   * Form for the page personal. That page is the first page of the cv builder.
@@ -17,11 +18,12 @@ import BuilderBodyContainer from '../../../../../common/components/layouts/layou
 export default function PersonalForm() {
   const [active, setActive] = useState(false);
 
-  const { state, dispatch } = useForm();
+  const state = useAppSelector(state => state.builder.personal);
+  const dispatch = useAppDispatch();
 
   return (
     <>
-      <form className={styles.form}>
+      <form className={styles.form} autoComplete="on">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
             <InputWrapper label="photo" labelPlaceHolder="Photo">
@@ -35,8 +37,8 @@ export default function PersonalForm() {
               <InputWrapper label="name" labelPlaceHolder="Name">
                 <TextField
                   name="name"
-                  value={state.main.name}
-                  handleChange={(e) => dispatch({ type: "main", name: e.target.name, value: e.target.value })}
+                  value={getName(state)}
+                  handleChange={(e) => dispatch({ type: SET_NAME, payload: e.target.value })}
                 />
               </InputWrapper>
             </Grid>
@@ -45,8 +47,8 @@ export default function PersonalForm() {
               <InputWrapper label="surname" labelPlaceHolder="Surname">
                 <TextField
                   name="surname"
-                  value={state.main.surname}
-                  handleChange={(e) => dispatch({ type: "main", name: e.target.name, value: e.target.value })}
+                  value={getSurname(state)}
+                  handleChange={(e) => dispatch({ type: SET_SURNAME, payload: e.target.value })}
                 />
               </InputWrapper>
             </Grid>
@@ -55,18 +57,18 @@ export default function PersonalForm() {
               <InputWrapper label="profession" labelPlaceHolder="Profession">
                 <TextField
                   name="profession"
-                  value={state.main.profession}
-                  handleChange={(e) => dispatch({ type: "main", name: e.target.name, value: e.target.value })}
+                  value={getProfession(state)}
+                  handleChange={(e) => dispatch({ type: SET_PROFESSION, payload: e.target.value })}
                 />
               </InputWrapper>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <InputWrapper label="mobile" labelPlaceHolder="Telephone number">
+              <InputWrapper label="tel" labelPlaceHolder="Telephone number">
                 <TextField
-                  name="mobile"
-                  value={state.details.mobile}
-                  handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
+                  name="tel"
+                  value={getMobile(state)}
+                  handleChange={(e) => dispatch({ type: SET_MOBILE, payload: e.target.value })}
                 />
               </InputWrapper>
             </Grid>
@@ -75,8 +77,8 @@ export default function PersonalForm() {
               <InputWrapper label="email" labelPlaceHolder="Email">
                 <TextField
                   name="email"
-                  value={state.details.email}
-                  handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
+                  value={getEmail(state)}
+                  handleChange={(e) => dispatch({ type: SET_EMAIL, payload: e.target.value })}
                 />
               </InputWrapper>
             </Grid>
@@ -85,18 +87,18 @@ export default function PersonalForm() {
               <InputWrapper label="address" labelPlaceHolder="Address">
                 <TextField
                   name="address"
-                  value={state.details.address}
-                  handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
+                  value={getAddress(state)}
+                  handleChange={(e) => dispatch({ type: SET_ADDRESS, payload: e.target.value })}
                 />
               </InputWrapper>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <InputWrapper label="postalCode" labelPlaceHolder="Postal code">
+              <InputWrapper label="postal-code" labelPlaceHolder="Postal code">
                 <TextField
-                  name="postalCode"
-                  value={state.details.postalCode}
-                  handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
+                  name="postal-code"
+                  value={getPostalCode(state)}
+                  handleChange={(e) => dispatch({ type: SET_POSTALCODE, payload: e.target.value })}
                 />
               </InputWrapper>
             </Grid>
@@ -105,8 +107,8 @@ export default function PersonalForm() {
               <InputWrapper label="city" labelPlaceHolder="City">
                 <TextField
                   name="city"
-                  value={state.details.city}
-                  handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
+                  value={getCity(state)}
+                  handleChange={(e) => dispatch({ type: SET_CITY, payload: e.target.value })}
                 />
               </InputWrapper>
             </Grid>
@@ -120,9 +122,8 @@ export default function PersonalForm() {
                     <InputWrapper label="linkedin" labelPlaceHolder="LinkedIn">
                       <TextField
                         name="linkedin"
-                        value={state.details.linkedin}
-                        handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-
+                        value={getLinkedin(state)}
+                        handleChange={(e) => dispatch({ type: SET_LINKEDIN, payload: e.target.value })}
                       />
                     </InputWrapper>
                   </Grid>
@@ -131,9 +132,8 @@ export default function PersonalForm() {
                     <InputWrapper label="website" labelPlaceHolder="Website">
                       <TextField
                         name="website"
-                        value={state.details.website}
-                        handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-
+                        value={getWebsite(state)}
+                        handleChange={(e) => dispatch({ type: SET_WEBSITE, payload: e.target.value })}
                       />
                     </InputWrapper>
                   </Grid>
@@ -142,9 +142,8 @@ export default function PersonalForm() {
                     <InputWrapper label="license" labelPlaceHolder="Driver's license">
                       <TextField
                         name="license"
-                        value={state.details.license}
-                        handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-
+                        value={getLicense(state)}
+                        handleChange={(e) => dispatch({ type: SET_LICENSE, payload: e.target.value })}
                       />
                     </InputWrapper>
                   </Grid>
@@ -153,9 +152,8 @@ export default function PersonalForm() {
                     <InputWrapper label="nationality" labelPlaceHolder="Nationality">
                       <TextField
                         name="nationality"
-                        value={state.details.nationality}
-                        handleChange={(e) => dispatch({ type: "details", name: e.target.name, value: e.target.value })}
-
+                        value={getNationality(state)}
+                        handleChange={(e) => dispatch({ type: SET_NATIONALITY, payload: e.target.value })}
                       />
                     </InputWrapper>
                   </Grid>

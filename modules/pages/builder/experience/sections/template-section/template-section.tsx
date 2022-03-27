@@ -4,7 +4,7 @@ import FormFooter from '../../../../../../common/components/molecules/form-foote
 import SavedSection from '../../../molecules/saved-section/saved-section';
 import React, { cloneElement, useState } from 'react';
 import { Collapse } from '@mui/material';
-import { useForm } from '../../../../../../providers/form-provider';
+import { useForm } from '../../../builder-reducer';
 import { v4 as uuidv4 } from 'uuid';
 
 interface TemplateInterface {

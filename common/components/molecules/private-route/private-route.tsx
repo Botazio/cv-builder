@@ -1,6 +1,6 @@
 import { useRouter } from "next/dist/client/router";
 import { useEffect, useState } from "react";
-import { useForm } from "../../../../providers/form-provider";
+import { useForm } from "../../../../modules/pages/builder/builder-reducer";
 
 export default function PrivateRoute({ children }) {
   const [active, setActive] = useState(false);

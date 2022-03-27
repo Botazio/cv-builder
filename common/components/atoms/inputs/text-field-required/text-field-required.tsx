@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import TextFieldError from '../text-field-error/text-field-error';
 import styles from './text-field-required.module.css';
 import cn from 'classnames';
-import { useForm } from '../../../../../providers/form-provider';
+import { useForm } from '../../../../../modules/pages/builder/builder-reducer';
 
 interface TextFieldErrorInterface {
   name: string;
