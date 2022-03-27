@@ -2,12 +2,12 @@ import SectionBody from '../section-body/section-body';
 import { Grid } from '@mui/material';
 import InputWrapper from '../../../../../../common/components/atoms/inputs/input-wrapper/input-wrapper';
 import TextField from '../../../../../../common/components/atoms/inputs/text-field/text-field';
-import MultilineTextField from '../../../../../../common/components/atoms/inputs/multiline-text-field/multiline-text-field';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import SectionButton from '../../../../../../common/components/atoms/buttons/section-button/section-button';
 import { Experience } from '../../../../../../common/interfaces/experience-interface';
 import SectionFooter from '../section-footer/section-footer';
+import TextArea from '../../../../../../common/components/atoms/inputs/text-area/text-area';
 
 export default function WorkSectionForm({ form, handleDelete, handleSave, handleChange }: { form?: Experience; handleDelete?: any; handleSave?: any; handleChange?: any; }) {
 
@@ -47,7 +47,7 @@ export default function WorkSectionForm({ form, handleDelete, handleSave, handle
 
           <Grid item xs={12}>
             <InputWrapper label="description" labelPlaceHolder="Description">
-              <MultilineTextField name="description" value={form.description} handleChange={handleChange} />
+              <TextArea name="description" value={form.description} handleChange={handleChange} />
             </InputWrapper>
           </Grid>
 

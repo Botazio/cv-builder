@@ -1,6 +1,5 @@
 import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
 import InputWrapper from '../../../../../../common/components/atoms/inputs/input-wrapper/input-wrapper';
-import MultilineTextField from '../../../../../../common/components/atoms/inputs/multiline-text-field/multiline-text-field';
 import SectionBody from '../../sections-forms/section-body/section-body';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import { Collapse, Grid } from '@mui/material';
@@ -8,6 +7,7 @@ import SectionButton from '../../../../../../common/components/atoms/buttons/sec
 import { useState } from 'react';
 import SectionFooter from '../../sections-forms/section-footer/section-footer';
 import SectionHeader from '../../sections-forms/section-header/section-header';
+import TextArea from '../../../../../../common/components/atoms/inputs/text-area/text-area';
 
 
 export default function DescriptionSection() {
@@ -20,7 +20,7 @@ export default function DescriptionSection() {
       <Collapse in={active}>
         <SectionBody>
           <InputWrapper label="description" labelPlaceHolder="Description">
-            <MultilineTextField name="description" value="" />
+            <TextArea name="description" value="" />
           </InputWrapper>
 
           <SectionFooter>
