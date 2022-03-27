@@ -14,11 +14,6 @@ export default function ExperienceForm() {
   return (
     <BuilderBodyContainer>
       <DescriptionSection />
-      <WorkSection />
-      <EducationSection />
-      <SkillsSection />
-      <LanguagesSection />
-      <ReferencesSection />
     </BuilderBodyContainer>
   );
 }

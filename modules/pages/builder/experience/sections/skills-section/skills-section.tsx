@@ -1,16 +1,6 @@
 import TemplateSection from '../template-section/template-section';
 import BuildOutlinedIcon from '@mui/icons-material/BuildOutlined';
 import SkillsSectionForm from '../../sections-forms/skills-section-form/skills-section-form';
-import { Skills } from '../../../../../../common/interfaces/skills-interface';
-
-function handleDefaultForm(id: string): Skills {
-  return (
-    {
-      id: id,
-      title: "",
-    }
-  );
-};
 
 export default function SkillsSection() {
 
@@ -21,7 +11,6 @@ export default function SkillsSection() {
       icon={<BuildOutlinedIcon />}
       footerButton="Add another skill"
       bottomDivider={true}
-      handleDefaultForm={handleDefaultForm}
       form={<SkillsSectionForm />} />
   );
 }
