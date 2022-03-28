@@ -9,14 +9,14 @@ import SectionFooter from '../../sections-forms/section-footer/section-footer';
 import SectionHeader from '../../sections-forms/section-header/section-header';
 import TextArea from '../../../../../../common/components/atoms/inputs/text-area/text-area';
 import { useAppDispatch, useAppSelector } from '../../../../../../state/hooks';
-import { getDescription } from '../../experience.reducer';
-import { SET_DESCRIPTION } from '../../experience.actions';
+import { SET_DESCRIPTION } from './description.actions';
+import { getDescription } from './description.reducer';
 
 
 export default function DescriptionSection() {
   const [active, setActive] = useState<boolean>(true);
 
-  const state = useAppSelector(state => state.builder.experience);
+  const state = useAppSelector(state => state.builder.experience.description);
   const dispatch = useAppDispatch();
 
   return (

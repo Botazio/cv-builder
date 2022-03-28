@@ -14,6 +14,7 @@ export default function ExperienceForm() {
   return (
     <BuilderBodyContainer>
       <DescriptionSection />
+      <WorkSection />
     </BuilderBodyContainer>
   );
 }

@@ -5,19 +5,22 @@ import { Collapse } from '@mui/material';
 import { v4 as uuidv4 } from 'uuid';
 import SectionHeader from '../../sections-forms/section-header/section-header';
 import SavedSection from '../../saved-section/saved-section';
+import OutlinedButton from '../../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
+import { Work } from '../work-section/work.reducer';
 
 interface TemplateInterface {
-  type: string;
+  elements: Work[];
   title: string;
   icon: React.ReactNode;
-  footerButton: string;
+  footerButtonValue: string;
   bottomDivider: boolean;
   form: React.ReactElement;
 }
 
-export default function TemplateSection({ type, title, icon, footerButton, bottomDivider, form }: TemplateInterface) {
+export default function TemplateSection({ elements, title, icon, footerButtonValue, bottomDivider, form }: TemplateInterface) {
   const [active, setActive] = useState<boolean>(true);
   const [activeForm, setActiveForm] = useState(null);
+
 
   return (
     <section>
@@ -25,7 +28,7 @@ export default function TemplateSection({ type, title, icon, footerButton, botto
 
       <Collapse in={active}>
         {/* 
-        {state[type].map((element) => {
+        {elements.map((element) => {
           if (element.id !== activeForm?.id) {
             return (
               <SavedSection
@@ -45,17 +48,12 @@ export default function TemplateSection({ type, title, icon, footerButton, botto
           }
         })} */}
 
-        {cloneElement(form, {
-          key: type,
-          form: activeForm
-        })}
-
         <FormFooter
-          startIcon={<AddCircleOutlineRoundedIcon />}
           topDivider={false}
-          bottomDivider={bottomDivider}
-          fullWidth={true}>
-          {footerButton}
+          bottomDivider={bottomDivider}>
+          <OutlinedButton
+            value={footerButtonValue}
+            startIcon={<AddCircleOutlineRoundedIcon />} />
         </FormFooter>
 
       </Collapse>

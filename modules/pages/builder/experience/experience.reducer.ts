@@ -1,24 +1,13 @@
-import { EXPERIENCEactions, SET_DESCRIPTION } from "./experience.actions";
+import { combineReducers } from "redux";
+import { descriptionReducer } from "./sections/description-section/description.reducer";
+import { workReducer } from "./sections/work-section/work.reducer";
 
 
-export interface Experience {
-  description: string;
-};
+const experienceReducer = combineReducers({
+  description: descriptionReducer,
+  work: workReducer
+});
 
-const initialState: Experience = {
-  description: ''
-};
+export default experienceReducer;
 
-export function experienceReducer(state = initialState, action: EXPERIENCEactions) {
-  switch (action.type) {
-    case SET_DESCRIPTION:
-      return {
-        ...state,
-        description: action.payload
-      };
-    default:
-      return state;
-  }
-}
-
-export const getDescription = (state: Experience) => state.description;
+export type RootState = ReturnType<typeof experienceReducer>;
