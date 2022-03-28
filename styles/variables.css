@@ -5,6 +5,7 @@
   --primary: #006BE9;
   --primary-font-color: white;
   --primary-hover: #0058D2;
+  --primary-transparent: rgba(0, 107, 233, 0.1);
 
   --secondary: white;
   --secondary-font-color: #0E1E25;
@@ -16,6 +17,7 @@
   --danger: #FE4256;
   --danger-font-color: white;
   --danger-hover: #FFBABD;
+  --danger-transparent: #FFBABD;
 
   --background-primary: #0E1E25;
   --background-primary-font-color: white;

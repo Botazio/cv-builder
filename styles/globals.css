@@ -30,8 +30,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
-.btn > svg {
+.btn > span {
   margin: 0px 5px;
 }
 .input-field {

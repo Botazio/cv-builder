@@ -1,20 +1,14 @@
-import { Button } from '@mui/material';
 import { useAppSelector } from '../../../../../state/hooks';
 import { saveState } from '../../../../../state/utils';
+import { ButtonInterface } from '../button-interface';
 import styles from './submit-button.module.css';
-
-interface SubmitButtonInterface {
-  label: string;
-  startIcon?: React.ReactNode;
-  endIcon?: React.ReactNode;
-}
 
 /**
  * 
  * Button used to navigate to the next section of the form.
  * It saves the current state into local storage
  */
-export default function SubmitButton({ label, startIcon, endIcon }: SubmitButtonInterface) {
+export default function SubmitButton({ value, startIcon, endIcon }: ButtonInterface) {
   const state = useAppSelector(state => state);
 
   return (
@@ -23,7 +17,7 @@ export default function SubmitButton({ label, startIcon, endIcon }: SubmitButton
       onClick={() => saveState(state)}
     >
       {startIcon}
-      <span>{label}</span>
+      <span>{value}</span>
       {endIcon}
     </button>
   );

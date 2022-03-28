@@ -10,6 +10,7 @@ import FormFooter from '../../../../../common/components/molecules/form-footer/f
 import { useAppDispatch, useAppSelector } from '../../../../../state/hooks';
 import { SET_ADDRESS, SET_CITY, SET_EMAIL, SET_LICENSE, SET_LINKEDIN, SET_MOBILE, SET_NAME, SET_NATIONALITY, SET_POSTALCODE, SET_PROFESSION, SET_SURNAME, SET_WEBSITE } from '../personal.actions';
 import { getAddress, getCity, getEmail, getLicense, getLinkedin, getMobile, getName, getNationality, getPostalCode, getProfession, getSurname, getWebsite } from '../personal.reducer';
+import OutlinedButton from '../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
 
 /**
   * Form for the page personal. That page is the first page of the cv builder.
@@ -170,10 +171,11 @@ export default function PersonalForm() {
       <FormFooter
         topDivider={true}
         bottomDivider={false}
-        startIcon={active ? <RemoveCircleOutlineRoundedIcon /> : <AddCircleOutlineRoundedIcon />}
-        fullWidth={true}
-        onClick={() => setActive(!active)}>
-        Additional Information
+      >
+        <OutlinedButton
+          value="Additional Information"
+          startIcon={active ? <RemoveCircleOutlineRoundedIcon /> : <AddCircleOutlineRoundedIcon />}
+          handleClick={() => setActive(!active)} />
       </FormFooter>
     </>
   );

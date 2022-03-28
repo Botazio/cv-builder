@@ -14,7 +14,7 @@ function ExperienceTemplate() {
       <SpaceDivider variant="large" />
       <Link href="/builder/template">
         <a>
-          <SubmitButton label="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
+          <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
         </a>
       </Link>
       <SpaceDivider variant="small" />

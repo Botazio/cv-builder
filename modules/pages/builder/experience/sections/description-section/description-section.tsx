@@ -35,9 +35,7 @@ export default function DescriptionSection() {
           <SectionFooter>
             <Grid container spacing={2} direction="row-reverse">
               <Grid item xs={12} sm={3}>
-                <SectionButton startIcon={<SaveRoundedIcon />} type="primary">
-                  Save
-                </SectionButton>
+                <SectionButton value="Save" startIcon={<SaveRoundedIcon />} type="primary" />
               </Grid>
             </Grid>
           </SectionFooter>
