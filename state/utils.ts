@@ -1,5 +1,4 @@
 import { storageAvailable } from "../utils/functions";
-import { useAppSelector } from "./hooks";
 
 const STORE: string = "cv_builder_store";
 
@@ -9,12 +8,6 @@ export function getPersistedState() {
     if (state) {
       return state;
     }
-    else {
-      return {};
-    }
-  }
-  else {
-    return {};
   }
 }
 

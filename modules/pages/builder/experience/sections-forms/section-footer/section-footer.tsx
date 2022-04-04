@@ -3,9 +3,10 @@ import styles from "./section-footer.module.css";
 
 
 /**
- * Footer for the sections in the experience form
+ * Footer for the section
  */
-export default function SectionFooter({ children }) {
+export default function SectionFormFooter({ children }: { children: React.ReactNode; }) {
+
   return (
     <>
       <SpaceDivider />

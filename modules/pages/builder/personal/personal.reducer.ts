@@ -97,16 +97,3 @@ export function personalReducer(state = initialState, action: PERSONALactions) {
       return state;
   }
 }
-
-export const getName = (state: Personal) => state.name;
-export const getSurname = (state: Personal) => state.surname;
-export const getProfession = (state: Personal) => state.profession;
-export const getMobile = (state: Personal) => state.mobile;
-export const getEmail = (state: Personal) => state.email;
-export const getAddress = (state: Personal) => state.address;
-export const getPostalCode = (state: Personal) => state.postalCode;
-export const getCity = (state: Personal) => state.city;
-export const getLinkedin = (state: Personal) => state.linkedin;
-export const getWebsite = (state: Personal) => state.website;
-export const getLicense = (state: Personal) => state.license;
-export const getNationality = (state: Personal) => state.nationality;

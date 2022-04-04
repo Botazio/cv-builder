@@ -9,7 +9,6 @@ import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutl
 import FormFooter from '../../../../../common/components/molecules/form-footer/form-footer';
 import { useAppDispatch, useAppSelector } from '../../../../../state/hooks';
 import { SET_ADDRESS, SET_CITY, SET_EMAIL, SET_LICENSE, SET_LINKEDIN, SET_MOBILE, SET_NAME, SET_NATIONALITY, SET_POSTALCODE, SET_PROFESSION, SET_SURNAME, SET_WEBSITE } from '../personal.actions';
-import { getAddress, getCity, getEmail, getLicense, getLinkedin, getMobile, getName, getNationality, getPostalCode, getProfession, getSurname, getWebsite } from '../personal.reducer';
 import OutlinedButton from '../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
 
 /**
@@ -38,7 +37,7 @@ export default function PersonalForm() {
               <InputWrapper label="name" labelPlaceHolder="Name">
                 <TextField
                   name="name"
-                  value={getName(state)}
+                  value={state.name}
                   handleChange={(e) => dispatch({ type: SET_NAME, payload: e.target.value })}
                 />
               </InputWrapper>
@@ -48,7 +47,7 @@ export default function PersonalForm() {
               <InputWrapper label="surname" labelPlaceHolder="Surname">
                 <TextField
                   name="surname"
-                  value={getSurname(state)}
+                  value={state.surname}
                   handleChange={(e) => dispatch({ type: SET_SURNAME, payload: e.target.value })}
                 />
               </InputWrapper>
@@ -58,7 +57,7 @@ export default function PersonalForm() {
               <InputWrapper label="profession" labelPlaceHolder="Profession">
                 <TextField
                   name="profession"
-                  value={getProfession(state)}
+                  value={state.profession}
                   handleChange={(e) => dispatch({ type: SET_PROFESSION, payload: e.target.value })}
                 />
               </InputWrapper>
@@ -68,7 +67,7 @@ export default function PersonalForm() {
               <InputWrapper label="tel" labelPlaceHolder="Telephone number">
                 <TextField
                   name="tel"
-                  value={getMobile(state)}
+                  value={state.mobile}
                   handleChange={(e) => dispatch({ type: SET_MOBILE, payload: e.target.value })}
                 />
               </InputWrapper>
@@ -78,7 +77,7 @@ export default function PersonalForm() {
               <InputWrapper label="email" labelPlaceHolder="Email">
                 <TextField
                   name="email"
-                  value={getEmail(state)}
+                  value={state.email}
                   handleChange={(e) => dispatch({ type: SET_EMAIL, payload: e.target.value })}
                 />
               </InputWrapper>
@@ -88,7 +87,7 @@ export default function PersonalForm() {
               <InputWrapper label="address" labelPlaceHolder="Address">
                 <TextField
                   name="address"
-                  value={getAddress(state)}
+                  value={state.address}
                   handleChange={(e) => dispatch({ type: SET_ADDRESS, payload: e.target.value })}
                 />
               </InputWrapper>
@@ -98,7 +97,7 @@ export default function PersonalForm() {
               <InputWrapper label="postal-code" labelPlaceHolder="Postal code">
                 <TextField
                   name="postal-code"
-                  value={getPostalCode(state)}
+                  value={state.postalCode}
                   handleChange={(e) => dispatch({ type: SET_POSTALCODE, payload: e.target.value })}
                 />
               </InputWrapper>
@@ -108,7 +107,7 @@ export default function PersonalForm() {
               <InputWrapper label="city" labelPlaceHolder="City">
                 <TextField
                   name="city"
-                  value={getCity(state)}
+                  value={state.city}
                   handleChange={(e) => dispatch({ type: SET_CITY, payload: e.target.value })}
                 />
               </InputWrapper>
@@ -123,7 +122,7 @@ export default function PersonalForm() {
                     <InputWrapper label="linkedin" labelPlaceHolder="LinkedIn">
                       <TextField
                         name="linkedin"
-                        value={getLinkedin(state)}
+                        value={state.linkedin}
                         handleChange={(e) => dispatch({ type: SET_LINKEDIN, payload: e.target.value })}
                       />
                     </InputWrapper>
@@ -133,7 +132,7 @@ export default function PersonalForm() {
                     <InputWrapper label="website" labelPlaceHolder="Website">
                       <TextField
                         name="website"
-                        value={getWebsite(state)}
+                        value={state.website}
                         handleChange={(e) => dispatch({ type: SET_WEBSITE, payload: e.target.value })}
                       />
                     </InputWrapper>
@@ -143,7 +142,7 @@ export default function PersonalForm() {
                     <InputWrapper label="license" labelPlaceHolder="Driver's license">
                       <TextField
                         name="license"
-                        value={getLicense(state)}
+                        value={state.license}
                         handleChange={(e) => dispatch({ type: SET_LICENSE, payload: e.target.value })}
                       />
                     </InputWrapper>
@@ -153,7 +152,7 @@ export default function PersonalForm() {
                     <InputWrapper label="nationality" labelPlaceHolder="Nationality">
                       <TextField
                         name="nationality"
-                        value={getNationality(state)}
+                        value={state.nationality}
                         handleChange={(e) => dispatch({ type: SET_NATIONALITY, payload: e.target.value })}
                       />
                     </InputWrapper>

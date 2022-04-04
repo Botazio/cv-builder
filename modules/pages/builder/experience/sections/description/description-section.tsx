@@ -9,14 +9,13 @@ import SectionFooter from '../../sections-forms/section-footer/section-footer';
 import SectionHeader from '../../sections-forms/section-header/section-header';
 import TextArea from '../../../../../../common/components/atoms/inputs/text-area/text-area';
 import { useAppDispatch, useAppSelector } from '../../../../../../state/hooks';
-import { SET_DESCRIPTION } from './description.actions';
-import { getDescription } from './description.reducer';
+import { SET_DESCRIPTION } from '../../experience.actions';
 
 
 export default function DescriptionSection() {
   const [active, setActive] = useState<boolean>(true);
 
-  const state = useAppSelector(state => state.builder.experience.description);
+  const state = useAppSelector(state => state.builder.experience);
   const dispatch = useAppDispatch();
 
   return (
@@ -28,7 +27,7 @@ export default function DescriptionSection() {
           <InputWrapper label="description" labelPlaceHolder="Description">
             <TextArea
               name="description"
-              value={getDescription(state)}
+              value={state.description}
               handleChange={(e) => dispatch({ type: SET_DESCRIPTION, payload: e.target.value })} />
           </InputWrapper>
 

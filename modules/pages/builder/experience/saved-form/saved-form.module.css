@@ -30,3 +30,9 @@
 .divider {
   padding: 0px var(--divider-space);
 }
+
+@media only screen and (max-width: 600px) {
+  .description {
+    display: none;
+  }
+}
