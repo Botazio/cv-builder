@@ -6,7 +6,7 @@ import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import SectionButton from '../../../../../../common/components/atoms/buttons/section-button/section-button';
 import { Languages } from '../../../../../../common/interfaces/languages-interface';
-import SectionFooter from '../section-footer/section-footer';
+import SectionFooter from '../section-form-footer/section-form-footer';
 
 export default function LanguagesSectionForm({ form, handleDelete, handleSave, handleChange }: { form?: Languages; handleDelete?: any; handleSave?: any; handleChange?: any; }) {
 
