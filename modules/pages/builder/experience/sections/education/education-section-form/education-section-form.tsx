@@ -7,7 +7,7 @@ import { Education } from '../education-utils';
 import { IterativeExperienceSections } from '../../../experience-sections.enum';
 import { useAppDispatch } from '../../../../../../../state/hooks';
 import SectionFormFooter from '../../../sections-forms/section-form-footer/section-form-footer';
-import { SET_FORM_DESCRIPTION, SET_FORM_END_DATE, SET_FORM_LOCATION, SET_FORM_PLACE, SET_FORM_START_DATE, SET_FORM_TITLE } from '../../../experience.actions';
+import { SET_FORM_FIELD } from '../../../experience.actions';
 
 export default function EducationSectionForm({ state }: { state: Education; }) {
 
@@ -23,7 +23,7 @@ export default function EducationSectionForm({ state }: { state: Education; }) {
             <TextField
               name="title"
               value={state.title}
-              handleChange={(e) => dispatch({ type: SET_FORM_TITLE, payload: e.target.value, section: section })} />
+              handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "title", section: section })} />
           </InputWrapper>
         </Grid>
 
@@ -32,7 +32,7 @@ export default function EducationSectionForm({ state }: { state: Education; }) {
             <TextField
               name="location"
               value={state.location}
-              handleChange={(e) => dispatch({ type: SET_FORM_LOCATION, payload: e.target.value, section: section })} />
+              handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "location", section: section })} />
           </InputWrapper>
         </Grid>
 
@@ -41,7 +41,7 @@ export default function EducationSectionForm({ state }: { state: Education; }) {
             <TextField
               name="place"
               value={state.place}
-              handleChange={(e) => dispatch({ type: SET_FORM_PLACE, payload: e.target.value, section: section })} />
+              handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "place", section: section })} />
           </InputWrapper>
         </Grid>
 
@@ -50,7 +50,7 @@ export default function EducationSectionForm({ state }: { state: Education; }) {
             <TextField
               name="startDate"
               value={state.startDate}
-              handleChange={(e) => dispatch({ type: SET_FORM_START_DATE, payload: e.target.value, section: section })} />
+              handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "startDate", section: section })} />
           </InputWrapper>
         </Grid>
 
@@ -59,7 +59,7 @@ export default function EducationSectionForm({ state }: { state: Education; }) {
             <TextField
               name="endDate"
               value={state.endDate}
-              handleChange={(e) => dispatch({ type: SET_FORM_END_DATE, payload: e.target.value, section: section })} />
+              handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "endDate", section: section })} />
           </InputWrapper>
         </Grid>
 
@@ -68,7 +68,7 @@ export default function EducationSectionForm({ state }: { state: Education; }) {
             <TextArea
               name="description"
               value={state.description}
-              handleChange={(e) => dispatch({ type: SET_FORM_DESCRIPTION, payload: e.target.value, section: section })} />
+              handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "description", section: section })} />
           </InputWrapper>
         </Grid>
 

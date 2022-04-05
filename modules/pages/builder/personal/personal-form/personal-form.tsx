@@ -8,7 +8,7 @@ import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRou
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
 import FormFooter from '../../../../../common/components/molecules/form-footer/form-footer';
 import { useAppDispatch, useAppSelector } from '../../../../../state/hooks';
-import { SET_ADDRESS, SET_CITY, SET_EMAIL, SET_LICENSE, SET_LINKEDIN, SET_MOBILE, SET_NAME, SET_NATIONALITY, SET_POSTALCODE, SET_PROFESSION, SET_SURNAME, SET_WEBSITE } from '../personal.actions';
+import { SET_FORM_FIELD } from '../personal.actions';
 import OutlinedButton from '../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
 
 /**
@@ -38,7 +38,7 @@ export default function PersonalForm() {
                 <TextField
                   name="name"
                   value={state.name}
-                  handleChange={(e) => dispatch({ type: SET_NAME, payload: e.target.value })}
+                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "name" })}
                 />
               </InputWrapper>
             </Grid>
@@ -48,7 +48,7 @@ export default function PersonalForm() {
                 <TextField
                   name="surname"
                   value={state.surname}
-                  handleChange={(e) => dispatch({ type: SET_SURNAME, payload: e.target.value })}
+                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "surname" })}
                 />
               </InputWrapper>
             </Grid>
@@ -58,7 +58,7 @@ export default function PersonalForm() {
                 <TextField
                   name="profession"
                   value={state.profession}
-                  handleChange={(e) => dispatch({ type: SET_PROFESSION, payload: e.target.value })}
+                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "profession" })}
                 />
               </InputWrapper>
             </Grid>
@@ -68,7 +68,7 @@ export default function PersonalForm() {
                 <TextField
                   name="tel"
                   value={state.mobile}
-                  handleChange={(e) => dispatch({ type: SET_MOBILE, payload: e.target.value })}
+                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "mobile" })}
                 />
               </InputWrapper>
             </Grid>
@@ -78,7 +78,7 @@ export default function PersonalForm() {
                 <TextField
                   name="email"
                   value={state.email}
-                  handleChange={(e) => dispatch({ type: SET_EMAIL, payload: e.target.value })}
+                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "email" })}
                 />
               </InputWrapper>
             </Grid>
@@ -88,7 +88,7 @@ export default function PersonalForm() {
                 <TextField
                   name="address"
                   value={state.address}
-                  handleChange={(e) => dispatch({ type: SET_ADDRESS, payload: e.target.value })}
+                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "address" })}
                 />
               </InputWrapper>
             </Grid>
@@ -98,7 +98,7 @@ export default function PersonalForm() {
                 <TextField
                   name="postal-code"
                   value={state.postalCode}
-                  handleChange={(e) => dispatch({ type: SET_POSTALCODE, payload: e.target.value })}
+                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "postalCode" })}
                 />
               </InputWrapper>
             </Grid>
@@ -108,7 +108,7 @@ export default function PersonalForm() {
                 <TextField
                   name="city"
                   value={state.city}
-                  handleChange={(e) => dispatch({ type: SET_CITY, payload: e.target.value })}
+                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "city" })}
                 />
               </InputWrapper>
             </Grid>
@@ -123,7 +123,7 @@ export default function PersonalForm() {
                       <TextField
                         name="linkedin"
                         value={state.linkedin}
-                        handleChange={(e) => dispatch({ type: SET_LINKEDIN, payload: e.target.value })}
+                        handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "linkedin" })}
                       />
                     </InputWrapper>
                   </Grid>
@@ -133,7 +133,7 @@ export default function PersonalForm() {
                       <TextField
                         name="website"
                         value={state.website}
-                        handleChange={(e) => dispatch({ type: SET_WEBSITE, payload: e.target.value })}
+                        handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "website" })}
                       />
                     </InputWrapper>
                   </Grid>
@@ -143,7 +143,7 @@ export default function PersonalForm() {
                       <TextField
                         name="license"
                         value={state.license}
-                        handleChange={(e) => dispatch({ type: SET_LICENSE, payload: e.target.value })}
+                        handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "license" })}
                       />
                     </InputWrapper>
                   </Grid>
@@ -153,7 +153,7 @@ export default function PersonalForm() {
                       <TextField
                         name="nationality"
                         value={state.nationality}
-                        handleChange={(e) => dispatch({ type: SET_NATIONALITY, payload: e.target.value })}
+                        handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "nationality" })}
                       />
                     </InputWrapper>
                   </Grid>

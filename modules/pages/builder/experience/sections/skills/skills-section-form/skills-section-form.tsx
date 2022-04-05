@@ -5,7 +5,7 @@ import { Skill } from '../skills-utils';
 import SectionFormFooter from '../../../sections-forms/section-form-footer/section-form-footer';
 import { IterativeExperienceSections } from '../../../experience-sections.enum';
 import { useAppDispatch } from '../../../../../../../state/hooks';
-import { SET_FORM_TITLE } from '../../../experience.actions';
+import { SET_FORM_FIELD } from '../../../experience.actions';
 
 export default function SkillsSectionForm({ state }: { state: Skill; }) {
 
@@ -19,7 +19,7 @@ export default function SkillsSectionForm({ state }: { state: Skill; }) {
         <TextField
           name="title"
           value={state.title}
-          handleChange={(e) => dispatch({ type: SET_FORM_TITLE, payload: e.target.value, section: section })} />
+          handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "title", section: section })} />
       </InputWrapper>
 
       <SectionFormFooter formID={state.id} section={section} />

@@ -1,8 +1,8 @@
 import produce from "immer";
 import { createNewElement, moveFormInArray, setFormField } from "./experience-utils";
-import { ADD_FORM, DELETE_FORM, EXPERIENCEactions, MOVE_FORM_DOWN, MOVE_FORM_UP, SAVE_FORM, SET_DESCRIPTION, SET_FORM_DESCRIPTION, SET_FORM_EMAIL, SET_FORM_END_DATE, SET_FORM_LOCATION, SET_FORM_MOBILE, SET_FORM_NAME, SET_FORM_PLACE, SET_FORM_START_DATE, SET_FORM_TITLE, UPDATE_FORM } from "./experience.actions";
+import { ADD_FORM, DELETE_FORM, EXPERIENCEactions, MOVE_FORM_DOWN, MOVE_FORM_UP, SAVE_FORM, SET_DESCRIPTION, SET_FORM_FIELD, UPDATE_FORM } from "./experience.actions";
 import { Education } from "./sections/education/education-utils";
-import { Language } from "./sections/languages-section/languages-utils";
+import { Language } from "./sections/languages/languages-utils";
 import { Reference } from "./sections/references/references-utils";
 import { Skill } from "./sections/skills/skills-utils";
 import { Work } from "./sections/work/work-utils";
@@ -60,32 +60,8 @@ export function experienceReducer(state = initialState, action: EXPERIENCEaction
     case SET_DESCRIPTION: {
       return { ...state, description: action.payload };
     }
-    case SET_FORM_TITLE: {
-      return setFormField(state, action.payload, action.section, 'title');
-    }
-    case SET_FORM_LOCATION: {
-      return setFormField(state, action.payload, action.section, 'location');
-    }
-    case SET_FORM_PLACE: {
-      return setFormField(state, action.payload, action.section, 'place');
-    }
-    case SET_FORM_START_DATE: {
-      return setFormField(state, action.payload, action.section, 'startDate');
-    }
-    case SET_FORM_END_DATE: {
-      return setFormField(state, action.payload, action.section, 'endDate');
-    }
-    case SET_FORM_DESCRIPTION: {
-      return setFormField(state, action.payload, action.section, 'description');
-    }
-    case SET_FORM_NAME: {
-      return setFormField(state, action.payload, action.section, 'name');
-    }
-    case SET_FORM_MOBILE: {
-      return setFormField(state, action.payload, action.section, 'mobile');
-    }
-    case SET_FORM_EMAIL: {
-      return setFormField(state, action.payload, action.section, 'email');
+    case SET_FORM_FIELD: {
+      return setFormField(state, action.payload, action.field, action.section);
     }
     case ADD_FORM: {
       const newElement = createNewElement(action.section);

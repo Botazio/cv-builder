@@ -4,12 +4,12 @@ import { v4 as uuidv4 } from 'uuid';
 import { IterativeExperienceSections } from './experience-sections.enum';
 import { Experience } from './experience.reducer';
 import { createEmptyEducation } from './sections/education/education-utils';
-import { createEmptyLanguage } from './sections/languages-section/languages-utils';
+import { createEmptyLanguage } from './sections/languages/languages-utils';
 import { createEmptyReference } from './sections/references/references-utils';
 import { createEmptySkill } from './sections/skills/skills-utils';
 import { createEmptyWorkExperience } from "./sections/work/work-utils";
 
-export function setFormField(state: Experience, payload: string, section: IterativeExperienceSections, field) {
+export function setFormField(state: Experience, payload: string, field: string, section: IterativeExperienceSections) {
   const nextState = produce(state, draft => {
     const draftState = draft[section];
 

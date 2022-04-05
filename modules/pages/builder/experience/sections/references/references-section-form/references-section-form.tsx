@@ -6,7 +6,7 @@ import SectionFormFooter from '../../../sections-forms/section-form-footer/secti
 import { useAppDispatch } from '../../../../../../../state/hooks';
 import { IterativeExperienceSections } from '../../../experience-sections.enum';
 import { Reference } from '../references-utils';
-import { SET_FORM_DESCRIPTION, SET_FORM_EMAIL, SET_FORM_MOBILE, SET_FORM_NAME, SET_FORM_PLACE } from '../../../experience.actions';
+import { SET_FORM_FIELD } from '../../../experience.actions';
 import TextArea from '../../../../../../../common/components/atoms/inputs/text-area/text-area';
 
 export default function ReferencesSectionForm({ state }: { state: Reference; }) {
@@ -23,7 +23,7 @@ export default function ReferencesSectionForm({ state }: { state: Reference; }) 
               <TextField
                 name="name"
                 value={state.name}
-                handleChange={(e) => dispatch({ type: SET_FORM_NAME, payload: e.target.value, section: section })} />
+                handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "name", section: section })} />
             </InputWrapper>
           </Grid>
 
@@ -32,7 +32,7 @@ export default function ReferencesSectionForm({ state }: { state: Reference; }) 
               <TextField
                 name="place"
                 value={state.place}
-                handleChange={(e) => dispatch({ type: SET_FORM_PLACE, payload: e.target.value, section: section })} />
+                handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "place", section: section })} />
             </InputWrapper>
           </Grid>
 
@@ -41,7 +41,7 @@ export default function ReferencesSectionForm({ state }: { state: Reference; }) 
               <TextField
                 name="mobile"
                 value={state.mobile}
-                handleChange={(e) => dispatch({ type: SET_FORM_MOBILE, payload: e.target.value, section: section })} />
+                handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "mobile", section: section })} />
             </InputWrapper>
           </Grid>
 
@@ -50,7 +50,7 @@ export default function ReferencesSectionForm({ state }: { state: Reference; }) 
               <TextField
                 name="email"
                 value={state.email}
-                handleChange={(e) => dispatch({ type: SET_FORM_EMAIL, payload: e.target.value, section: section })} />
+                handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "email", section: section })} />
             </InputWrapper>
           </Grid>
 
@@ -59,7 +59,7 @@ export default function ReferencesSectionForm({ state }: { state: Reference; }) 
               <TextArea
                 name="description"
                 value={state.description}
-                handleChange={(e) => dispatch({ type: SET_FORM_DESCRIPTION, payload: e.target.value, section: section })} />
+                handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "description", section: section })} />
             </InputWrapper>
           </Grid>
 
