@@ -2,9 +2,9 @@ import TemplateSection from '../template-section/template-section';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import EducationSectionForm from './education-section-form/education-section-form';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
-import OutlinedButton from '../../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
+import OutlinedButton from '@common/components/atoms/buttons/outlined-button/outlined-button';
 import { IterativeExperienceSections } from '../../experience-sections.enum';
-import { useAppDispatch, useAppSelector } from '../../../../../../state/hooks';
+import { useAppDispatch, useAppSelector } from '@state/hooks';
 import SavedForm from '../../saved-form/saved-form';
 import { ADD_FORM } from '../../experience.actions';
 

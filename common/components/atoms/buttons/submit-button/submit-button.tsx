@@ -1,5 +1,5 @@
-import { useAppSelector } from '../../../../../state/hooks';
-import { saveState } from '../../../../../state/utils';
+import { useAppSelector } from '@state/hooks';
+import { saveState } from '@state/utils';
 import { ButtonInterface } from '../button-interface';
 import styles from './submit-button.module.css';
 

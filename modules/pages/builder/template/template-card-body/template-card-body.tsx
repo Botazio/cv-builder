@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './template-card-body.module.css';
 import TemplatePreview from '../template-preview/template-preview';
-import { useClientRect } from '../../../../../utils/hooks';
+import { useClientRect } from '@common/utils/hooks';
 
 
 /**

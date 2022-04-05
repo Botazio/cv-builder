@@ -2,11 +2,11 @@ import TemplateSection from '../template-section/template-section';
 import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
 import ReferencesSectionForm from './references-section-form/references-section-form';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
-import { useAppDispatch, useAppSelector } from '../../../../../../state/hooks';
+import { useAppDispatch, useAppSelector } from '@state/hooks';
 import SavedForm from '../../saved-form/saved-form';
 import { ADD_FORM } from '../../experience.actions';
 import { IterativeExperienceSections } from '../../experience-sections.enum';
-import OutlinedButton from '../../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
+import OutlinedButton from '@common/components/atoms/buttons/outlined-button/outlined-button';
 
 
 export default function ReferencesSection() {

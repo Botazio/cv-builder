@@ -1,6 +1,6 @@
 import React from 'react';
-import { useClientRect } from '../../../../../utils/hooks';
-import BuilderBodyContainer from '../../../../../common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
+import { useClientRect } from '@common/utils/hooks';
+import BuilderBodyContainer from '@common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
 import TemplatePreview from '../../template/template-preview/template-preview';
 import styles from './download-page-body.module.css';
 

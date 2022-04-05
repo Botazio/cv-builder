@@ -1,4 +1,4 @@
-import ExperienceTemplate from "../../modules/pages/builder/experience/experience-template";
+import ExperiencePage from "@modules/pages/builder/experience/experience-page";
 
 
 /**
@@ -6,6 +6,6 @@ import ExperienceTemplate from "../../modules/pages/builder/experience/experienc
   */
 export default function Experience() {
   return (
-    <ExperienceTemplate />
+    <ExperiencePage />
   );
 }

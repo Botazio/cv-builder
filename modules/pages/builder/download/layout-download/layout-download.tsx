@@ -1,6 +1,5 @@
-import DownloadHeader from '../../../../common/components/atoms/download-header/download-header';
-import SpaceDivider from '../../../../../common/components/atoms/dividers/space-divider/space-divider';
-import LayoutDefault from '../../../../../common/components/layouts/layout-default/layout-default';
+import SpaceDivider from '@common/components/atoms/dividers/space-divider/space-divider';
+import LayoutDefault from '@common/components/layouts/layout-default/layout-default';
 import styles from './layout-download.module.css';
 
 /**

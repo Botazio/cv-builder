@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from "next/dynamic";
-import { LondonTemplate } from '../../../../../common/cv-templates/london-template/london-template';
+import { LondonTemplate } from '@common/cv-templates/london-template/london-template';
 
 const NextPDFViewer = dynamic(() => import("../next-pdf-viewer/next-pdf-viewer"), {
   ssr: false
