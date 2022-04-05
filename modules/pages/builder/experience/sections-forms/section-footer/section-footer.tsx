@@ -5,7 +5,7 @@ import styles from "./section-footer.module.css";
 /**
  * Footer for the section
  */
-export default function SectionFormFooter({ children }: { children: React.ReactNode; }) {
+export default function SectionFooter({ children }: { children: React.ReactNode; }) {
 
   return (
     <>

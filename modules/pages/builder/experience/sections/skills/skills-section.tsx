@@ -1,27 +1,26 @@
 import TemplateSection from '../template-section/template-section';
-import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
-import LanguagesSectionForm from './languages-section-form/languages-section-form';
-import { useAppDispatch, useAppSelector } from '../../../../../../state/hooks';
-import OutlinedButton from '../../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
-import { IterativeExperienceSections } from '../../experience-sections.enum';
-import { ADD_FORM } from '../../experience.actions';
+import BuildOutlinedIcon from '@mui/icons-material/BuildOutlined';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
+import SkillsSectionForm from './skills-section-form/skills-section-form';
+import OutlinedButton from '../../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
+import { useAppDispatch, useAppSelector } from '../../../../../../state/hooks';
+import { ADD_FORM } from '../../experience.actions';
+import { IterativeExperienceSections } from '../../experience-sections.enum';
 import SavedForm from '../../saved-form/saved-form';
 
-
-export default function LanguagesSection() {
-  const state = useAppSelector(state => state.builder.experience.languages);
+export default function SkillsSection() {
+  const state = useAppSelector(state => state.builder.experience.skills);
   const dispatch = useAppDispatch();
 
   return (
     <TemplateSection
-      title="Languages"
-      icon={<LanguageRoundedIcon />}
+      title="Skills"
+      icon={<BuildOutlinedIcon />}
       footerButton={
         <OutlinedButton
-          value="Add another language"
+          value="Add another skill"
           startIcon={<AddCircleOutlineRoundedIcon />}
-          handleClick={() => dispatch({ type: ADD_FORM, section: IterativeExperienceSections.LANGUAGES })}
+          handleClick={() => dispatch({ type: ADD_FORM, section: IterativeExperienceSections.SKILLS })}
         />
       }
       bottomDivider={true}>
@@ -33,13 +32,13 @@ export default function LanguagesSection() {
               key={element.id}
               title={element.title}
               elementID={element.id}
-              sectionCode={IterativeExperienceSections.LANGUAGES}
+              sectionCode={IterativeExperienceSections.SKILLS}
             />
           );
         }
         else if (element.id === state.activeElementID) {
           return (
-            <LanguagesSectionForm
+            <SkillsSectionForm
               key={element.id}
               state={element} />
           );

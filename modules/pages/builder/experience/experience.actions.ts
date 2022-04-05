@@ -7,6 +7,9 @@ export const SET_FORM_PLACE = '[EXPERIENCE][SECTION] Change Place';
 export const SET_FORM_START_DATE = '[EXPERIENCE][SECTION] Change Start Date';
 export const SET_FORM_END_DATE = '[EXPERIENCE][SECTION] Change End Date';
 export const SET_FORM_DESCRIPTION = '[EXPERIENCE][SECTION] Change Description';
+export const SET_FORM_NAME = '[EXPERIENCE][SECTION] Change Name';
+export const SET_FORM_MOBILE = '[EXPERIENCE][SECTION] Change Mobile';
+export const SET_FORM_EMAIL = '[EXPERIENCE][SECTION] Change EMAIL';
 export const ADD_FORM = '[EXPERIENCE][SECTION] Add Form';
 export const DELETE_FORM = '[EXPERIENCE][SECTION] Delete Form';
 export const UPDATE_FORM = '[EXPERIENCE][SECTION] Update Form';
@@ -49,6 +52,21 @@ export class SetFormDescription {
   constructor(public payload: string, public section: IterativeExperienceSections) { }
 }
 
+export class SetFormName {
+  readonly type = SET_FORM_NAME;
+  constructor(public payload: string, public section: IterativeExperienceSections) { }
+}
+
+export class SetFormMobile {
+  readonly type = SET_FORM_MOBILE;
+  constructor(public payload: string, public section: IterativeExperienceSections) { }
+}
+
+export class SetFormEmail {
+  readonly type = SET_FORM_EMAIL;
+  constructor(public payload: string, public section: IterativeExperienceSections) { }
+}
+
 export class AddForm {
   readonly type = ADD_FORM;
   constructor(public section: IterativeExperienceSections) { }
@@ -87,6 +105,9 @@ export type EXPERIENCEactions =
   SetFormStartDate |
   SetFormEndDate |
   SetFormDescription |
+  SetFormName |
+  SetFormMobile |
+  SetFormEmail |
   AddForm |
   DeleteForm |
   UpdateForm |

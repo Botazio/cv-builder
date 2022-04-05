@@ -18,6 +18,7 @@ export default function WorkSectionForm({ state }: { state: Work; }) {
     <>
       <SectionBody>
         <Grid container spacing={2}>
+
           <Grid item xs={12} sm={6}>
             <InputWrapper label="title" labelPlaceHolder="Title/Position">
               <TextField

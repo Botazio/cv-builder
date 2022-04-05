@@ -12,7 +12,7 @@ import { DELETE_FORM, MOVE_FORM_DOWN, MOVE_FORM_UP, UPDATE_FORM } from '../exper
 interface SavedSectionInterface {
   id?: string;
   title: string;
-  description: string;
+  description?: string;
   elementID: string;
   sectionCode: IterativeExperienceSections;
 }
@@ -29,7 +29,7 @@ export default function SavedForm({ id, title, description, elementID, sectionCo
       <div id={id} className={styles.container}>
         <div className={styles.info}>
           <h4 className={styles.title}>{title ? title : "Title"}</h4>
-          <p className={styles.description}>{description}</p>
+          <p className={styles.description}>{description ? description : ""}</p>
         </div>
 
         <div className={styles.buttons}>

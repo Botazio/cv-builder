@@ -1,27 +1,28 @@
 import TemplateSection from '../template-section/template-section';
-import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
-import EducationSectionForm from './education-section-form/education-section-form';
+import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
+import ReferencesSectionForm from './references-section-form/references-section-form';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
-import OutlinedButton from '../../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
-import { IterativeExperienceSections } from '../../experience-sections.enum';
 import { useAppDispatch, useAppSelector } from '../../../../../../state/hooks';
 import SavedForm from '../../saved-form/saved-form';
 import { ADD_FORM } from '../../experience.actions';
+import { IterativeExperienceSections } from '../../experience-sections.enum';
+import OutlinedButton from '../../../../../../common/components/atoms/buttons/outlined-button/outlined-button';
 
 
-export default function EducationSection() {
-  const state = useAppSelector(state => state.builder.experience.education);
+export default function ReferencesSection() {
+  const state = useAppSelector(state => state.builder.experience.references);
   const dispatch = useAppDispatch();
+
 
   return (
     <TemplateSection
-      title="Education"
-      icon={<SchoolOutlinedIcon />}
+      title="References"
+      icon={<FeedbackOutlinedIcon />}
       footerButton={
         <OutlinedButton
-          value="Add another education"
+          value="Add another reference"
           startIcon={<AddCircleOutlineRoundedIcon />}
-          handleClick={() => dispatch({ type: ADD_FORM, section: IterativeExperienceSections.EDUCATION })}
+          handleClick={() => dispatch({ type: ADD_FORM, section: IterativeExperienceSections.REFERENCES })}
         />
       }
       bottomDivider={true}>
@@ -31,16 +32,16 @@ export default function EducationSection() {
           return (
             <SavedForm
               key={element.id}
-              title={element.title}
-              description={(element.description.length > 30 ? element.description.slice(0, 30) + "..." : element.description)}
+              title={element.name}
+              description={element.description}
               elementID={element.id}
-              sectionCode={IterativeExperienceSections.EDUCATION}
+              sectionCode={IterativeExperienceSections.REFERENCES}
             />
           );
         }
         else if (element.id === state.activeElementID) {
           return (
-            <EducationSectionForm
+            <ReferencesSectionForm
               key={element.id}
               state={element} />
           );
