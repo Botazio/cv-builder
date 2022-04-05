@@ -1,8 +1,8 @@
 import styles from './template-card.module.css';
 import cn from 'classnames';
-import TemplateCardHeader from '../../molecules/template-card-header/template-card-header';
-import SpaceDivider from '../../atoms/dividers/space-divider/space-divider';
-import TemplateCardBody from '../../molecules/template-card-body/template-card-body';
+import TemplateCardHeader from './template-card-header/template-card-header';
+import SpaceDivider from '@common/components/atoms/dividers/space-divider/space-divider';
+import TemplateCardBody from './template-card-body/template-card-body';
 
 /**
  * Renders a card used to display a preview of a CV.

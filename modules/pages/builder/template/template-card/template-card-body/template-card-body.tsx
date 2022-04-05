@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './template-card-body.module.css';
-import TemplatePreview from '../template-preview/template-preview';
+import TemplatePreview from '@common/components/organisms/template-preview/template-preview';
 import { useClientRect } from '@common/utils/hooks';
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './next-pdf-viewer.module.css';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { usePDF } from '@react-pdf/renderer';
-import workerSrc from "../../../../../pdf-worker";
+import workerSrc from "../../../../pdf-worker";
 import { CircularProgress } from '@mui/material';
 import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
 

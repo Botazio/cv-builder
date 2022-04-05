@@ -1,7 +1,7 @@
 import React from 'react';
 import { useClientRect } from '@common/utils/hooks';
 import BuilderBodyContainer from '@common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
-import TemplatePreview from '../../template/template-preview/template-preview';
+import TemplatePreview from '@common/components/organisms/template-preview/template-preview';
 import styles from './download-page-body.module.css';
 
 export default function DownloadPageBody() {
