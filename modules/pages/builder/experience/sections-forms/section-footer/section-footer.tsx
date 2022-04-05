@@ -1,11 +1,12 @@
-import SpaceDivider from "../dividers/space-divider/space-divider";
+import SpaceDivider from "@common/components/atoms/dividers/space-divider/space-divider";
 import styles from "./section-footer.module.css";
 
 
 /**
- * Footer for the sections in the experience form
+ * Footer for the section
  */
-export default function SectionFooter({ children }) {
+export default function SectionFooter({ children }: { children: React.ReactNode; }) {
+
   return (
     <>
       <SpaceDivider />

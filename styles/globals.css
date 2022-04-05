@@ -6,32 +6,48 @@ body,
 #__next {
   padding: 0;
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-family);
   min-height: 100vh;
   background-color: var(--background-secondary);
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 * {
   box-sizing: border-box;
 }
-
-.MuiInput-multiline {
-  height: 150px;
-}
-
 .btn {
-  height: 48px;
+  height: var(--input-btn-height);
   padding: 14px 14px 14px 16px;
   box-sizing: border-box;
   line-height: 19px;
   border-radius: var(--custom-border-radius);
   font-size: 15px;
   font-family: var(--font-family);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.btn > span {
+  margin: 0px 5px;
+}
+.input-field {
+  background-color: var(--input-field-background);
+  color: var(--secondary-font-color);
+  caret-color: var(--secondary-font-color);
+  font-family: var(--font-family);
+  border-radius: var(--custom-border-radius);
+  outline: none;
+  border: none;
+  padding: 14px 14px 14px 16px;
+  box-sizing: border-box;
+  line-height: 19px;
+  font-size: 15px;
+  width: 100%;
+  resize: none;
 }
 

@@ -1,16 +1,21 @@
-import { Button } from '@mui/material';
 import styles from './outlined-button.module.css';
 import React from 'react';
+import { ButtonInterface } from '../button-interface';
 
 /**
  * 
  * Default button in the application. 
  */
-export default function OutlinedButton({ children, ...restProps }) {
+export default function OutlinedButton({ value, startIcon, endIcon, handleClick }: ButtonInterface) {
 
   return (
-    <Button className={styles.btn} {...restProps} variant="outlined">
-      {children}
-    </Button >
+    <button
+      className={styles.btn}
+      onClick={handleClick}
+    >
+      {startIcon}
+      <span>{value}</span>
+      {endIcon}
+    </button>
   );
 }

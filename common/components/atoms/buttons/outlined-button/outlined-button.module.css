@@ -2,9 +2,13 @@
   composes: btn from global;
   border: 1px solid var(--primary);
   color: var(--primary);
-  text-transform:none;
+  background: transparent;
+  text-transform: none;
   font-weight: 500;
 }
 .btn::first-letter {
   text-transform: uppercase;
+}
+.btn:hover {
+  background-color: var(--primary-transparent);
 }
