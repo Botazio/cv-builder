@@ -1,7 +1,5 @@
 import React from 'react';
 import { Page, Font, Document, StyleSheet, View, Text } from '@react-pdf/renderer';
-import { FormInterface } from '../../interfaces/form-interface';
-import { Education } from '../../interfaces/education-interface';
 
 // Create styles
 const styles = StyleSheet.create({

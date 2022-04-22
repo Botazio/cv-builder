@@ -12,7 +12,7 @@
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
-    "@react-pdf/renderer": "^2.0.21",
+    "@react-pdf/renderer": "^2.1.1",
     "@reduxjs/toolkit": "^1.8.0",
     "array-move": "^4.0.0",
     "classnames": "^2.3.1",

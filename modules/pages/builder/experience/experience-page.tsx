@@ -12,7 +12,7 @@ function ExperiencePage() {
     <LayoutBuilder header={<LayoutBuilderHeader title="Experience" />}>
       <ExperienceForm />
       <SpaceDivider variant="large" />
-      <Link href="/builder/Page">
+      <Link href="/builder/template">
         <a>
           <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
         </a>
