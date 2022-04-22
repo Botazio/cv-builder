@@ -1,3 +1,17 @@
 .container {
   padding: var(--divider-space);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: calc(var(--divider-space) / 2);
+}
+
+.container>div {
+  flex-basis: calc(33.3333% - var(--divider-space) / 3);
+}
+
+@media only screen and (max-width: 600px) {
+  .container>div {
+    flex-basis: 100%;
+  }
 }

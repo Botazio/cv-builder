@@ -9,6 +9,11 @@ function ContainerTemplateCards() {
   return (
     <div className={styles.container}>
       <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
+      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
+      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
+      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
+      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
+      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
     </div>
   );
 }
