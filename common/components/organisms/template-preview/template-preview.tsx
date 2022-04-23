@@ -9,8 +9,9 @@ const NextPDFViewer = dynamic(() => import("../next-pdf-viewer/next-pdf-viewer")
 /**
  * Displays a preview for a pdf document. Gets the dimensions from a container reference
  */
-export default function TemplatePreview({ width, height, document }: { width: number, height: number, document?: any; }) {
+export default function TemplatePreview({ width, height, document }: { width: number, height: number, document: any; }) {
+
   return (
-    <NextPDFViewer width={width} height={height} doc={LondonTemplate()} />
+    <NextPDFViewer width={width} height={height} doc={document} />
   );
 }

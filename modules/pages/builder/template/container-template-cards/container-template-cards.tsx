@@ -1,19 +1,17 @@
-import { LondonTemplate } from "@modules/cv-templates/london-template/london-template";
+import TorontoTemplate from "@modules/cv-templates/templates/toronto-template";
+import { useAppSelector } from "@state/hooks";
 import { useState } from "react";
 import TemplateCard from "../template-card/template-card";
 import styles from "./container-template-cards.module.css";
 
 function ContainerTemplateCards() {
-  const [selected, setSelected] = useState("London");
+  const [selected, setSelected] = useState("Toronto");
+
+  const state = useAppSelector(state => state.builder);
 
   return (
     <div className={styles.container}>
-      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
-      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
-      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
-      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
-      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
-      <TemplateCard id="London" title="London" document={LondonTemplate()} selected={selected} setSelected={setSelected} />
+      <TemplateCard id="Toronto" title="Toronto" document={<TorontoTemplate state={state} />} selected={selected} setSelected={setSelected} />
     </div>
   );
 }

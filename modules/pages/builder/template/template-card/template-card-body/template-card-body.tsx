@@ -12,7 +12,7 @@ export default function TemplateCardBody({ document }: { document: any; }) {
 
   return (
     <div ref={ref} className={styles.container}>
-      {rect !== null && <TemplatePreview width={rect.width} height={rect.height} />}
+      {rect !== null && <TemplatePreview width={rect.width} height={rect.height} document={document} />}
     </div>
   );
 }

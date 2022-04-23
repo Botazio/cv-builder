@@ -1,7 +1,11 @@
 import { combineReducers } from "redux";
-import { experienceReducer } from "./experience/experience.reducer";
-import { personalReducer } from "./personal/personal.reducer";
+import { Experience, experienceReducer } from "./experience/experience.reducer";
+import { Personal, personalReducer } from "./personal/personal.reducer";
 
+export interface Builder {
+  personal: Personal;
+  experience: Experience;
+}
 
 const builderReducer = combineReducers({
   personal: personalReducer,

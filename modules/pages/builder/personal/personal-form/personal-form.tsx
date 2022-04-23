@@ -93,27 +93,6 @@ export default function PersonalForm() {
               </InputWrapper>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
-              <InputWrapper label="postal-code" labelPlaceHolder="Postal code">
-                <TextField
-                  name="postal-code"
-                  value={state.postalCode}
-                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "postalCode" })}
-                />
-              </InputWrapper>
-            </Grid>
-
-            <Grid item xs={12} sm={6}>
-              <InputWrapper label="city" labelPlaceHolder="City">
-                <TextField
-                  name="city"
-                  value={state.city}
-                  handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "city" })}
-                />
-              </InputWrapper>
-            </Grid>
-
-
             <Grid item xs={12}>
               <Collapse in={active}>
                 <Grid container item spacing={2}>
