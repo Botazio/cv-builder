@@ -1,6 +1,6 @@
 import { Builder } from '@modules/pages/builder/builder.reducer';
 import { StyleSheet, View, Text } from '@react-pdf/renderer';
-import { propStyles } from "../utils/prop-styles";
+import { propStyles } from "../utils/styles/prop-styles.interface";
 
 function createComponentStyles(propStyles: propStyles) {
   return StyleSheet.create({

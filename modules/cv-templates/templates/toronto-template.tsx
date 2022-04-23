@@ -2,7 +2,7 @@ import { Builder } from '@modules/pages/builder/builder.reducer';
 import { Page, Font, Document, StyleSheet, View, Text } from '@react-pdf/renderer';
 import BodyOne from '../bodies/body-one';
 import HeaderOne from '../headers/header-one';
-import { propStyles } from '../utils/prop-styles';
+import { propStyles } from '../utils/styles/prop-styles.interface';
 
 const torontoStyles: propStyles = {
   primaryColor: '#B4FF9F',
