@@ -25,7 +25,7 @@ function createComponentStyles(propStyles: propStyles) {
     containerLeft: {
       display: 'flex',
       flexDirection: 'column',
-      marginRight: propStyles.dividerSpace,
+      marginRight: propStyles.dividerSpace * 2 / 3,
       width: '30%',
     },
     containerRight: {
@@ -73,20 +73,16 @@ function HeaderOne({ state, propStyles }: { state: Builder, propStyles: propStyl
   return (
     <View style={styles.wrapper}>
       <View style={styles.containerLeft}>
-
         <View style={styles.containerPhoto}></View>
-
         {state.personal.profession !== '' && <View style={styles.containerProfession}>
           {profession.map((word, index) => <Text key={index} style={styles.subTitle}>{word + ' '}</Text>)}
         </View>}
-
         {state.personal.mobile !== '' && <Text style={styles.textDetails}>{state.personal.mobile}</Text>}
         {state.personal.email !== '' && <Text style={styles.textDetails}>{state.personal.email}</Text>}
         {state.personal.address !== '' && <Text style={styles.textDetails}>{state.personal.address}</Text>}
         {state.personal.linkedin !== '' && <Text style={styles.textDetails}>{state.personal.linkedin}</Text>}
         {state.personal.website !== '' && <Text style={styles.textDetails}>{state.personal.website}</Text>}
         {state.personal.license !== '' && <Text style={styles.textDetails}>Driving license: {state.personal.license}</Text>}
-
       </View>
 
       <View style={styles.containerRight}>

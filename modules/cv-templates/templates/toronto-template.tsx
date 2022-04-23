@@ -1,5 +1,6 @@
 import { Builder } from '@modules/pages/builder/builder.reducer';
 import { Page, Font, Document, StyleSheet, View, Text } from '@react-pdf/renderer';
+import BodyOne from '../bodies/body-one';
 import HeaderOne from '../headers/header-one';
 import { propStyles } from '../utils/prop-styles';
 
@@ -23,11 +24,15 @@ const torontoStyles: propStyles = {
 
 const styles = StyleSheet.create({
   page: {
-    padding: "30px 40px",
+    padding: "30 30",
     fontFamily: 'robotoText',
     fontSize: torontoStyles.fontSizeParagraph,
     color: torontoStyles.primaryFontColor,
   },
+  divider: {
+    width: '100%',
+    height: torontoStyles.dividerSpace * 2 / 3
+  }
 });
 
 Font.register({
@@ -45,6 +50,8 @@ function TorontoTemplate({ state }: { state: Builder; }) {
     <Document>
       <Page size="A4" style={styles.page}>
         <HeaderOne state={state} propStyles={torontoStyles} />
+        <View style={styles.divider} />
+        <BodyOne state={state} propStyles={torontoStyles} />
       </Page>
     </Document>
   );
