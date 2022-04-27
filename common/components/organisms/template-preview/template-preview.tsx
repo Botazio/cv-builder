@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from "next/dynamic";
-import { LondonTemplate } from '@common/cv-templates/london-template/london-template';
+import { LondonTemplate } from '@modules/cv-templates/london-template/london-template';
 
 const NextPDFViewer = dynamic(() => import("../next-pdf-viewer/next-pdf-viewer"), {
   ssr: false
@@ -9,8 +9,9 @@ const NextPDFViewer = dynamic(() => import("../next-pdf-viewer/next-pdf-viewer")
 /**
  * Displays a preview for a pdf document. Gets the dimensions from a container reference
  */
-export default function TemplatePreview({ rect, document }: { rect: any, document?: any; }) {
+export default function TemplatePreview({ width, height, document }: { width: number, height: number, document: any; }) {
+
   return (
-    <NextPDFViewer width={rect.width} height={rect.height} doc={LondonTemplate()} />
+    <NextPDFViewer width={width} height={height} doc={document} />
   );
 }

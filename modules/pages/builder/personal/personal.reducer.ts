@@ -9,8 +9,6 @@ export interface Personal {
   mobile: string;
   email: string;
   address: string;
-  postalCode: string;
-  city: string;
   linkedin: string;
   website: string;
   license: string;
@@ -24,8 +22,6 @@ const initialState: Personal = {
   mobile: '',
   email: '',
   address: '',
-  postalCode: '',
-  city: '',
   linkedin: '',
   website: '',
   license: '',
