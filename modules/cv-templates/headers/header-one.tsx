@@ -87,13 +87,13 @@ function HeaderOne({ state, propStyles }: { state: Builder, propStyles: propStyl
 
       <View style={styles.containerRight}>
         <View style={styles.containerName}>
-          <Text style={styles.textName}>{state.personal.name}</Text>
-          <Text style={styles.textName}>{state.personal.surname}</Text>
+          {state.personal.name !== '' && <Text style={styles.textName}>{state.personal.name}</Text>}
+          {state.personal.surname !== '' && <Text style={styles.textName}>{state.personal.surname}</Text>}
         </View>
-        <View style={styles.containerDescription}>
+        {state.experience.description !== '' && <View style={styles.containerDescription}>
           <Text style={styles.title}>About me</Text>
           <Text>{state.experience.description}</Text>
-        </View>
+        </View>}
       </View>
     </View>
   );
