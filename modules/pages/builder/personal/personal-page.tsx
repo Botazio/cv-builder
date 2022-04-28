@@ -6,8 +6,13 @@ import PersonalForm from "./personal-form/personal-form";
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import LayoutBuilderBody from "@common/components/layouts/layout-builder/layout-builder-body/layout-builder-body";
 import LayoutBuilderHeader from "@common/components/layouts/layout-builder/layout-builder-header/layout-builder-header";
+import { useSaveState } from "@state/hooks";
 
 function PersonalPage() {
+
+  // Save the state in local storage when the component unmounts
+  useSaveState();
+
   return (
     <LayoutBuilder header={<LayoutBuilderHeader title="Personal information" />}>
 
