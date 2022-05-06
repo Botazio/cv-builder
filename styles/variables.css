@@ -24,6 +24,8 @@
 
   --background-secondary: #fafafa;
 
+  --background-dialog: rgba(0, 0, 0, 0.4);
+
   --divider-space: 30px;
   --divider-primary-color: rgb(234, 234, 234);
   --divider-secondary-color: #8E8E8E;

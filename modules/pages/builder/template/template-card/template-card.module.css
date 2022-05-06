@@ -13,7 +13,7 @@
   border: 1px solid var(--divider-secondary-color);
 }
 
-.expand_button {
+.editor_button {
   position: absolute;
   bottom: calc(var(--divider-space) / 2);
   right: calc(var(--divider-space) / 2);

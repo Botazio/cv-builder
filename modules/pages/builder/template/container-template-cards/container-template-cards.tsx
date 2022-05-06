@@ -12,9 +12,6 @@ function ContainerTemplateCards() {
   return (
     <div className={styles.container}>
       <TemplateCard id="Toronto" title="Toronto" document={<TorontoTemplate state={state} />} selected={selected} setSelected={setSelected} />
-      <TemplateCard id="Toront" title="Toronto" document={<TorontoTemplate state={state} />} selected={selected} setSelected={setSelected} />
-      <TemplateCard id="Toront" title="Toronto" document={<TorontoTemplate state={state} />} selected={selected} setSelected={setSelected} />
-      <TemplateCard id="Toront" title="Toronto" document={<TorontoTemplate state={state} />} selected={selected} setSelected={setSelected} />
     </div>
   );
 }
