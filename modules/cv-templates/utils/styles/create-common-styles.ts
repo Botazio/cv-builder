@@ -2,7 +2,7 @@ import { propStyles } from './prop-styles.interface';
 import { StyleSheet } from '@react-pdf/renderer';
 
 /**
- * This function is used to append common styles to each component styles.
+ * This function is used to create common styles from prop styles.
  * 
  */
 export function createCommonStyles(propStyles: propStyles) {

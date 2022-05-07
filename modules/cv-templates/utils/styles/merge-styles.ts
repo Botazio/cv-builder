@@ -1,5 +1,3 @@
-import { StyleSheet } from '@react-pdf/renderer';
-
 /**
  * This function is used to merge common styles with component styles
  * 

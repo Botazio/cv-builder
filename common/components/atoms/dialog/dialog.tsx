@@ -17,7 +17,7 @@ function Dialog({ active, setActive, children }: DialogInterface) {
         [styles.inactive]: !active
       })}
       onClick={() => setActive(false)}>
-      <div className={styles.content}>
+      <div className={styles.content} onClick={e => e.stopPropagation()}>
         {children}
       </div>
     </div>
