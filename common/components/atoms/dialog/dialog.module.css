@@ -27,7 +27,6 @@
   padding: var(--divider-space);
   border-radius: var(--custom-border-radius);
   box-shadow: var(--custom-box-shadow);
-  width: var(--builder-width);
   -webkit-animation-name: animate;
   -webkit-animation-duration: 0.4s;
   animation-name: animate;

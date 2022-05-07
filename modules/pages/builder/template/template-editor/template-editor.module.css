@@ -1,0 +1,18 @@
+.container_editor {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container_template {
+  flex: 1 1 auto;
+}
+
+.container_color_selectors {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container_color_selectors>div {
+  margin: 0px 10px;
+}

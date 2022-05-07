@@ -1,8 +1,13 @@
 import cn from 'classnames';
 import styles from './dialog.module.css';
 
+interface DialogInterface {
+  active: boolean,
+  setActive: Function,
+  children?: React.ReactNode,
+}
 
-function Dialog({ active, setActive, children }: { active: boolean, setActive: Function, children?: React.ReactChildren; }) {
+function Dialog({ active, setActive, children }: DialogInterface) {
 
   return (
     <div

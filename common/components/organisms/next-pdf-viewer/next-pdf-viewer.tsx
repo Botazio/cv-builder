@@ -25,7 +25,6 @@ export default function NextPDFViewer({ doc, width, height }: { doc: any; width?
       error={<ErrorOutlineRoundedIcon className={styles.error} sx={{ width: '50px', height: '50px' }} />}
     >
       <Page
-        className={styles.container}
         width={width}
         height={height}
         pageNumber={1} />
