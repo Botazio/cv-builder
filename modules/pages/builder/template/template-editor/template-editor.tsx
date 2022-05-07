@@ -29,7 +29,7 @@ function TemplateEditor({ document, activeTheme, setActiveTheme, listThemes, act
 
         <div className={styles.container_color_selectors}>
           {listThemes.elements.map((theme, index) => (
-            <ColorSelector key={index} primary={theme.primary} secondary={theme.secondary} />
+            <ColorSelector key={index} theme={theme} active={activeTheme} setActive={setActiveTheme} />
           ))}
         </div>
 

@@ -1,3 +1,4 @@
+import { TemplateTheme } from '@modules/cv-templates/utils/styles/template-theme';
 import { Builder } from '@modules/pages/builder/builder.reducer';
 import { Page, Font, Document, StyleSheet, View } from '@react-pdf/renderer';
 import BodyOne from '../../bodies/body-one';
@@ -45,7 +46,7 @@ Font.register({
   src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-bold-webfont.ttf",
 });
 
-function RioTemplate({ state }: { state: Builder; }) {
+function RioTemplate({ state }: { state: Builder; theme: TemplateTheme; }) {
   return (
     <Document>
       <Page size="A4" style={styles.page}>

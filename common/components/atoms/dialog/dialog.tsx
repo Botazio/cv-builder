@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import styles from './dialog.module.css';
+import * as ReactDOM from 'react-dom';
 
 interface DialogInterface {
   active: boolean,
@@ -7,9 +8,13 @@ interface DialogInterface {
   children?: React.ReactNode,
 }
 
+/**
+ * Displays a modal with the children inside
+ */
+
 function Dialog({ active, setActive, children }: DialogInterface) {
 
-  return (
+  return ReactDOM.createPortal(
     <div
       className={cn({
         [styles.dialog]: true,
@@ -20,7 +25,8 @@ function Dialog({ active, setActive, children }: DialogInterface) {
       <div className={styles.content} onClick={e => e.stopPropagation()}>
         {children}
       </div>
-    </div>
+    </div>,
+    document.getElementById('__next')
   );
 }
 
