@@ -1,4 +1,4 @@
-import { TemplateTheme } from '@modules/cv-templates/utils/styles/template-theme';
+import { TemplateTheme } from '@modules/cv-templates/utils/styles/template-theme.interface';
 import { Builder } from '@modules/pages/builder/builder.reducer';
 import { Page, Font, Document, StyleSheet, View } from '@react-pdf/renderer';
 import BodyOne from '../../bodies/body-one';
