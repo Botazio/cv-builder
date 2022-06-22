@@ -1,3 +1,4 @@
+import CloseButton from "@common/components/atoms/buttons/close-button/close-button";
 import Dialog from "@common/components/atoms/dialog/dialog";
 import SpaceDivider from "@common/components/atoms/dividers/space-divider/space-divider";
 import TemplatePreview from "@common/components/organisms/template-preview/template-preview";
@@ -20,6 +21,10 @@ function TemplateEditor({ document, activeTheme, setActiveTheme, listThemes, act
       active={active}
       setActive={setActive}>
       <div className={styles.container_editor}>
+
+        <div className={styles.container_close_button}>
+          <CloseButton setActive={setActive} />
+        </div>
 
         <div className={styles.container_template}>
           <TemplatePreview document={document} delimitedBy="height" />

@@ -2,6 +2,14 @@
   height: 80vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.container_close_button {
+  align-self: flex-end;
+  margin-right: calc(var(--divider-space) * -0.5);
+  margin-top: calc(var(--divider-space) * -0.5);
+  margin-bottom: calc(var(--divider-space) / 2);
 }
 
 .container_template {
