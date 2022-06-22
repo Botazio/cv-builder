@@ -1,4 +1,4 @@
-import { TemplateTheme } from '@modules/cv-templates/utils/styles/template-theme.interface';
+import { TemplateTheme } from '@modules/cv-templates/utils/styles/interfaces/template-theme.interface';
 import styles from './color-selector.module.css';
 import cn from 'classnames';
 

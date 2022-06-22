@@ -1,4 +1,4 @@
-import { propStyles } from './prop-styles.interface';
+import { propStyles } from '../interfaces/prop-styles.interface';
 import { StyleSheet } from '@react-pdf/renderer';
 
 /**

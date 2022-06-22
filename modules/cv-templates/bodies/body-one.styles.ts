@@ -1,4 +1,4 @@
-import { propStyles } from "../utils/styles/prop-styles.interface";
+import { propStyles } from "../utils/styles/interfaces/prop-styles.interface";
 
 /**
  * Styles for body-one component

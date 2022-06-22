@@ -1,11 +1,11 @@
-import { TemplateTheme } from '@modules/cv-templates/utils/styles/template-theme.interface';
+import { TemplateTheme } from '@modules/cv-templates/utils/styles/interfaces/template-theme.interface';
 import { Builder } from '@modules/pages/builder/builder.reducer';
 import { Page, Font, Document, StyleSheet, View } from '@react-pdf/renderer';
 import BodyOne from '../../bodies/body-one';
 import HeaderOne from '../../headers/header-one';
-import { propStyles } from '../../utils/styles/prop-styles.interface';
+import { propStyles } from '../../utils/styles/interfaces/prop-styles.interface';
 
-const RioStyles: propStyles = {
+const RIO_PROP_STYLES: propStyles = {
   primaryColor: '#B4FF9F',
   primaryFontColor: 'black',
   secondaryColor: 'blue',
@@ -27,12 +27,12 @@ const styles = StyleSheet.create({
   page: {
     padding: "30 30",
     fontFamily: 'robotoText',
-    fontSize: RioStyles.fontSizeParagraph,
-    color: RioStyles.primaryFontColor,
+    fontSize: RIO_PROP_STYLES.fontSizeParagraph,
+    color: RIO_PROP_STYLES.primaryFontColor,
   },
   divider: {
     width: '100%',
-    height: RioStyles.dividerSpace * 2 / 3
+    height: RIO_PROP_STYLES.dividerSpace * 2 / 3
   }
 });
 
@@ -50,9 +50,9 @@ function RioTemplate({ state }: { state: Builder; theme: TemplateTheme; }) {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <HeaderOne state={state} propStyles={RioStyles} />
+        <HeaderOne state={state} propStyles={RIO_PROP_STYLES} />
         <View style={styles.divider} />
-        <BodyOne state={state} propStyles={RioStyles} />
+        <BodyOne state={state} propStyles={RIO_PROP_STYLES} />
       </Page>
     </Document>
   );

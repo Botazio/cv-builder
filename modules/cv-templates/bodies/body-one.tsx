@@ -1,8 +1,8 @@
 import { Builder } from '@modules/pages/builder/builder.reducer';
 import { StyleSheet, View, Text } from '@react-pdf/renderer';
-import { createCommonStyles } from '../utils/styles/create-common-styles';
-import { mergeStyles } from '../utils/styles/merge-styles';
-import { propStyles } from '../utils/styles/prop-styles.interface';
+import { createCommonStyles } from '../utils/styles/functions/create-common-styles';
+import { mergeStyles } from '../utils/styles/functions/merge-styles';
+import { propStyles } from '../utils/styles/interfaces/prop-styles.interface';
 import { Reference } from '@modules/pages/builder/experience/sections/references/references-utils';
 import { Education } from '@modules/pages/builder/experience/sections/education/education-utils';
 import { Work } from '@modules/pages/builder/experience/sections/work/work-utils';
