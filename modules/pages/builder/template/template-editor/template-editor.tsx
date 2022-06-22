@@ -2,7 +2,7 @@ import CloseButton from "@common/components/atoms/buttons/close-button/close-but
 import Dialog from "@common/components/atoms/dialog/dialog";
 import SpaceDivider from "@common/components/atoms/dividers/space-divider/space-divider";
 import TemplatePreview from "@common/components/organisms/template-preview/template-preview";
-import { ListTemplateThemes, TemplateTheme } from "@modules/cv-templates/utils/styles/interfaces/template-theme.interface";
+import { ListTemplateThemes, TemplateTheme } from "@modules/cv-templates/templates/template-theme.interface";
 import ColorSelector from "./color-selector/color-selector";
 import styles from './template-editor.module.css';
 

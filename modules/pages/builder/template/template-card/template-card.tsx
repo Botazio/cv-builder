@@ -6,7 +6,7 @@ import TemplateCardEditorButton from './template-card-editor-button/template-car
 import { useEffect, useState } from 'react';
 import TemplateEditor from '../template-editor/template-editor';
 import TemplatePreview from '@common/components/organisms/template-preview/template-preview';
-import { ListTemplateThemes } from '@modules/cv-templates/utils/styles/interfaces/template-theme.interface';
+import { ListTemplateThemes } from '@modules/cv-templates/templates/template-theme.interface';
 
 interface TemplateCardInterface {
   id: string;
