@@ -1,5 +1,17 @@
-import { propStyles } from '../interfaces/prop-styles.interface';
 import { StyleSheet } from '@react-pdf/renderer';
+import { propStyles } from './interfaces/prop-styles.interface';
+
+
+/**
+ * This function is used to merge common styles with component styles
+ * 
+ */
+export function mergeStyles(commonStyles, componentStyles) {
+  const styles = { ...commonStyles, ...componentStyles };
+
+  return styles;
+}
+
 
 /**
  * This function is used to create common styles from prop styles.

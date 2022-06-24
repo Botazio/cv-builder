@@ -1,4 +1,5 @@
-import { ListTemplateThemes } from "@modules/cv-templates/utils/styles/interfaces/template-theme.interface";
+import { ListTemplateThemes } from "../template-theme.interface";
+
 
 export const RioTemplateThemes: ListTemplateThemes = {
   elements: [

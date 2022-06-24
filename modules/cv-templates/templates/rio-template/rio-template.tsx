@@ -25,7 +25,7 @@ function createRioPropStyles(theme: TemplateTheme): propStyles {
   };
 };
 
-const styles = StyleSheet.create({
+const templateStyles = StyleSheet.create({
   page: {
     padding: "30 30",
     fontFamily: 'robotoText',
@@ -53,9 +53,9 @@ function RioTemplate({ state, theme }: { state: Builder; theme: TemplateTheme; }
 
   return (
     <Document>
-      <Page size="A4" style={styles.page}>
+      <Page size="A4" style={templateStyles.page}>
         <HeaderOne state={state} propStyles={rioPropStyles} />
-        <View style={styles.divider} />
+        <View style={templateStyles.divider} />
         <BodyOne state={state} propStyles={rioPropStyles} />
       </Page>
     </Document>
