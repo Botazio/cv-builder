@@ -1,5 +1,5 @@
 import RioTemplate from "@modules/cv-templates/templates/rio-template/rio-template";
-import { RioTemplateThemes } from "@modules/cv-templates/templates/rio-template/rio-template-themes";
+import { RioTemplateThemes } from "@modules/cv-templates/templates/rio-template/rio-template-utils";
 import { useAppSelector } from "@state/hooks";
 import { useState } from "react";
 import TemplateCard from "../template-card/template-card";
