@@ -3,45 +3,42 @@ import cn from 'classnames';
 import TemplateCardHeader from './template-card-header/template-card-header';
 import SpaceDivider from '@common/components/atoms/dividers/space-divider/space-divider';
 import TemplateCardEditorButton from './template-card-editor-button/template-card-editor-button';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import TemplateEditor from '../template-editor/template-editor';
 import TemplatePreview from '@common/components/organisms/template-preview/template-preview';
-import { ListTemplateThemes } from '@modules/cv-templates/templates/template-theme.interface';
+import { useAppDispatch, useAppSelector } from '@state/hooks';
+import { getActiveTemplateID, getTemplate } from '../template.reducer';
+import { SET_ACTIVE_TEMPLATE } from '../template.actions';
+import { TemplateNames } from '@modules/cv-templates/templates/template-names.enum';
 
 interface TemplateCardInterface {
-  id: string;
+  id: TemplateNames;
   title: string;
   document: any;
-  listThemes: ListTemplateThemes,
-  selected: string;
-  setSelected: Function;
 }
 
 /**
  * Renders a card used to display a preview of a CV.
  */
-export default function TemplateCard({ id, title, document, listThemes, selected, setSelected }: TemplateCardInterface) {
+export default function TemplateCard({ id, title, document }: TemplateCardInterface) {
   const [isEditorActive, setIsEditorActive] = useState(false);
-  const [activeTheme, setActiveTheme] = useState(null);
 
-  useEffect(() => {
-    setActiveTheme(listThemes[0]);
-  }, []);
+  const state = useAppSelector(state => state.builder);
+  const activeTemplateID = getActiveTemplateID(state);
+  const template = getTemplate(state, id);
 
-  const handleChange = () => {
-    setSelected(id);
-  };
+  const dispatch = useAppDispatch();
 
   return (
     <div
       className={cn({
         [styles.container]: true,
-        [styles.selected]: id === selected,
-        [styles.unselected]: id !== selected
+        [styles.selected]: id === activeTemplateID,
+        [styles.unselected]: id !== activeTemplateID
       })}
-      onClick={handleChange}>
+      onClick={() => dispatch({ type: SET_ACTIVE_TEMPLATE, payload: template.name })}>
 
-      <TemplateCardHeader title={title} checked={id === selected} />
+      <TemplateCardHeader title={title} checked={id === activeTemplateID} />
 
       <SpaceDivider variant="small" />
 
@@ -54,9 +51,7 @@ export default function TemplateCard({ id, title, document, listThemes, selected
       {isEditorActive &&
         <TemplateEditor
           document={document}
-          activeTheme={activeTheme}
-          setActiveTheme={setActiveTheme}
-          listThemes={listThemes}
+          template={template}
           active={isEditorActive}
           setActive={setIsEditorActive} />}
 

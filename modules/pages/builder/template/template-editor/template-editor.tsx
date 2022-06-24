@@ -2,20 +2,18 @@ import CloseButton from "@common/components/atoms/buttons/close-button/close-but
 import Dialog from "@common/components/atoms/dialog/dialog";
 import SpaceDivider from "@common/components/atoms/dividers/space-divider/space-divider";
 import TemplatePreview from "@common/components/organisms/template-preview/template-preview";
-import { ListTemplateThemes, TemplateTheme } from "@modules/cv-templates/templates/template-theme.interface";
+import { Template } from "@modules/cv-templates/templates/template.interface";
 import ColorSelector from "./color-selector/color-selector";
 import styles from './template-editor.module.css';
 
 interface TemplateEditorInterface {
   document: any,
-  activeTheme: TemplateTheme,
-  setActiveTheme: Function,
-  listThemes: ListTemplateThemes,
+  template: Template,
   active: boolean,
   setActive: Function;
 }
 
-function TemplateEditor({ document, activeTheme, setActiveTheme, listThemes, active, setActive }: TemplateEditorInterface) {
+function TemplateEditor({ document, template, active, setActive }: TemplateEditorInterface) {
   return (
     <Dialog
       active={active}
@@ -33,8 +31,8 @@ function TemplateEditor({ document, activeTheme, setActiveTheme, listThemes, act
         <SpaceDivider variant="medium" />
 
         <div className={styles.container_color_selectors}>
-          {listThemes.elements.map((theme, index) => (
-            <ColorSelector key={index} theme={theme} active={activeTheme} setActive={setActiveTheme} />
+          {template.themes.map((theme, index) => (
+            <ColorSelector key={index} theme={theme} template={template} />
           ))}
         </div>
 
