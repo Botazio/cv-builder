@@ -16,7 +16,8 @@ export default function NextPDFViewer({ doc, width, height }: { doc: any; width?
     if (instance) {
       updateInstance();
     }
-  });
+  }, [doc]);
+
 
   if (!instance) return <div></div>;
 

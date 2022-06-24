@@ -48,7 +48,7 @@ Font.register({
   src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-bold-webfont.ttf",
 });
 
-function RioTemplate({ state, theme }: { state: Builder; theme: TemplateTheme; }) {
+function TorontoTemplate({ state, theme }: { state: Builder; theme: TemplateTheme; }) {
   const propStyles = createPropStyles(theme);
 
   return (
@@ -62,4 +62,4 @@ function RioTemplate({ state, theme }: { state: Builder; theme: TemplateTheme; }
   );
 }
 
-export default RioTemplate;
+export default TorontoTemplate;

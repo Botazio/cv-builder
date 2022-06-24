@@ -10,11 +10,13 @@ function ColorSelector({ theme, template }: { theme: TemplateTheme; template: Te
 
   const dispatch = useAppDispatch();
 
+  console.log(template);
+
   return (
     <div
       className={cn({
         [styles.container]: true,
-        [styles.active]: template.activeTheme === theme,
+        [styles.active]: JSON.stringify(template.activeTheme) === JSON.stringify(theme),
       })}
       onClick={() => dispatch({ type: SET_TEMPLATE_THEME, payload: theme, templateName: template.name })}>
       <div style={{ "backgroundColor": theme.primary }}></div>

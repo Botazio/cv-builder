@@ -1,5 +1,5 @@
 import { ListTemplateThemes, TemplateTheme } from "@modules/cv-templates/templates/template-theme.interface";
-import { RioTemplateThemes } from "@modules/cv-templates/templates/rio-template/rio-template-utils";
+import { RioTemplateThemes } from "@modules/cv-templates/templates/rio-template/rio-template-themes";
 import { TemplateNames } from "@modules/cv-templates/templates/template-names.enum";
 import { SET_ACTIVE_TEMPLATE, SET_TEMPLATE_THEME, TEMPLATEactions } from "./template.actions";
 import produce from 'immer';
@@ -19,6 +19,11 @@ const initialState: TemplatePage = {
   elements: {
     "rio-template": {
       name: TemplateNames.RIO_TEMPLATE,
+      activeTheme: RioTemplateThemes[0],
+      themes: RioTemplateThemes
+    },
+    "toronto-template": {
+      name: TemplateNames.TORONTO_TEMPLATE,
       activeTheme: RioTemplateThemes[0],
       themes: RioTemplateThemes
     }
