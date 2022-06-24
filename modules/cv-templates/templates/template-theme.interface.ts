@@ -1,5 +1,4 @@
-export interface ListTemplateThemes {
-  elements: TemplateTheme[];
+export interface ListTemplateThemes extends Array<TemplateTheme> {
 }
 
 export interface TemplateTheme {

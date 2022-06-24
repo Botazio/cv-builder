@@ -25,7 +25,7 @@ export default function TemplateCard({ id, title, document, listThemes, selected
   const [activeTheme, setActiveTheme] = useState(null);
 
   useEffect(() => {
-    setActiveTheme(listThemes.elements[0]);
+    setActiveTheme(listThemes[0]);
   }, []);
 
   const handleChange = () => {
