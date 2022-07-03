@@ -1,3 +1,4 @@
+import SaveStateWrapper from "@common/components/molecules/save-state-wrapper/save-state-wrapper";
 import PersonalPage from "@modules/pages/builder/personal/personal-page";
 
 /**
@@ -5,6 +6,8 @@ import PersonalPage from "@modules/pages/builder/personal/personal-page";
   */
 export default function Personal() {
   return (
-    <PersonalPage />
+    <SaveStateWrapper>
+      <PersonalPage />
+    </SaveStateWrapper>
   );
 }

@@ -1,3 +1,4 @@
+import SaveStateWrapper from "@common/components/molecules/save-state-wrapper/save-state-wrapper";
 import TemplatePage from "@modules/pages/builder/template/template-page";
 
 /**
@@ -5,6 +6,8 @@ import TemplatePage from "@modules/pages/builder/template/template-page";
   */
 export default function Template() {
   return (
-    <TemplatePage />
+    <SaveStateWrapper>
+      <TemplatePage />
+    </SaveStateWrapper>
   );
 }
