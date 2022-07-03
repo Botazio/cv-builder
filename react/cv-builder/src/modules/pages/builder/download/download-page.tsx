@@ -3,16 +3,16 @@ import BackButton from '@common/components/atoms/buttons/back-button/back-button
 import SpaceDivider from '@common/components/atoms/dividers/space-divider/space-divider';
 import LayoutDownload from '@modules/pages/builder/download/layout-download/layout-download';
 import DownloadPageBody from '@modules/pages/builder/download/download-page-body/download-page-body';
-import Link from 'next/link';
 import DownloadButton from './download-button/download-button';
 import { useAppSelector } from '@state/hooks';
 import { getActiveTemplateName } from '../template/template.reducer';
 import TemplatePreview from '@common/components/organisms/template-preview/template-preview';
 import TemplateDictionary from '@modules/cv-templates/templates/template-dictionary';
+import { Link } from 'react-router-dom';
 
 
 export default function DownloadPage() {
-  const [url, setUrl] = React.useState();
+  const [url, setUrl] = React.useState('');
 
   const state = useAppSelector(state => state.builder);
   const activeTemplateName = getActiveTemplateName(state);
@@ -29,7 +29,7 @@ export default function DownloadPage() {
       <SpaceDivider variant="large" />
       <DownloadButton url={url} />
       <SpaceDivider variant="small" />
-      <Link href="/builder/template">
+      <Link to="/builder/template">
         <a>
           <BackButton />
         </a>

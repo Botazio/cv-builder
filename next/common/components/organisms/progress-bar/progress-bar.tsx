@@ -4,8 +4,7 @@ import SwitchLight from './switch-light/switch-light';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
 import CreateRoundedIcon from '@mui/icons-material/CreateRounded';
-import { useRouter } from 'next/dist/client/router';
-import Link from 'next/link';
+import { Link, useLocation } from 'react-router-dom';
 
 /**
   * This component defines the progress made by the user to build his cv. 
@@ -13,7 +12,7 @@ import Link from 'next/link';
   */
 export default function ProgressBar() {
   const [active, setActive] = useState<string>();
-  const url: string = useRouter().pathname;
+  const url: string = useLocation().pathname;
 
   useEffect(() => {
     setActive(url);
@@ -21,7 +20,7 @@ export default function ProgressBar() {
 
   return (
     <div className={styles.container}>
-      <Link href="/builder/personal">
+      <Link to="/builder/personal">
         <a>
           <SwitchLight isActive={active === "/builder/personal"} title="Personal">
             <PersonRoundedIcon fontSize="medium" />
@@ -29,7 +28,7 @@ export default function ProgressBar() {
         </a>
       </Link>
 
-      <Link href="/builder/experience">
+      <Link to="/builder/experience">
         <a>
           <SwitchLight isActive={active === "/builder/experience"} title="Experience">
             <WorkRoundedIcon fontSize="medium" />
@@ -38,7 +37,7 @@ export default function ProgressBar() {
       </Link>
 
 
-      <Link href="/builder/template">
+      <Link to="/builder/template">
         <a>
           <SwitchLight isActive={active === "/builder/template"} title="Template">
             <CreateRoundedIcon fontSize="medium" />
