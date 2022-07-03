@@ -5,5 +5,6 @@ export interface ButtonInterface {
   type?: string;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
+  isActive?: boolean;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
 }

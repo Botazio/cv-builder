@@ -4,7 +4,6 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 
 /**
- * 
  * This component shows a check icon when active.
  */
 export default function CheckButton({ checked }: { checked: boolean; }) {

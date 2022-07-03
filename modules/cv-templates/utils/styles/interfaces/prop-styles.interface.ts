@@ -1,6 +1,6 @@
 
 /**
- * This interface is used by every component in cv templates as an argument.
+ * This interface is used by every template component in cv templates as an argument.
  * This allows to modify and reuse components in different templates.
  */
 export interface propStyles {

@@ -15,7 +15,7 @@ export default function TextField({ name, value, required, handleChange }: TextF
       <input
         className={styles.input}
         required={required ? required : false}
-        onChange={handleChange}
+        onInput={handleChange}
         value={value}
         type="text"
         name={name}

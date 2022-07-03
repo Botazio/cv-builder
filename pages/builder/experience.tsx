@@ -1,3 +1,4 @@
+import SaveStateWrapper from "@common/components/molecules/save-state-wrapper/save-state-wrapper";
 import ExperiencePage from "@modules/pages/builder/experience/experience-page";
 
 
@@ -6,6 +7,8 @@ import ExperiencePage from "@modules/pages/builder/experience/experience-page";
   */
 export default function Experience() {
   return (
-    <ExperiencePage />
+    <SaveStateWrapper>
+      <ExperiencePage />
+    </SaveStateWrapper>
   );
 }
