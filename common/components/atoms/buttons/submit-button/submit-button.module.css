@@ -7,6 +7,16 @@
   font-weight: bold;
   width: 200px;
 }
+
 .btn:hover {
   background-color: var(--primary-hover);
+}
+
+.disabled {
+  background-color: var(--primary-disabled);
+  cursor: auto;
+}
+
+.disabled:hover {
+  background-color: var(--primary-disabled);
 }

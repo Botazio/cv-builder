@@ -12,7 +12,7 @@ export default function DownloadButton({ url }: { url: string; }) {
 
   return (
     <a href={url} download={state.personal.name !== '' ? `${state.personal.name}'s CV.pdf` : 'Unknown_CV.pdf'}>
-      <SubmitButton value="Download" endIcon={<DownloadRoundedIcon />} />
+      <SubmitButton value="Download" endIcon={<DownloadRoundedIcon />} isActive={!!url} />
     </a>
   );
 }
