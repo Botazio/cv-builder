@@ -1,4 +1,4 @@
-import { ListTemplateThemes, TemplateTheme } from "@modules/cv-templates/templates/template-theme.interface";
+import { TemplateTheme } from "@modules/cv-templates/templates/template-theme.interface";
 import { RioTemplateThemes } from "@modules/cv-templates/templates/rio-template/rio-template-themes";
 import { TemplateNames } from "@modules/cv-templates/templates/template-names.enum";
 import { SET_ACTIVE_TEMPLATE, SET_TEMPLATE_THEME, TEMPLATEactions } from "./template.actions";
@@ -8,14 +8,14 @@ import { Template } from "@modules/cv-templates/templates/template.interface";
 
 
 export interface TemplatePage {
-  activeTemplateID: TemplateNames;
+  activeTemplateName: TemplateNames;
   elements: {
     [key in TemplateNames]: Template
   };
 };
 
 const initialState: TemplatePage = {
-  activeTemplateID: TemplateNames.RIO_TEMPLATE,
+  activeTemplateName: TemplateNames.RIO_TEMPLATE,
   elements: {
     "rio-template": {
       name: TemplateNames.RIO_TEMPLATE,
@@ -34,7 +34,7 @@ export function templateReducer(state = initialState, action: TEMPLATEactions) {
   switch (action.type) {
     case SET_ACTIVE_TEMPLATE: {
       const nextState = produce(state, draft => {
-        draft.activeTemplateID = action.payload;
+        draft.activeTemplateName = action.payload;
       });
 
       return nextState;
@@ -54,7 +54,7 @@ export function templateReducer(state = initialState, action: TEMPLATEactions) {
 }
 
 export function getActiveTemplateID(state: Builder): TemplateNames {
-  return state.template.activeTemplateID;
+  return state.template.activeTemplateName;
 }
 
 export function getTemplate(state: Builder, templateName: TemplateNames): Template {

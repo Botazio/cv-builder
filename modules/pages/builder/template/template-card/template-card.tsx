@@ -24,7 +24,7 @@ export default function TemplateCard({ id, title, document }: TemplateCardInterf
   const [isEditorActive, setIsEditorActive] = useState(false);
 
   const state = useAppSelector(state => state.builder);
-  const activeTemplateID = getActiveTemplateID(state);
+  const activeTemplateName = getActiveTemplateID(state);
   const template = getTemplate(state, id);
 
   const dispatch = useAppDispatch();
@@ -33,12 +33,12 @@ export default function TemplateCard({ id, title, document }: TemplateCardInterf
     <div
       className={cn({
         [styles.container]: true,
-        [styles.selected]: id === activeTemplateID,
-        [styles.unselected]: id !== activeTemplateID
+        [styles.selected]: id === activeTemplateName,
+        [styles.unselected]: id !== activeTemplateName
       })}
       onClick={() => dispatch({ type: SET_ACTIVE_TEMPLATE, payload: template.name })}>
 
-      <TemplateCardHeader title={title} checked={id === activeTemplateID} />
+      <TemplateCardHeader title={title} checked={id === activeTemplateName} />
 
       <SpaceDivider variant="small" />
 

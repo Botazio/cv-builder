@@ -10,8 +10,6 @@ function ColorSelector({ theme, template }: { theme: TemplateTheme; template: Te
 
   const dispatch = useAppDispatch();
 
-  console.log(template);
-
   return (
     <div
       className={cn({
