@@ -5,10 +5,12 @@
   justify-content: center;
   padding: var(--divider-space);
 }
-.container > h3 {
+
+.container>h3 {
   color: var(--input-field-label);
   font-weight: normal;
 }
+
 .cv_preview {
   background-color: var(--background-secondary);
   border-radius: var(--custom-border-radius);
@@ -17,7 +19,8 @@
   display: flex;
   justify-content: center;
 }
-.cv_preview > div {
+
+.cv_preview>div {
   width: 350px;
   max-width: calc(100% - (var(--divider-space)));
   box-shadow: var(--custom-box-shadow);

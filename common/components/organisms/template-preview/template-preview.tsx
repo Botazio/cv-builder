@@ -11,12 +11,13 @@ const NextPDFViewer = dynamic(() => import("../next-pdf-viewer/next-pdf-viewer")
 interface TemplatePreviewInterface {
   delimitedBy: "width" | "height",
   document: any,
+  setUrl?: Function,
 }
 
 /**
  * Displays a preview for a pdf document. Gets the dimensions from a container reference
  */
-export default function TemplatePreview({ delimitedBy, document }: TemplatePreviewInterface) {
+export default function TemplatePreview({ delimitedBy, document, setUrl }: TemplatePreviewInterface) {
   const [rect, ref] = useClientRect();
 
   return (
@@ -26,7 +27,7 @@ export default function TemplatePreview({ delimitedBy, document }: TemplatePrevi
         [styles.delimited_by_width]: delimitedBy === "width",
         [styles.delimited_by_height]: delimitedBy === "height"
       })}>
-      {rect !== null && <NextPDFViewer width={rect.width} height={rect.height} doc={document} />}
+      {rect !== null && <NextPDFViewer width={rect.width} height={rect.height} doc={document} setUrl={setUrl} />}
     </div>
   );
 }

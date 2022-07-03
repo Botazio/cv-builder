@@ -7,7 +7,7 @@ import { useState } from 'react';
 import TemplateEditor from '../template-editor/template-editor';
 import TemplatePreview from '@common/components/organisms/template-preview/template-preview';
 import { useAppDispatch, useAppSelector } from '@state/hooks';
-import { getActiveTemplateID, getTemplate } from '../template.reducer';
+import { getActiveTemplateName, getTemplate } from '../template.reducer';
 import { SET_ACTIVE_TEMPLATE } from '../template.actions';
 import { TemplateNames } from '@modules/cv-templates/templates/template-names.enum';
 
@@ -24,7 +24,7 @@ export default function TemplateCard({ id, title, document }: TemplateCardInterf
   const [isEditorActive, setIsEditorActive] = useState(false);
 
   const state = useAppSelector(state => state.builder);
-  const activeTemplateName = getActiveTemplateID(state);
+  const activeTemplateName = getActiveTemplateName(state);
   const template = getTemplate(state, id);
 
   const dispatch = useAppDispatch();

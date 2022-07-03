@@ -4,19 +4,30 @@ import SpaceDivider from '@common/components/atoms/dividers/space-divider/space-
 import LayoutDownload from '@modules/pages/builder/download/layout-download/layout-download';
 import DownloadPageBody from '@modules/pages/builder/download/download-page-body/download-page-body';
 import Link from 'next/link';
-import { useAppSelector } from '@state/hooks';
 import DownloadButton from './download-button/download-button';
+import { useAppSelector } from '@state/hooks';
+import { getActiveTemplateName } from '../template/template.reducer';
+import TemplatePreview from '@common/components/organisms/template-preview/template-preview';
+import TemplateDictionary from '@modules/cv-templates/templates/template-dictionary';
 
 
 export default function DownloadPage() {
+  const [url, setUrl] = React.useState();
 
   const state = useAppSelector(state => state.builder);
+  const activeTemplateName = getActiveTemplateName(state);
+
 
   return (
     <LayoutDownload>
-      <DownloadPageBody />
+      <DownloadPageBody>
+        <TemplatePreview
+          document={<TemplateDictionary state={state} activeTemplateName={activeTemplateName} />}
+          delimitedBy="width"
+          setUrl={setUrl} />
+      </DownloadPageBody>
       <SpaceDivider variant="large" />
-      <DownloadButton />
+      <DownloadButton url={url} />
       <SpaceDivider variant="small" />
       <Link href="/builder/template">
         <a>

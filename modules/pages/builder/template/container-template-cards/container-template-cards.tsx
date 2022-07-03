@@ -1,6 +1,6 @@
 import RioTemplate from "@modules/cv-templates/templates/rio-template/rio-template";
 import { TemplateNames } from "@modules/cv-templates/templates/template-names.enum";
-import TorontoTemplate from "@modules/cv-templates/templates/toronto-template copy/toronto-template";
+import TorontoTemplate from "@modules/cv-templates/templates/toronto-template/toronto-template";
 import { useAppSelector } from "@state/hooks";
 import TemplateCard from "../template-card/template-card";
 import { getTemplateActiveTheme } from "../template.reducer";

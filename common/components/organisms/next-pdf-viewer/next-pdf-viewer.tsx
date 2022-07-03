@@ -9,7 +9,7 @@ import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 
-export default function NextPDFViewer({ doc, width, height }: { doc: any; width?: number; height?: number; }) {
+export default function NextPDFViewer({ doc, width, height, setUrl }: { doc: any; width?: number; height?: number; setUrl?: Function; }) {
   const [instance, updateInstance] = usePDF({ document: doc });
 
   useEffect(() => {
@@ -17,6 +17,12 @@ export default function NextPDFViewer({ doc, width, height }: { doc: any; width?
       updateInstance();
     }
   }, [doc]);
+
+  useEffect(() => {
+    if (instance && setUrl) {
+      setUrl(instance.url);
+    }
+  }, [instance, setUrl]);
 
 
   if (!instance) return <div></div>;

@@ -53,7 +53,7 @@ export function templateReducer(state = initialState, action: TEMPLATEactions) {
   }
 }
 
-export function getActiveTemplateID(state: Builder): TemplateNames {
+export function getActiveTemplateName(state: Builder): TemplateNames {
   return state.template.activeTemplateName;
 }
 
