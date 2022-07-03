@@ -1,0 +1,15 @@
+.container {
+  aspect-ratio: 1 / 1.4142;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.delimited_by_width {
+  width: 100%;
+}
+
+.delimited_by_height {
+  height: 100%;
+}

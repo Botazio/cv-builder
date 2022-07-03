@@ -1,0 +1,12 @@
+.btn {
+  composes: btn from global;
+  background-color: var(--backgrond-secondary);
+  color: var(--input-field-label);
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: bold;
+  width: auto;
+}
+.btn:hover {
+  background-color: transparent;
+}

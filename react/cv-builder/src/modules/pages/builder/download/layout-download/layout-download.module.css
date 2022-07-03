@@ -1,0 +1,16 @@
+.page_header {
+  background-color: var(--background-primary);
+  color: var(--background-primary-font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page_body {
+  background-color: var(--background-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 90px;
+}

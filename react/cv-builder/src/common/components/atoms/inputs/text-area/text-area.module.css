@@ -1,0 +1,12 @@
+.textarea {
+  composes: input-field from global;
+  height: 150px;
+}
+.textarea:hover, .textarea:focus {
+  background-color: var(--input-field-hover);
+  box-sizing: border-box;
+  transition: background-color 0.25s ease-in-out;
+}
+.textarea:focus {
+  outline: none;
+}

@@ -1,0 +1,46 @@
+/* Global variables shared across all the components */
+:root {
+  /* Font families */
+  --font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  /* Component colors */
+  --primary: #006BE9;
+  --primary-font-color: white;
+  --primary-hover: #0058D2;
+  --primary-transparent: rgba(0, 107, 233, 0.1);
+  --primary-disabled: #8E8E8E;
+
+  --secondary: white;
+  --secondary-font-color: #0E1E25;
+  --secondary-hover: #dddddd;
+
+  --danger: #FE4256;
+  --danger-font-color: white;
+  --danger-hover: #FFBABD;
+  --danger-transparent: #FFBABD;
+
+  /* Background colors */
+  --background-primary: #0E1E25;
+  --background-primary-font-color: white;
+
+  --background-secondary: #fafafa;
+
+  --background-dialog: rgba(0, 0, 0, 0.4);
+
+  /* Inputs */
+  --input-field-background: #E9E9E9;
+  --input-field-hover: #dddddd;
+  --input-field-label: #8E8E8E;
+  --input-btn-height: 48px;
+
+  /* Misc */
+  --divider-space: 30px;
+  --divider-primary-color: rgb(234, 234, 234);
+  --divider-secondary-color: #8E8E8E;
+
+  --builder-width: 820px;
+
+  --custom-box-shadow: 4px 4px 24px rgb(139 140 165 / 20%);
+  --custom-border-radius: 12px;
+}

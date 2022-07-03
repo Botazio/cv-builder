@@ -1,0 +1,24 @@
+.btn {
+  composes: btn from global;
+  text-transform: none;
+  width: 100%;
+  font-weight: 500;
+  background-color: transparent;
+}
+.btn::first-letter {
+  text-transform: uppercase;
+}
+.primary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.primary:hover {
+  background-color: var(--primary-transparent);
+}
+.secondary {
+  border: 1px solid var(--danger);
+  color: var(--danger);  
+}
+.secondary:hover {
+  background-color: var(--danger-transparent);
+}

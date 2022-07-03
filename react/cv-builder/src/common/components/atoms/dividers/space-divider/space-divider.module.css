@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+}
+.small {
+  height: calc(var(--divider-space) / 2);
+}
+.medium {
+  height: var(--divider-space);
+}
+.large {
+  height: calc(var(--divider-space) * 3 / 2);
+}
