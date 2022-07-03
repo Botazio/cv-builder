@@ -1,7 +1,0 @@
-.container > label{
-  color: var(--input-field-label);
-  display: block;
-  line-height: 18px;
-  margin-bottom: 7px;
-  transform-origin: top left;
-}

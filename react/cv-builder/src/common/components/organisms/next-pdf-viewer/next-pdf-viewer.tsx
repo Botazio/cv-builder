@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from './next-pdf-viewer.module.css';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { usePDF } from '@react-pdf/renderer';
-import workerSrc from "../../../../pdf-worker";
 import { CircularProgress } from '@mui/material';
 import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
-
-pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 
 export default function NextPDFViewer({ doc, width, height, setUrl }: { doc: any; width?: number; height?: number; setUrl?: Function; }) {

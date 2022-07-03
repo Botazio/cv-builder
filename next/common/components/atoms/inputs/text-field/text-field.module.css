@@ -1,9 +1,0 @@
-.input {
-  composes: input-field from global;
-  height: var(--input-btn-height);
-}
-.input:hover, .input:focus {
-  background-color: var(--input-field-hover);
-  box-sizing: border-box;
-  transition: background-color 0.25s ease-in-out;
-}

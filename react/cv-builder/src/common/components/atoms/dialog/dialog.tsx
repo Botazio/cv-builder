@@ -26,7 +26,7 @@ function Dialog({ active, setActive, children }: DialogInterface) {
         {children}
       </div>
     </div>,
-    document.getElementById('__next')
+    document.getElementById('root')
   );
 }
 
