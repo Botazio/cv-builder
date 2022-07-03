@@ -4,7 +4,7 @@ import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
 import { useAppSelector } from '@state/hooks';
 
 /**
- * Displays a button to download a pdf document. It also saves the document instance in the redux state.
+ * Displays a button to download a pdf document.
  */
 export default function DownloadButton({ url }: { url: string; }) {
 
