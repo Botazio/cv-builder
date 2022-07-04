@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import builderReducer from '@modules/pages/builder/builder.reducer';
+import builderReducer from 'modules/pages/builder/builder.reducer';
 import { getPersistedState } from './utils';
 
 export const store = configureStore({

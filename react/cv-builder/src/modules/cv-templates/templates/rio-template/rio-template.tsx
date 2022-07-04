@@ -1,5 +1,5 @@
-import { TemplateTheme } from '@modules/cv-templates/templates/template-theme.interface';
-import { Builder } from '@modules/pages/builder/builder.reducer';
+import { TemplateTheme } from 'modules/cv-templates/templates/template-theme.interface';
+import { Builder } from 'modules/pages/builder/builder.reducer';
 import { Page, Font, Document, StyleSheet, View } from '@react-pdf/renderer';
 import BodyOne from '../../bodies/body-one';
 import HeaderOne from '../../headers/header-one';

@@ -1,10 +1,10 @@
-import SpaceDivider from '@common/components/atoms/dividers/space-divider/space-divider';
-import SubmitButton from '@common/components/atoms/buttons/submit-button/submit-button';
-import LayoutBuilder from '@common/components/layouts/layout-builder/layout-builder';
+import SpaceDivider from 'common/components/atoms/dividers/space-divider/space-divider';
+import SubmitButton from 'common/components/atoms/buttons/submit-button/submit-button';
+import LayoutBuilder from 'common/components/layouts/layout-builder/layout-builder';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import BackButton from '@common/components/atoms/buttons/back-button/back-button';
-import LayoutBuilderHeader from '@common/components/layouts/layout-builder/layout-builder-header/layout-builder-header';
-import LayoutBuilderBody from '@common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
+import BackButton from 'common/components/atoms/buttons/back-button/back-button';
+import LayoutBuilderHeader from 'common/components/layouts/layout-builder/layout-builder-header/layout-builder-header';
+import LayoutBuilderBody from 'common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
 import ContainerTemplateCards from './container-template-cards/container-template-cards';
 import { Link } from 'react-router-dom';
 

@@ -1,6 +1,6 @@
-import SpaceDivider from '@common/components/atoms/dividers/space-divider/space-divider';
-import LayoutBuilderHeader from '@common/components/layouts/layout-builder/layout-builder-header/layout-builder-header';
-import LayoutDefault from '@common/components/layouts/layout-default/layout-default';
+import SpaceDivider from 'common/components/atoms/dividers/space-divider/space-divider';
+import LayoutBuilderHeader from 'common/components/layouts/layout-builder/layout-builder-header/layout-builder-header';
+import LayoutDefault from 'common/components/layouts/layout-default/layout-default';
 import styles from './layout-download.module.css';
 
 /**

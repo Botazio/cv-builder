@@ -1,12 +1,12 @@
-import SpaceDivider from "@common/components/atoms/dividers/space-divider/space-divider";
+import SpaceDivider from "common/components/atoms/dividers/space-divider/space-divider";
 import { IterativeExperienceSections } from "../../experience-sections.enum";
 import styles from "./section-form-footer.module.css";
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import { Grid } from "@mui/material";
-import SectionButton from "@common/components/atoms/buttons/section-button/section-button";
+import SectionButton from "common/components/atoms/buttons/section-button/section-button";
 import { DELETE_FORM, SAVE_FORM } from "../../experience.actions";
-import { useAppDispatch } from "@state/hooks";
+import { useAppDispatch } from "state/hooks";
 
 
 /**

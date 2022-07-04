@@ -1,4 +1,4 @@
-import FormFooter from '@common/components/molecules/form-footer/form-footer';
+import FormFooter from 'common/components/molecules/form-footer/form-footer';
 import { useState } from 'react';
 import { Collapse } from '@mui/material';
 import SectionHeader from '../../sections-forms/section-header/section-header';

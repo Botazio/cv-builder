@@ -1,5 +1,5 @@
 import React from "react";
-import LineDivider from "@common/components/atoms/dividers/line-divider/line-divider";
+import LineDivider from "common/components/atoms/dividers/line-divider/line-divider";
 import styles from "./section-body.module.css";
 
 

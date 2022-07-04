@@ -1,10 +1,10 @@
-import { TemplateTheme } from "@modules/cv-templates/templates/template-theme.interface";
-import { RioTemplateThemes } from "@modules/cv-templates/templates/rio-template/rio-template-themes";
-import { TemplateNames } from "@modules/cv-templates/templates/template-names.enum";
+import { TemplateTheme } from "modules/cv-templates/templates/template-theme.interface";
+import { RioTemplateThemes } from "modules/cv-templates/templates/rio-template/rio-template-themes";
+import { TemplateNames } from "modules/cv-templates/templates/template-names.enum";
 import { SET_ACTIVE_TEMPLATE, SET_TEMPLATE_THEME, TEMPLATEactions } from "./template.actions";
 import produce from 'immer';
 import { Builder } from "../builder.reducer";
-import { Template } from "@modules/cv-templates/templates/template.interface";
+import { Template } from "modules/cv-templates/templates/template.interface";
 
 
 export interface TemplatePage {

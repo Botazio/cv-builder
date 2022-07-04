@@ -1,4 +1,4 @@
-import { Builder } from '@modules/pages/builder/builder.reducer';
+import { Builder } from 'modules/pages/builder/builder.reducer';
 import { StyleSheet, View, Text } from '@react-pdf/renderer';
 import { propStyles } from "../utils/styles/interfaces/prop-styles.interface";
 

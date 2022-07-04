@@ -1,8 +1,8 @@
-import { TemplateTheme } from '@modules/cv-templates/templates/template-theme.interface';
+import { TemplateTheme } from 'modules/cv-templates/templates/template-theme.interface';
 import styles from './color-selector.module.css';
 import cn from 'classnames';
-import { Template } from '@modules/cv-templates/templates/template.interface';
-import { useAppDispatch } from '@state/hooks';
+import { Template } from 'modules/cv-templates/templates/template.interface';
+import { useAppDispatch } from 'state/hooks';
 import { SET_TEMPLATE_THEME } from '../../template.actions';
 
 

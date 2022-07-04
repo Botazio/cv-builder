@@ -1,12 +1,7 @@
-import React from 'react';
-import dynamic from "next/dynamic";
 import cn from 'classnames';
-import { useClientRect } from '@common/utils/hooks';
+import { useClientRect } from 'common/utils/hooks';
 import styles from './template-preview.module.css';
-
-const NextPDFViewer = dynamic(() => import("../next-pdf-viewer/next-pdf-viewer"), {
-  ssr: false
-});
+import NextPDFViewer from '../next-pdf-viewer/next-pdf-viewer';
 
 interface TemplatePreviewInterface {
   delimitedBy: "width" | "height",

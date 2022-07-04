@@ -1,5 +1,5 @@
-import { TemplateNames } from "@modules/cv-templates/templates/template-names.enum";
-import { TemplateTheme } from "@modules/cv-templates/templates/template-theme.interface";
+import { TemplateNames } from "modules/cv-templates/templates/template-names.enum";
+import { TemplateTheme } from "modules/cv-templates/templates/template-theme.interface";
 
 export const SET_ACTIVE_TEMPLATE = '[TEMPLATE] Change Active Template';
 export const SET_TEMPLATE_THEME = '[TEMPLATE] Change Template Theme';

@@ -1,8 +1,8 @@
 import WorkSectionForm from './work-section-form/work-section-form';
 import TemplateSection from '../template-section/template-section';
 import WorkOutlineRoundedIcon from '@mui/icons-material/WorkOutlineRounded';
-import { useAppDispatch, useAppSelector } from '@state/hooks';
-import OutlinedButton from '@common/components/atoms/buttons/outlined-button/outlined-button';
+import { useAppDispatch, useAppSelector } from 'state/hooks';
+import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 import { ADD_FORM } from '../../experience.actions';
 import { IterativeExperienceSections } from '../../experience-sections.enum';

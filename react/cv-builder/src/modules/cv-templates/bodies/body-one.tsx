@@ -1,9 +1,9 @@
-import { Builder } from '@modules/pages/builder/builder.reducer';
+import { Builder } from 'modules/pages/builder/builder.reducer';
 import { StyleSheet, View, Text } from '@react-pdf/renderer';
 import { propStyles } from '../utils/styles/interfaces/prop-styles.interface';
-import { Reference } from '@modules/pages/builder/experience/sections/references/references-utils';
-import { Education } from '@modules/pages/builder/experience/sections/education/education-utils';
-import { Work } from '@modules/pages/builder/experience/sections/work/work-utils';
+import { Reference } from 'modules/pages/builder/experience/sections/references/references-utils';
+import { Education } from 'modules/pages/builder/experience/sections/education/education-utils';
+import { Work } from 'modules/pages/builder/experience/sections/work/work-utils';
 import { WordsSeparator } from '../utils/components/words-separator';
 import { createCommonStyles, mergeStyles } from '../utils/styles/functions';
 

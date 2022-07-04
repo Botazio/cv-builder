@@ -1,15 +1,15 @@
 import styles from './personal-form.module.css';
-import TextField from '@common/components/atoms/inputs/text-field/text-field';
-import InputWrapper from '@common/components/atoms/inputs/input-wrapper/input-wrapper';
-import PhotoField from '@common/components/atoms/inputs/photo-field/photo-field';
+import TextField from 'common/components/atoms/inputs/text-field/text-field';
+import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
+import PhotoField from 'common/components/atoms/inputs/photo-field/photo-field';
 import { Collapse, Grid } from '@mui/material';
 import React, { useState } from 'react';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
-import FormFooter from '@common/components/molecules/form-footer/form-footer';
-import { useAppDispatch, useAppSelector } from '@state/hooks';
+import FormFooter from 'common/components/molecules/form-footer/form-footer';
+import { useAppDispatch, useAppSelector } from 'state/hooks';
 import { SET_FORM_FIELD } from '../personal.actions';
-import OutlinedButton from '@common/components/atoms/buttons/outlined-button/outlined-button';
+import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
 
 /**
   * Form for the page personal. That page is the first page of the cv builder.

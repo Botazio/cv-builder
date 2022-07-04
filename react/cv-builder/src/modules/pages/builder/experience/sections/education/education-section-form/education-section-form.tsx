@@ -1,11 +1,11 @@
 import SectionBody from '../../../sections-forms/section-body/section-body';
 import { Grid } from '@mui/material';
-import InputWrapper from '@common/components/atoms/inputs/input-wrapper/input-wrapper';
-import TextField from '@common/components/atoms/inputs/text-field/text-field';
-import TextArea from '@common/components/atoms/inputs/text-area/text-area';
+import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
+import TextField from 'common/components/atoms/inputs/text-field/text-field';
+import TextArea from 'common/components/atoms/inputs/text-area/text-area';
 import { Education } from '../education-utils';
 import { IterativeExperienceSections } from '../../../experience-sections.enum';
-import { useAppDispatch } from '@state/hooks';
+import { useAppDispatch } from 'state/hooks';
 import SectionFormFooter from '../../../sections-forms/section-form-footer/section-form-footer';
 import { SET_FORM_FIELD } from '../../../experience.actions';
 

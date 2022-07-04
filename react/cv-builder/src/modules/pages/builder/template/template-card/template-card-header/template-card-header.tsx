@@ -1,4 +1,4 @@
-import CheckButton from '@common/components/atoms/buttons/check-button/check-button';
+import CheckButton from 'common/components/atoms/buttons/check-button/check-button';
 import styles from './template-card-header.module.css';
 
 export default function TemplateCardHeader({ title, checked }: { title: string; checked: boolean; }) {

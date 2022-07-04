@@ -1,8 +1,8 @@
 import TemplateSection from '../template-section/template-section';
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
 import LanguagesSectionForm from './languages-section-form/languages-section-form';
-import { useAppDispatch, useAppSelector } from '@state/hooks';
-import OutlinedButton from '@common/components/atoms/buttons/outlined-button/outlined-button';
+import { useAppDispatch, useAppSelector } from 'state/hooks';
+import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
 import { IterativeExperienceSections } from '../../experience-sections.enum';
 import { ADD_FORM } from '../../experience.actions';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';

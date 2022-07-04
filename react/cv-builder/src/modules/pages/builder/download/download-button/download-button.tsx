@@ -1,7 +1,7 @@
-import SubmitButton from '@common/components/atoms/buttons/submit-button/submit-button';
+import SubmitButton from 'common/components/atoms/buttons/submit-button/submit-button';
 import React from 'react';
 import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
-import { useAppSelector } from '@state/hooks';
+import { useAppSelector } from 'state/hooks';
 
 /**
  * Displays a button to download a pdf document.

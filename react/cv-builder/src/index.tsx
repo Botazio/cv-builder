@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/globals.css';
 import {
   BrowserRouter,
   Routes,
@@ -13,7 +13,7 @@ import DownloadPage from './modules/pages/builder/download/download-page';
 import App from './App';
 import Home from './modules/pages/home/home';
 import { Provider } from 'react-redux';
-import { store } from '@state/store';
+import { store } from 'state/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -23,8 +23,7 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<Home />} />
+          <Route path="/">
             <Route path="builder">
               <Route path="personal" element={<PersonalPage />} />
               <Route path="experience" element={<ExperiencePage />} />

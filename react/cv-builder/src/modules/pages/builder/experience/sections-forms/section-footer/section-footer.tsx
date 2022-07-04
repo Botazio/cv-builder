@@ -1,4 +1,4 @@
-import SpaceDivider from "@common/components/atoms/dividers/space-divider/space-divider";
+import SpaceDivider from "common/components/atoms/dividers/space-divider/space-divider";
 import styles from "./section-footer.module.css";
 
 

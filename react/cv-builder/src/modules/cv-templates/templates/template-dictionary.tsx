@@ -1,4 +1,4 @@
-import { getTemplateActiveTheme } from '@modules/pages/builder/template/template.reducer';
+import { getTemplateActiveTheme } from 'modules/pages/builder/template/template.reducer';
 import React from 'react';
 import RioTemplate from './rio-template/rio-template';
 import { TemplateNames } from './template-names.enum';

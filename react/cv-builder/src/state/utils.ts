@@ -1,4 +1,4 @@
-import { storageAvailable } from "@common/utils/functions";
+import { storageAvailable } from "common/utils/functions";
 
 const STORE: string = "cv_builder_store";
 

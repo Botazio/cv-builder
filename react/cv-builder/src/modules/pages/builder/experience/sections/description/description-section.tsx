@@ -1,14 +1,14 @@
 import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
-import InputWrapper from '@common/components/atoms/inputs/input-wrapper/input-wrapper';
+import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
 import SectionBody from '../../sections-forms/section-body/section-body';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import { Collapse, Grid } from '@mui/material';
-import SectionButton from '@common/components/atoms/buttons/section-button/section-button';
+import SectionButton from 'common/components/atoms/buttons/section-button/section-button';
 import { useState } from 'react';
 import SectionFooter from '../../sections-forms/section-footer/section-footer';
 import SectionHeader from '../../sections-forms/section-header/section-header';
-import TextArea from '@common/components/atoms/inputs/text-area/text-area';
-import { useAppDispatch, useAppSelector } from '@state/hooks';
+import TextArea from 'common/components/atoms/inputs/text-area/text-area';
+import { useAppDispatch, useAppSelector } from 'state/hooks';
 import { SET_DESCRIPTION } from '../../experience.actions';
 
 

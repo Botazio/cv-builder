@@ -1,15 +1,15 @@
 import styles from './template-card.module.css';
 import cn from 'classnames';
 import TemplateCardHeader from './template-card-header/template-card-header';
-import SpaceDivider from '@common/components/atoms/dividers/space-divider/space-divider';
+import SpaceDivider from 'common/components/atoms/dividers/space-divider/space-divider';
 import TemplateCardEditorButton from './template-card-editor-button/template-card-editor-button';
 import { useState } from 'react';
 import TemplateEditor from '../template-editor/template-editor';
-import TemplatePreview from '@common/components/organisms/template-preview/template-preview';
-import { useAppDispatch, useAppSelector } from '@state/hooks';
+import TemplatePreview from 'common/components/organisms/template-preview/template-preview';
+import { useAppDispatch, useAppSelector } from 'state/hooks';
 import { getActiveTemplateName, getTemplate } from '../template.reducer';
 import { SET_ACTIVE_TEMPLATE } from '../template.actions';
-import { TemplateNames } from '@modules/cv-templates/templates/template-names.enum';
+import { TemplateNames } from 'modules/cv-templates/templates/template-names.enum';
 
 interface TemplateCardInterface {
   id: TemplateNames;

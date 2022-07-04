@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import styles from './next-pdf-viewer.module.css';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { usePDF } from '@react-pdf/renderer';
 import { CircularProgress } from '@mui/material';
 import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';

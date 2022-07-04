@@ -1,8 +1,8 @@
-import CloseButton from "@common/components/atoms/buttons/close-button/close-button";
-import Dialog from "@common/components/atoms/dialog/dialog";
-import SpaceDivider from "@common/components/atoms/dividers/space-divider/space-divider";
-import TemplatePreview from "@common/components/organisms/template-preview/template-preview";
-import { Template } from "@modules/cv-templates/templates/template.interface";
+import CloseButton from "common/components/atoms/buttons/close-button/close-button";
+import Dialog from "common/components/atoms/dialog/dialog";
+import SpaceDivider from "common/components/atoms/dividers/space-divider/space-divider";
+import TemplatePreview from "common/components/organisms/template-preview/template-preview";
+import { Template } from "modules/cv-templates/templates/template.interface";
 import ColorSelector from "./color-selector/color-selector";
 import styles from './template-editor.module.css';
 
