@@ -27,7 +27,13 @@ export default function EducationSection() {
       bottomDivider={true}>
 
       {state.elements.map((element) => {
-        if (element.id !== state.activeElementID) {
+        if (element.id === state.activeElementID) {
+          return (
+            <EducationSectionForm
+              key={element.id}
+              state={element} />
+          );
+        } else {
           return (
             <SavedForm
               key={element.id}
@@ -36,13 +42,6 @@ export default function EducationSection() {
               elementID={element.id}
               sectionCode={IterativeExperienceSections.EDUCATION}
             />
-          );
-        }
-        else if (element.id === state.activeElementID) {
-          return (
-            <EducationSectionForm
-              key={element.id}
-              state={element} />
           );
         }
       })}

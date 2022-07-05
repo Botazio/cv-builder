@@ -21,28 +21,22 @@ export default function ProgressBar() {
   return (
     <div className={styles.container}>
       <Link to="/builder/personal">
-        <a>
-          <SwitchLight isActive={active === "/builder/personal"} title="Personal">
-            <PersonRoundedIcon fontSize="medium" />
-          </SwitchLight>
-        </a>
+        <SwitchLight isActive={active === "/builder/personal"} title="Personal">
+          <PersonRoundedIcon fontSize="medium" />
+        </SwitchLight>
       </Link>
 
       <Link to="/builder/experience">
-        <a>
-          <SwitchLight isActive={active === "/builder/experience"} title="Experience">
-            <WorkRoundedIcon fontSize="medium" />
-          </SwitchLight>
-        </a>
+        <SwitchLight isActive={active === "/builder/experience"} title="Experience">
+          <WorkRoundedIcon fontSize="medium" />
+        </SwitchLight>
       </Link>
 
 
       <Link to="/builder/template">
-        <a>
-          <SwitchLight isActive={active === "/builder/template"} title="Template">
-            <CreateRoundedIcon fontSize="medium" />
-          </SwitchLight>
-        </a>
+        <SwitchLight isActive={active === "/builder/template"} title="Template">
+          <CreateRoundedIcon fontSize="medium" />
+        </SwitchLight>
       </Link>
     </div>
   );

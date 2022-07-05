@@ -28,7 +28,13 @@ export default function ReferencesSection() {
       bottomDivider={true}>
 
       {state.elements.map((element) => {
-        if (element.id !== state.activeElementID) {
+        if (element.id === state.activeElementID) {
+          return (
+            <ReferencesSectionForm
+              key={element.id}
+              state={element} />
+          );
+        } else {
           return (
             <SavedForm
               key={element.id}
@@ -37,13 +43,6 @@ export default function ReferencesSection() {
               elementID={element.id}
               sectionCode={IterativeExperienceSections.REFERENCES}
             />
-          );
-        }
-        else if (element.id === state.activeElementID) {
-          return (
-            <ReferencesSectionForm
-              key={element.id}
-              state={element} />
           );
         }
       })}

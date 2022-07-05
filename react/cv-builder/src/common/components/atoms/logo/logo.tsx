@@ -1,4 +1,5 @@
 import styles from './logo.module.css';
+import { ReactComponent as AppLogo } from './logo.svg';
 
 /**
   * Logo for the web app.
@@ -6,7 +7,7 @@ import styles from './logo.module.css';
 export default function Logo() {
   return (
     <div className={styles.container}>
-      <img src="/logo.svg" height={45} width={200} />
+      <AppLogo height={45} width={200} />
     </div>
   );
 }

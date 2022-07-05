@@ -26,7 +26,13 @@ export default function SkillsSection() {
       bottomDivider={true}>
 
       {state.elements.map((element) => {
-        if (element.id !== state.activeElementID) {
+        if (element.id === state.activeElementID) {
+          return (
+            <SkillsSectionForm
+              key={element.id}
+              state={element} />
+          );
+        } else {
           return (
             <SavedForm
               key={element.id}
@@ -34,13 +40,6 @@ export default function SkillsSection() {
               elementID={element.id}
               sectionCode={IterativeExperienceSections.SKILLS}
             />
-          );
-        }
-        else if (element.id === state.activeElementID) {
-          return (
-            <SkillsSectionForm
-              key={element.id}
-              state={element} />
           );
         }
       })}

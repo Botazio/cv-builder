@@ -27,7 +27,13 @@ export default function LanguagesSection() {
       bottomDivider={true}>
 
       {state.elements.map((element) => {
-        if (element.id !== state.activeElementID) {
+        if (element.id === state.activeElementID) {
+          return (
+            <LanguagesSectionForm
+              key={element.id}
+              state={element} />
+          );
+        } else {
           return (
             <SavedForm
               key={element.id}
@@ -35,13 +41,6 @@ export default function LanguagesSection() {
               elementID={element.id}
               sectionCode={IterativeExperienceSections.LANGUAGES}
             />
-          );
-        }
-        else if (element.id === state.activeElementID) {
-          return (
-            <LanguagesSectionForm
-              key={element.id}
-              state={element} />
           );
         }
       })}

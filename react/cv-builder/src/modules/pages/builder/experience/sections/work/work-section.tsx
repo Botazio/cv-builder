@@ -27,7 +27,13 @@ export default function WorkSection() {
       bottomDivider={true}>
 
       {state.elements.map((element) => {
-        if (element.id !== state.activeElementID) {
+        if (element.id === state.activeElementID) {
+          return (
+            <WorkSectionForm
+              key={element.id}
+              state={element} />
+          );
+        } else {
           return (
             <SavedForm
               key={element.id}
@@ -36,13 +42,6 @@ export default function WorkSection() {
               elementID={element.id}
               sectionCode={IterativeExperienceSections.WORK}
             />
-          );
-        }
-        else if (element.id === state.activeElementID) {
-          return (
-            <WorkSectionForm
-              key={element.id}
-              state={element} />
           );
         }
       })}
