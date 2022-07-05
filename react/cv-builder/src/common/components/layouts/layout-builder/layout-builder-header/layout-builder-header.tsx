@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './layout-builder-header.module.css';
 import cn from 'classnames';
 import LineDivider from '../../../atoms/dividers/line-divider/line-divider';

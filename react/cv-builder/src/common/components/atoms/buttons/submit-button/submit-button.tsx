@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 /**
  * 
- * Button used to navigate to the next section of the form.
+ * Button used to navigate to the next section.
  */
 export default function SubmitButton({ value, startIcon, endIcon, isActive }: ButtonInterface) {
 

@@ -10,7 +10,6 @@ import PersonalPage from './modules/pages/builder/personal/personal-page';
 import ExperiencePage from './modules/pages/builder/experience/experience-page';
 import TemplatePage from './modules/pages/builder/template/template-page';
 import DownloadPage from './modules/pages/builder/download/download-page';
-import App from './App';
 import Home from './modules/pages/home/home';
 import { Provider } from 'react-redux';
 import { store } from 'state/store';
@@ -23,13 +22,12 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/">
-            <Route path="builder">
-              <Route path="personal" element={<PersonalPage />} />
-              <Route path="experience" element={<ExperiencePage />} />
-              <Route path="template" element={<TemplatePage />} />
-              <Route path="download" element={<DownloadPage />} />
-            </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="builder">
+            <Route path="personal" element={<PersonalPage />} />
+            <Route path="experience" element={<ExperiencePage />} />
+            <Route path="template" element={<TemplatePage />} />
+            <Route path="download" element={<DownloadPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

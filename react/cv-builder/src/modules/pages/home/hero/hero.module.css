@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  background-color: var(--background-primary);
+  color: var(--background-primary-font-color);
+  padding: var(--divider-space);
+  padding-bottom: calc(var(--divider-space) * 2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container_glowing_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_glowing_items>h1 {
+  font-size: 9rem;
+  margin: 0;
+  cursor: default;
+}
+.glowing {
+  color: var(--primary);
+  text-shadow: 0px 0px 10px var(--primary)
+}
