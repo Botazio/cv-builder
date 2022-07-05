@@ -30,9 +30,7 @@ export default function DownloadPage() {
       <DownloadButton url={url} />
       <SpaceDivider variant="small" />
       <Link to="/builder/template">
-        <a>
-          <BackButton />
-        </a>
+        <BackButton />
       </Link>
     </LayoutDownload>
   );

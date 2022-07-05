@@ -24,17 +24,13 @@ export default function TemplatePage() {
       <SpaceDivider variant="large" />
 
       <Link to="/builder/download">
-        <a>
-          <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
-        </a>
+        <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
       </Link>
 
       <SpaceDivider variant="small" />
 
       <Link to="/builder/experience">
-        <a>
-          <BackButton />
-        </a>
+        <BackButton />
       </Link>
 
     </LayoutBuilder>

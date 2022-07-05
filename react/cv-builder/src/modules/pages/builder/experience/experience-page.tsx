@@ -13,15 +13,11 @@ function ExperiencePage() {
       <ExperienceForm />
       <SpaceDivider variant="large" />
       <Link to="/builder/template">
-        <a>
-          <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
-        </a>
+        <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
       </Link>
       <SpaceDivider variant="small" />
       <Link to="/builder/personal">
-        <a>
-          <BackButton />
-        </a>
+        <BackButton />
       </Link>
     </LayoutBuilder>
   );

@@ -18,9 +18,7 @@ function PersonalPage() {
       <SpaceDivider variant="large" />
 
       <Link to="/builder/experience">
-        <a>
-          <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon fontSize="small" />} />
-        </a>
+        <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon fontSize="small" />} />
       </Link>
 
     </LayoutBuilder >
