@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  background-color: var(--primary);
+  padding: var(--divider-space);
+  color: var(--primary-font-color);
+  height: 50vh;
+}

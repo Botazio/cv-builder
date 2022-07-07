@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--divider-space);
+  background-color: var(--secondary);
+}
+.container>p {
+  width: var(--builder-width);
+  font-size: 1.1rem;
+  text-align: center;
+}
+.container a {
+  text-decoration: underline;
+}
+.container svg {
+  height: 250px;
+  width: 400px;
+  fill: var(--primary);
+}
