@@ -1,5 +1,4 @@
 import styles from './section-button.module.css';
-import React from 'react';
 import cn from 'classnames';
 import { ButtonInterface } from '../button-interface';
 

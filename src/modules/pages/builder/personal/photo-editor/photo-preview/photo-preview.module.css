@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  border: 1px solid var(--primary);
+  border-radius: var(--custom-border-radius);
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+.container:hover {
+  background-color: var(--primary-transparent);
+}

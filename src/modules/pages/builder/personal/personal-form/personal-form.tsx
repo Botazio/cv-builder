@@ -1,7 +1,7 @@
 import styles from './personal-form.module.css';
 import TextField from 'common/components/atoms/inputs/text-field/text-field';
 import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
-import PhotoField from 'common/components/atoms/inputs/photo-field/photo-field';
+import PhotoField from 'modules/pages/builder/personal/photo-field/photo-field';
 import { Collapse, Grid } from '@mui/material';
 import React, { useState } from 'react';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
