@@ -1,16 +1,21 @@
-import styles from './outlined-button.module.css';
-import React from 'react';
+import cn from 'classnames';
 import { ButtonInterface } from '../button-interface';
+import styles from './outlined-button.module.css';
 
 /**
  * 
  * Default button in the application. 
  */
-export default function OutlinedButton({ value, startIcon, endIcon, handleClick }: ButtonInterface) {
+export default function OutlinedButton({ value, startIcon, endIcon, type = "primary", isActive = true, handleClick }: ButtonInterface) {
 
   return (
     <button
-      className={styles.btn}
+      className={cn({
+        [styles.btn]: true,
+        [styles.disabled]: isActive === false,
+        [styles.primary]: type === "primary" && isActive,
+        [styles.secondary]: type === "secondary" && isActive,
+      })}
       onClick={handleClick}
     >
       {startIcon}

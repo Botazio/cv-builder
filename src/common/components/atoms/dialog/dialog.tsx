@@ -1,6 +1,6 @@
 import cn from 'classnames';
-import styles from './dialog.module.css';
 import * as ReactDOM from 'react-dom';
+import styles from './dialog.module.css';
 
 interface DialogInterface {
   active: boolean,
@@ -14,8 +14,6 @@ interface DialogInterface {
  */
 
 function Dialog({ active, setActive, type = 'primary', children }: DialogInterface) {
-  console.log(active);
-
   return ReactDOM.createPortal(
     <div
       className={cn({

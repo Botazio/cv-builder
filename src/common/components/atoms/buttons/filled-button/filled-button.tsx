@@ -3,7 +3,7 @@ import { ButtonInterface } from '../button-interface';
 import styles from './filled-button.module.css';
 
 
-export default function FilledButton({ value, startIcon, endIcon, type = "primary", isActive }: ButtonInterface) {
+export default function FilledButton({ value, startIcon, endIcon, type = "primary", isActive = true, handleClick }: ButtonInterface) {
 
   return (
     <button
@@ -13,6 +13,7 @@ export default function FilledButton({ value, startIcon, endIcon, type = "primar
         [styles.primary]: type === "primary" && isActive,
         [styles.secondary]: type === "secondary" && isActive,
       })}
+      onClick={handleClick}
     >
       {startIcon}
       <span>{value}</span>

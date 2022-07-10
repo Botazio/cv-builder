@@ -2,9 +2,11 @@
 import CloseButton from "common/components/atoms/buttons/close-button/close-button";
 import Dialog from "common/components/atoms/dialog/dialog";
 import SpaceDivider from "common/components/atoms/dividers/space-divider/space-divider";
+import { useState } from "react";
 import FooterEditor from "./footer-editor/footer-editor";
 import styles from './photo-editor.module.css';
 import PhotoPreview from "./photo-preview/photo-preview";
+import PhotoSelector from "./photo-selector/photo-selector";
 
 interface PhotoEditorInterface {
   active: boolean,
@@ -15,6 +17,8 @@ interface PhotoEditorInterface {
  * Allows the user to select a photo for the CV and displays it.
  */
 export default function PhotoEditor({ active, setActive }: PhotoEditorInterface) {
+  const [photo, setPhoto] = useState<File>();
+
   return (
     <Dialog active={active} setActive={setActive} type="secondary">
       <div className={styles.container}>
@@ -29,14 +33,16 @@ export default function PhotoEditor({ active, setActive }: PhotoEditorInterface)
         <SpaceDivider />
 
         <div className={styles.body}>
-          <PhotoPreview />
+          {!photo && <PhotoSelector setPhoto={setPhoto} />}
+          {photo && <PhotoPreview photo={photo} />}
         </div>
 
         <SpaceDivider />
 
-        <div className={styles.footer}>
-          <FooterEditor />
-        </div>
+        {photo && <div className={styles.footer}>
+          <FooterEditor setActive={setActive} />
+        </div>}
+
       </div>
     </Dialog>
   );
