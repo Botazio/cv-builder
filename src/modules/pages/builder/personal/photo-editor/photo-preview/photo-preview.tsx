@@ -9,7 +9,6 @@ export default function PhotoPreview({ photo }) {
         <img
           className={styles.photo}
           src={photo.url}
-          onLoad={() => { URL.revokeObjectURL(photo.url); }}
         />
       </div>
     </div>

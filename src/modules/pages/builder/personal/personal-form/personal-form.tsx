@@ -1,15 +1,15 @@
-import styles from './personal-form.module.css';
-import TextField from 'common/components/atoms/inputs/text-field/text-field';
-import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
-import PhotoField from 'modules/pages/builder/personal/photo-field/photo-field';
-import { Collapse, Grid } from '@mui/material';
-import React, { useState } from 'react';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
+import { Collapse, Grid } from '@mui/material';
+import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
+import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
+import TextField from 'common/components/atoms/inputs/text-field/text-field';
 import FormFooter from 'common/components/molecules/form-footer/form-footer';
+import PhotoField from 'modules/pages/builder/personal/photo-field/photo-field';
+import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
 import { SET_FORM_FIELD } from '../personal.actions';
-import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
+import styles from './personal-form.module.css';
 
 /**
   * Form for the page personal. That page is the first page of the cv builder.

@@ -17,7 +17,7 @@ interface PhotoEditorInterface {
  * Allows the user to select a photo for the CV and displays it.
  */
 export default function PhotoEditor({ active, setActive }: PhotoEditorInterface) {
-  const [photo, setPhoto] = useState<File>();
+  const [photo, setPhoto] = useState(null);
 
   return (
     <Dialog active={active} setActive={setActive} type="secondary">
@@ -40,7 +40,7 @@ export default function PhotoEditor({ active, setActive }: PhotoEditorInterface)
         <SpaceDivider />
 
         {photo && <div className={styles.footer}>
-          <FooterEditor setActive={setActive} />
+          <FooterEditor setActive={setActive} photoURL={photo.url} />
         </div>}
 
       </div>
