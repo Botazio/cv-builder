@@ -13,6 +13,7 @@
   --secondary: white;
   --secondary-font-color: #0E1E25;
   --secondary-hover: #dddddd;
+  --secondary-transparent: rgba(255, 255, 255, 0.2);
 
   --danger: #FE4256;
   --danger-font-color: white;

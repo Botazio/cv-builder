@@ -8,6 +8,7 @@ export default function PhotoPreview({ photo }) {
       <div className={styles.container_photo}>
         <img
           className={styles.photo}
+          alt="Profile photo"
           src={photo.url}
         />
       </div>

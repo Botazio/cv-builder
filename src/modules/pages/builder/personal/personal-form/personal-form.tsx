@@ -151,7 +151,7 @@ export default function PersonalForm() {
         bottomDivider={false}
       >
         <OutlinedButton
-          value="Additional Information"
+          value="Additional information"
           startIcon={active ? <RemoveCircleOutlineRoundedIcon /> : <AddCircleOutlineRoundedIcon />}
           handleClick={() => setActive(!active)} />
       </FormFooter>

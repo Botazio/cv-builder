@@ -1,23 +1,7 @@
 .container {
-  background: var(--input-field-background);
-  border-radius: var(--custom-border-radius);
-  color: var(--input-field-label);
   overflow: hidden;
-  padding: 0.875em;
   position: relative;
   width: 150px;
   height: 150px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.container:hover,
-.container:active,
-.container:focus {
-  background: var(--input-field-hover);
-}
-.container p {
-  margin: 0;
+  border-radius: var(--custom-border-radius);
 }

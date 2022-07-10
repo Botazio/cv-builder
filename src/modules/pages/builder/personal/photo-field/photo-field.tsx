@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import styles from './photo-field.module.css';
-import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
+import { useAppSelector } from 'state/hooks';
 import PhotoEditor from '../photo-editor/photo-editor';
+import PhotoFieldActive from './photo-field-active/photo-field-active';
+import PhotoFieldInactive from './photo-field-inactive/photo-field-inactive';
+import styles from './photo-field.module.css';
 
 /**
  * Input type of photo. It is part of the form data but
@@ -10,14 +12,19 @@ import PhotoEditor from '../photo-editor/photo-editor';
 export default function PhotoField() {
   const [isEditorActive, setIsEditorActive] = useState<boolean>(false);
 
+  const photoURL = useAppSelector(state => state.builder.personal.photoURL);
+
   return (
     <>
-      <div className={styles.container} onClick={() => setIsEditorActive(true)}>
-        <span><PersonRoundedIcon sx={{ fontSize: 75 }} /></span>
-        <p>Add photo</p>
-      </div>
+      {!photoURL && <div className={styles.container}>
+        <PhotoFieldInactive setIsEditorActive={setIsEditorActive} />
+      </div>}
 
       {isEditorActive && <PhotoEditor active={isEditorActive} setActive={setIsEditorActive} />}
+
+      {photoURL && <div className={styles.container}>
+        <PhotoFieldActive />
+      </div>}
     </>
   );
 }
