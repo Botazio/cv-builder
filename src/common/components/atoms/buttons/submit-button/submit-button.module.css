@@ -13,10 +13,10 @@
 }
 
 .disabled {
-  background-color: var(--primary-disabled);
+  background-color: var(--disabled);
   cursor: auto;
 }
 
 .disabled:hover {
-  background-color: var(--primary-disabled);
+  background-color: var(--disabled);
 }
