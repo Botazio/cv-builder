@@ -40,7 +40,7 @@ export default function PhotoEditor({ active, setActive }: PhotoEditorInterface)
         <SpaceDivider />
 
         {photo && <div className={styles.footer}>
-          <FooterEditor setActive={setActive} photoURL={photo.url} />
+          <FooterEditor setActive={setActive} photoURL={photo.url} setPhoto={setPhoto} />
         </div>}
 
       </div>

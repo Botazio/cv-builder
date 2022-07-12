@@ -6,7 +6,7 @@ import { useAppDispatch } from 'state/hooks';
 import { SET_FORM_FIELD } from '../../personal.actions';
 import styles from './footer-editor.module.css';
 
-export default function FooterEditor({ setActive, photoURL }: { setActive: Function; photoURL: string; }) {
+export default function FooterEditor({ setActive, photoURL, setPhoto }: { setActive: Function; photoURL: string; setPhoto: Function; }) {
 
   const dispatch = useAppDispatch();
 
@@ -30,7 +30,7 @@ export default function FooterEditor({ setActive, photoURL }: { setActive: Funct
             value="Discard"
             type="secondary"
             startIcon={<DeleteRoundedIcon />}
-            handleClick={() => setActive(false)} />
+            handleClick={() => setPhoto(null)} />
         </Grid>
       </Grid>
     </div>
