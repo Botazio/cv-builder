@@ -1,0 +1,36 @@
+.btn {
+  composes: btn from global;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+}
+
+.disabled {
+  background-color: var(--disabled);
+  color: var(--disabled-font-color);
+  cursor: auto;
+}
+
+.disabled:hover {
+  background-color: var(--disabled);
+}
+
+.primary {
+  background-color: var(--primary);
+  color: var(--primary-font-color);
+}
+
+.primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondary {
+  background-color: var(--danger);
+  color: var(--danger-font-color);
+}
+
+.secondary:hover {
+  background-color: var(--danger-hover);
+}

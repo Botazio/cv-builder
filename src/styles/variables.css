@@ -9,16 +9,19 @@
   --primary-font-color: white;
   --primary-hover: #0058D2;
   --primary-transparent: rgba(0, 107, 233, 0.1);
-  --primary-disabled: #8E8E8E;
 
   --secondary: white;
   --secondary-font-color: #0E1E25;
   --secondary-hover: #dddddd;
+  --secondary-transparent: rgba(255, 255, 255, 0.2);
 
   --danger: #FE4256;
   --danger-font-color: white;
   --danger-hover: #FFBABD;
   --danger-transparent: #FFBABD;
+
+  --disabled: #a5a5a5;
+  --disabled-font-color: white;
 
   /* Background colors */
   --background-primary: #0E1E25;

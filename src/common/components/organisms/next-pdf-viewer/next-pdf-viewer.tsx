@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
-import styles from './next-pdf-viewer.module.css';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-import { usePDF } from '@react-pdf/renderer';
-import { CircularProgress } from '@mui/material';
 import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
+import { CircularProgress } from '@mui/material';
+import { usePDF } from '@react-pdf/renderer';
+import { useEffect } from 'react';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import styles from './next-pdf-viewer.module.css';
 
 
-export default function NextPDFViewer({ doc, width, height, setUrl }: { doc: any; width?: number; height?: number; setUrl?: Function; }) {
+export default function NextPDFViewer({ doc, width, height, setURL }: { doc: any; width?: number; height?: number; setURL?: Function; }) {
   const [instance, updateInstance] = usePDF({ document: doc });
 
   useEffect(() => {
@@ -16,10 +16,10 @@ export default function NextPDFViewer({ doc, width, height, setUrl }: { doc: any
   }, [doc]);
 
   useEffect(() => {
-    if (instance && setUrl) {
-      setUrl(instance.url);
+    if (instance && setURL) {
+      setURL(instance.url);
     }
-  }, [instance, setUrl]);
+  }, [instance, setURL]);
 
 
   if (!instance) return <div></div>;

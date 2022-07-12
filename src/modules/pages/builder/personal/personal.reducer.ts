@@ -1,8 +1,9 @@
-import { PERSONALactions, SET_FORM_FIELD } from "./personal.actions";
 import produce from 'immer';
+import { PERSONALactions, SET_FORM_FIELD } from "./personal.actions";
 
 
 export interface Personal {
+  photoURL: string;
   name: string;
   surname: string;
   profession: string;
@@ -16,6 +17,7 @@ export interface Personal {
 };
 
 const initialState: Personal = {
+  photoURL: '',
   name: '',
   surname: '',
   profession: '',

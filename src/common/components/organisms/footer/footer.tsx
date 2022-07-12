@@ -1,8 +1,9 @@
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { Link } from 'react-router-dom';
 import Logo from '../../atoms/logo/logo';
 import styles from './footer.module.css';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
 
 /**
   * Footer for the application.
@@ -15,12 +16,20 @@ export default function Footer() {
       </div>
 
       <div className={styles.icons}>
-        <LinkedInIcon fontSize="large" />
-        <GitHubIcon fontSize="large" />
-        <TwitterIcon fontSize="large" />
+        <a href="https://www.linkedin.com/in/williamhgates">
+          <LinkedInIcon fontSize="large" />
+        </a>
+        <a href="https://github.com/Botazio">
+          <GitHubIcon fontSize="large" />
+        </a>
+        <a href="https://twitter.com/Botaz_io">
+          <TwitterIcon fontSize="large" />
+        </a>
       </div>
 
-      <p>Privacy and cookies policy</p>
+      <Link to="/legal/privacy-cookies-policy">
+        Privacy & Cookies Policy
+      </Link>
     </footer>
   );
 }

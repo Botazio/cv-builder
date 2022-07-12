@@ -1,12 +1,9 @@
 import cn from 'classnames';
 import { ButtonInterface } from '../button-interface';
-import styles from './outlined-button.module.css';
+import styles from './filled-button.module.css';
 
-/**
- * 
- * Default button in the application. 
- */
-export default function OutlinedButton({ value, startIcon, endIcon, type = "primary", isActive = true, handleClick }: ButtonInterface) {
+
+export default function FilledButton({ value, startIcon, endIcon, type = "primary", isActive = true, handleClick }: ButtonInterface) {
 
   return (
     <button

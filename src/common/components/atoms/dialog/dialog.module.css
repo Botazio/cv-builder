@@ -22,7 +22,6 @@
 }
 
 .content {
-  background-color: var(--background-secondary);
   margin: auto;
   padding: var(--divider-space);
   border-radius: var(--custom-border-radius);
@@ -31,6 +30,14 @@
   -webkit-animation-duration: 0.4s;
   animation-name: animate;
   animation-duration: 0.4s
+}
+
+.primary {
+  background-color: var(--background-secondary);
+}
+
+.secondary {
+  background-color: var(--secondary);
 }
 
 @-webkit-keyframes animate {
