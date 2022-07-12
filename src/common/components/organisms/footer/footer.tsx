@@ -1,6 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import { Link } from 'react-router-dom';
 import Logo from '../../atoms/logo/logo';
 import styles from './footer.module.css';
 
@@ -26,7 +27,9 @@ export default function Footer() {
         </a>
       </div>
 
-      <p>Privacy and cookies policy</p>
+      <Link to="/legal/privacy-cookies-policy">
+        Privacy & Cookies Policy
+      </Link>
     </footer>
   );
 }

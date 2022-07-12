@@ -1,6 +1,6 @@
 import styles from './collaboration-panel.module.css';
-import { ReactComponent as Collaboration } from './illustrations/undraw_collaboration.svg';
-import { ReactComponent as CodeTyping } from './illustrations/undraw_code_typing.svg';
+import { ReactComponent as CodeTyping } from './media/undraw_code_typing.svg';
+import { ReactComponent as Collaboration } from './media/undraw_collaboration.svg';
 
 export default function CollaborationPanel() {
   return (
