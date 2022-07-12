@@ -1,23 +1,16 @@
 import { ButtonInterface } from '../button-interface';
+import FilledButton from '../filled-button/filled-button';
 import styles from './submit-button.module.css';
-import cn from 'classnames';
 
 /**
  * 
  * Button used to navigate to the next section.
  */
-export default function SubmitButton({ value, startIcon, endIcon, isActive }: ButtonInterface) {
+export default function SubmitButton(props: ButtonInterface) {
 
   return (
-    <button
-      className={cn({
-        [styles.btn]: true,
-        [styles.disabled]: isActive === false,
-      })}
-    >
-      {startIcon}
-      <span>{value}</span>
-      {endIcon}
-    </button>
+    <div className={styles.container}>
+      <FilledButton {...props} />
+    </div>
   );
 }
