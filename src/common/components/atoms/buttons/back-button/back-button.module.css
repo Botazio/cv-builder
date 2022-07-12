@@ -6,6 +6,7 @@
   font-size: 1rem;
   font-weight: bold;
   width: auto;
+  border: none;
 }
 .btn:hover {
   background-color: transparent;
