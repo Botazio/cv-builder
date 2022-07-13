@@ -1,4 +1,5 @@
 import { StyleSheet } from '@react-pdf/renderer';
+import chroma from "chroma-js";
 import { propStyles } from './interfaces/prop-styles.interface';
 
 
@@ -62,4 +63,17 @@ export function createCommonStyles(propStyles: propStyles) {
       fontStyle: 'italic'
     }
   });
+}
+
+/**
+ * Uses chroma to get the best contrasting color for a given color.
+ */
+export function getContrastColor(color: string) {
+  const firstColor: string = 'black';
+  const secondColor: string = 'white';
+
+  const contrastFirstColor = chroma.contrast(color, firstColor);
+  const contrastSecondColor = chroma.contrast(color, secondColor);
+
+  return contrastFirstColor >= contrastSecondColor ? firstColor : secondColor;
 }

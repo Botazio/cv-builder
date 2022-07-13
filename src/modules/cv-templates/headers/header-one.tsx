@@ -41,6 +41,7 @@ function createComponentStyles(propStyles: propStyles) {
     },
     containerDescription: {
       backgroundColor: propStyles.primaryColor,
+      color: propStyles.primaryFontColor,
       borderRadius: propStyles.borderRadius,
       padding: propStyles.dividerSpace / 3
     },
