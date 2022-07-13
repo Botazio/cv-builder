@@ -1,8 +1,8 @@
 .btn {
   composes: btn from global;
   background: transparent;
-  text-transform: none;
   font-weight: 500;
+  cursor: pointer;
 }
 .btn::first-letter {
   text-transform: uppercase;

@@ -10,12 +10,14 @@ export default function PhotoFieldActive() {
   return (
     <div className={styles.container_photo}>
       <img className={styles.photo} src={photoURL} alt="Profile" />
-      <button
-        className={styles.delete_button}
-        onClick={() => dispatch({ type: SET_FORM_FIELD, payload: '', field: "photoURL" })}>
-        <DeleteRoundedIcon />
-        <span>Delete</span>
-      </button>
+      <div className={styles.container_delete_btn}>
+        <button
+          className={styles.delete_btn}
+          onClick={() => dispatch({ type: SET_FORM_FIELD, payload: '', field: "photoURL" })}>
+          <DeleteRoundedIcon />
+          <span>Delete</span>
+        </button>
+      </div>
     </div>
   );
 }

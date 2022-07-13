@@ -11,7 +11,7 @@
   background-color: var(--background-primary);
   border-radius: var(--custom-border-radius);
 }
-.container_photo:hover>.delete_button {
+.container_photo:hover .container_delete_btn {
   z-index: 10;
 }
 .container_photo:hover>.photo {
@@ -22,17 +22,17 @@
   position: absolute;
   z-index: 1;
 }
-.delete_button {
+.container_delete_btn {
+  width: calc(100% - var(--divider-space));
+}
+.delete_btn {
   composes: btn from global;
-  text-transform: capitalize;
-  font-size: 1rem;
   font-weight: bold;
-  width: 80%;
   background: transparent;
   color: var(--secondary);
   border: 2px solid var(--secondary);
   cursor: pointer;
 }
-.delete_button:hover {
+.delete_btn:hover {
   background-color: var(--secondary-transparent)
 }
