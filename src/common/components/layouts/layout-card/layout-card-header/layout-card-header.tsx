@@ -1,6 +1,6 @@
-import styles from './layout-builder-header.module.css';
 import cn from 'classnames';
 import LineDivider from '../../../atoms/dividers/line-divider/line-divider';
+import styles from './layout-card-header.module.css';
 
 interface BuilderHeaderInterface {
   title?: string;
@@ -9,9 +9,9 @@ interface BuilderHeaderInterface {
 }
 
 /**
- * Header for the different pages of the cv builder
+ * Header for pages that use the card display
  */
-export default function LayoutBuilderHeader({ title, position, fontSize = "medium" }: BuilderHeaderInterface) {
+export default function LayoutCardHeader({ title, position, fontSize = "medium" }: BuilderHeaderInterface) {
   return (
     <div className={cn({
       [styles.container]: true,
