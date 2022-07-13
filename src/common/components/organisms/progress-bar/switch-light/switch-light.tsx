@@ -1,9 +1,9 @@
-import React from 'react';
 import cn from 'classnames';
+import React from 'react';
 import styles from './switch-light.module.css';
 
 /**
-  * This component is a circle that lights up when activated. 
+  * Circle that lights up when activated. 
   */
 export default function SwitchLight({ children, isActive, title }: { children?: React.ReactNode, isActive: boolean; title?: String; }) {
   return (

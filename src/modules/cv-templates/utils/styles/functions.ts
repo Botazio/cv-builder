@@ -3,7 +3,7 @@ import { propStyles } from './interfaces/prop-styles.interface';
 
 
 /**
- * This function is used to merge common styles with component styles
+ * Merges common styles with component styles
  * 
  */
 export function mergeStyles(commonStyles, componentStyles) {
@@ -14,7 +14,7 @@ export function mergeStyles(commonStyles, componentStyles) {
 
 
 /**
- * This function is used to create common styles from prop styles.
+ * Creates common styles from prop styles.
  * 
  */
 export function createCommonStyles(propStyles: propStyles) {
@@ -38,10 +38,10 @@ export function createCommonStyles(propStyles: propStyles) {
       display: 'flex'
     },
     containerWithBackground: {
-      backgroundColor: propStyles.backgroundColor,
+      backgroundColor: propStyles.primaryColor,
       borderRadius: propStyles.borderRadius,
       padding: propStyles.dividerSpace / 3,
-      color: propStyles.backgroundFontColor
+      color: propStyles.primaryFontColor
     },
     containerWithIndentation: {
       marginLeft: propStyles.dividerSpace / 3
@@ -50,10 +50,10 @@ export function createCommonStyles(propStyles: propStyles) {
       marginBottom: propStyles.marginTitle / 2
     },
     textWithBackground: {
-      backgroundColor: propStyles.backgroundColor,
+      backgroundColor: propStyles.primaryColor,
       borderRadius: propStyles.borderRadius / 4,
       padding: propStyles.dividerSpace / 6,
-      color: propStyles.backgroundFontColor,
+      color: propStyles.primaryFontColor,
     },
     textWithIndentation: {
       textIndent: propStyles.dividerSpace / 3

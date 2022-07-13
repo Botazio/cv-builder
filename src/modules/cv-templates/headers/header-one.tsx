@@ -1,5 +1,5 @@
+import { StyleSheet, Text, View } from '@react-pdf/renderer';
 import { Builder } from 'modules/pages/builder/builder.reducer';
-import { StyleSheet, View, Text } from '@react-pdf/renderer';
 import { propStyles } from "../utils/styles/interfaces/prop-styles.interface";
 
 function createComponentStyles(propStyles: propStyles) {
@@ -40,7 +40,7 @@ function createComponentStyles(propStyles: propStyles) {
       width: '100%',
     },
     containerDescription: {
-      backgroundColor: propStyles.backgroundColor,
+      backgroundColor: propStyles.primaryColor,
       borderRadius: propStyles.borderRadius,
       padding: propStyles.dividerSpace / 3
     },

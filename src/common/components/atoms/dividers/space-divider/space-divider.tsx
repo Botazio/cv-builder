@@ -1,9 +1,9 @@
-import styles from './space-divider.module.css';
 import cn from 'classnames';
+import styles from './space-divider.module.css';
 
 /**
-  * This component sets a space between sections.
-  * The gap of the space is set in the global styles css file.
+  * Sets a space between sections.
+  * The gap of the space depends on the variant property.
   */
 export default function SpaceDivider({ variant }: { variant?: "large" | "medium" | "small"; }) {
   return (

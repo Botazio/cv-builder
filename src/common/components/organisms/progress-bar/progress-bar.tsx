@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import styles from './progress-bar.module.css';
-import SwitchLight from './switch-light/switch-light';
+import CreateRoundedIcon from '@mui/icons-material/CreateRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
-import CreateRoundedIcon from '@mui/icons-material/CreateRounded';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import styles from './progress-bar.module.css';
+import SwitchLight from './switch-light/switch-light';
 
 /**
-  * This component defines the progress made by the user to build his cv. 
+  * Defines the progress made by the user to build his cv. 
   * It defines in which step the user is.
   */
 export default function ProgressBar() {

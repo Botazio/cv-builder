@@ -8,6 +8,10 @@ interface TextFieldInterface {
   handleChange?: any;
 }
 
+
+/**
+ * Default text field.
+ */
 export default function TextField({ name, value, required, handleChange }: TextFieldInterface) {
 
   return (

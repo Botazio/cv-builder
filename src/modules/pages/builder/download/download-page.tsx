@@ -11,6 +11,9 @@ import { getActiveTemplateName } from '../template/template.reducer';
 import DownloadButton from './download-button/download-button';
 
 
+/**
+  * Page that shows the preview of the template and the download button for it.
+ */
 export default function DownloadPage() {
   const [url, setURL] = React.useState('');
 

@@ -4,7 +4,7 @@ import LayoutDefault from 'common/components/layouts/layout-default/layout-defau
 import styles from './layout-download.module.css';
 
 /**
-  * This component is the layout for the download page
+  * Layout for the download page
   */
 export default function LayoutDownload({ children }: { children?: React.ReactNode; }) {
   return (

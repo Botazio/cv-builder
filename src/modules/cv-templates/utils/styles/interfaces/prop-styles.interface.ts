@@ -8,8 +8,6 @@ export interface propStyles {
   primaryFontColor: string;
   secondaryColor: string;
   secondaryFontColor: string;
-  backgroundColor: string;
-  backgroundFontColor: string;
   fontFamilyTitle: string;
   fontSizeTitle: number;
   fontFamilySubTitle: string;

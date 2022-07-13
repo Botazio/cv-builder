@@ -1,12 +1,12 @@
-import styles from './saved-form.module.css';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
-import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import LineDivider from 'common/components/atoms/dividers/line-divider/line-divider';
-import { IterativeExperienceSections } from '../experience-sections.enum';
 import { useAppDispatch } from 'state/hooks';
+import { IterativeExperienceSections } from '../experience-sections.enum';
 import { DELETE_FORM, MOVE_FORM_DOWN, MOVE_FORM_UP, UPDATE_FORM } from '../experience.actions';
+import styles from './saved-form.module.css';
 
 
 interface SavedSectionInterface {
@@ -18,8 +18,7 @@ interface SavedSectionInterface {
 }
 
 /**
- * This component is shared by all the sections to indicate items that have
- * been saved
+ * Displays information about items that have been saved
  */
 export default function SavedForm({ id, title, description, elementID, sectionCode }: SavedSectionInterface) {
   const dispatch = useAppDispatch();
