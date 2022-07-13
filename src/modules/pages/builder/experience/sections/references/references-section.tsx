@@ -1,12 +1,12 @@
-import TemplateSection from '../template-section/template-section';
-import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
-import ReferencesSectionForm from './references-section-form/references-section-form';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
-import { useAppDispatch, useAppSelector } from 'state/hooks';
-import SavedForm from '../../saved-form/saved-form';
-import { ADD_FORM } from '../../experience.actions';
-import { IterativeExperienceSections } from '../../experience-sections.enum';
+import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
 import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
+import { useAppDispatch, useAppSelector } from 'state/hooks';
+import { IterativeExperienceSections } from '../../experience-sections.enum';
+import { ADD_FORM } from '../../experience.actions';
+import SectionSavedForm from '../../sections-forms/section-saved-form/section-saved-form';
+import TemplateSection from '../template-section/template-section';
+import ReferencesSectionForm from './references-section-form/references-section-form';
 
 
 export default function ReferencesSection() {
@@ -36,7 +36,7 @@ export default function ReferencesSection() {
           );
         } else {
           return (
-            <SavedForm
+            <SectionSavedForm
               key={element.id}
               title={element.name}
               description={element.description}

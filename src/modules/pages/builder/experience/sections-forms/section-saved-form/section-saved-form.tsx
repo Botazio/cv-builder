@@ -4,9 +4,9 @@ import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownR
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import LineDivider from 'common/components/atoms/dividers/line-divider/line-divider';
 import { useAppDispatch } from 'state/hooks';
-import { IterativeExperienceSections } from '../experience-sections.enum';
-import { DELETE_FORM, MOVE_FORM_DOWN, MOVE_FORM_UP, UPDATE_FORM } from '../experience.actions';
-import styles from './saved-form.module.css';
+import { IterativeExperienceSections } from '../../experience-sections.enum';
+import { DELETE_FORM, MOVE_FORM_DOWN, MOVE_FORM_UP, UPDATE_FORM } from '../../experience.actions';
+import styles from './section-saved-form.module.css';
 
 
 interface SavedSectionInterface {
@@ -20,7 +20,7 @@ interface SavedSectionInterface {
 /**
  * Displays information about items that have been saved
  */
-export default function SavedForm({ id, title, description, elementID, sectionCode }: SavedSectionInterface) {
+export default function SectionSavedForm({ id, title, description, elementID, sectionCode }: SavedSectionInterface) {
   const dispatch = useAppDispatch();
 
   return (

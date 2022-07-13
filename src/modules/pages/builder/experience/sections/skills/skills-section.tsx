@@ -1,12 +1,12 @@
-import TemplateSection from '../template-section/template-section';
-import BuildOutlinedIcon from '@mui/icons-material/BuildOutlined';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
-import SkillsSectionForm from './skills-section-form/skills-section-form';
+import BuildOutlinedIcon from '@mui/icons-material/BuildOutlined';
 import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
-import { ADD_FORM } from '../../experience.actions';
 import { IterativeExperienceSections } from '../../experience-sections.enum';
-import SavedForm from '../../saved-form/saved-form';
+import { ADD_FORM } from '../../experience.actions';
+import SectionSavedForm from '../../sections-forms/section-saved-form/section-saved-form';
+import TemplateSection from '../template-section/template-section';
+import SkillsSectionForm from './skills-section-form/skills-section-form';
 
 export default function SkillsSection() {
   const state = useAppSelector(state => state.builder.experience.skills);
@@ -34,7 +34,7 @@ export default function SkillsSection() {
           );
         } else {
           return (
-            <SavedForm
+            <SectionSavedForm
               key={element.id}
               title={element.title}
               elementID={element.id}
