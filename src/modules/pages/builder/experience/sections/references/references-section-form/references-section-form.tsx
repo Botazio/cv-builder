@@ -1,13 +1,13 @@
-import SectionBody from '../../../sections-forms/section-body/section-body';
 import { Grid } from '@mui/material';
 import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
+import TextArea from 'common/components/atoms/inputs/text-area/text-area';
 import TextField from 'common/components/atoms/inputs/text-field/text-field';
-import SectionFormFooter from '../../../sections-forms/section-form-footer/section-form-footer';
+import SectionBody from 'common/components/layouts/layout-card/layout-card-section/section-body/section-body';
 import { useAppDispatch } from 'state/hooks';
 import { IterativeExperienceSections } from '../../../experience-sections.enum';
-import { Reference } from '../references-utils';
 import { SET_FORM_FIELD } from '../../../experience.actions';
-import TextArea from 'common/components/atoms/inputs/text-area/text-area';
+import SectionFormFooter from '../../../sections-forms/section-form-footer/section-form-footer';
+import { Reference } from '../references-utils';
 
 export default function ReferencesSectionForm({ state }: { state: Reference; }) {
 

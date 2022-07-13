@@ -4,12 +4,12 @@ import { Collapse, Grid } from '@mui/material';
 import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
 import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
 import TextArea from 'common/components/atoms/inputs/text-area/text-area';
+import SectionBody from 'common/components/layouts/layout-card/layout-card-section/section-body/section-body';
+import SectionFooter from 'common/components/layouts/layout-card/layout-card-section/section-footer/section-footer';
+import SectionHeader from 'common/components/layouts/layout-card/layout-card-section/section-header/section-header';
 import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
 import { SET_DESCRIPTION } from '../../experience.actions';
-import SectionBody from '../../sections-forms/section-body/section-body';
-import SectionFooter from '../../sections-forms/section-footer/section-footer';
-import SectionHeader from '../../sections-forms/section-header/section-header';
 
 
 export default function DescriptionSection() {

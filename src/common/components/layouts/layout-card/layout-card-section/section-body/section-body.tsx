@@ -1,10 +1,10 @@
-import React from "react";
 import LineDivider from "common/components/atoms/dividers/line-divider/line-divider";
+import React from "react";
 import styles from "./section-body.module.css";
 
 
 /**
- * Body for the sections data in the experience form.
+ * Body for the section.
  */
 export default function SectionBody({ children }: { children?: React.ReactNode; }) {
   return (
