@@ -50,11 +50,11 @@ export default function PrivacyCookiesPolicyPage() {
           </SectionBody>
         </Collapse>
 
-        <SectionHeader icon={<CategoryOutlinedIcon />} title="Types of cookies this page uses" handleClick={() => handleClick(1)} />
+        <SectionHeader icon={<CategoryOutlinedIcon />} title="Types of cookies this app uses" handleClick={() => handleClick(1)} />
         <Collapse in={activeSections[1]}>
           <SectionBody>
             <p>
-              The page only uses one cookie to persist the form information and another to store your cookies preferences.
+              The app only uses one cookie to persist the form information.
               <br /><br />
               The one to persist the form information was put in place so you can leave or refresh the site and the information you entered previously will be saved.
               This way, you don't have to enter the same information twice!
@@ -68,12 +68,11 @@ export default function PrivacyCookiesPolicyPage() {
         <Collapse in={activeSections[2]}>
           <SectionBody>
             <p>
-              In case you accepted the cookies and you changed your mind about them, you can always remove them using your browser options.
+              In case you accepted the conditions to use the app and you changed your mind about it, you can always remove the cookies using your browser options.
               <br /><br />
-              Once removed, you will be asked again if you accept to store cookies on your computer the next time you connect to the application.
-              Click on reject and you can keep using the page without cookies.
+              Once removed, the next time you connect to the app you will be asked again if you accept the conditions.
               <br /><br />
-              Keep in mind that if you don't accept cookies, your information won't be saved and you will have to enter the same details every time you use the app.
+              Keep in mind that if you don't accept the conditions, you won't be allowed to use the app.
             </p>
           </SectionBody>
         </Collapse>
