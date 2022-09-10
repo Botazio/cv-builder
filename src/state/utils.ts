@@ -1,4 +1,5 @@
 import { storageAvailable } from "common/utils/functions";
+import { RootState } from "./store";
 
 const STORE: string = "cv_builder_store";
 
@@ -11,8 +12,17 @@ export function getPersistedState() {
   }
 }
 
-export function saveState(state) {
+export function saveState(state: RootState): boolean {
+  let hasStateBeenSaved: boolean = false;
+
   if (storageAvailable('localStorage')) {
-    localStorage.setItem(STORE, JSON.stringify(state));
+    try {
+      localStorage.setItem(STORE, JSON.stringify(state));
+      hasStateBeenSaved = true;
+    } catch (e) {
+      console.error(e);
+    }
   }
+
+  return hasStateBeenSaved;
 }

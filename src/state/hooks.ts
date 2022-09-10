@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { SET_DISPLAY } from 'modules/pages/builder/display.actions';
+import { useEffect } from 'react';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import type { RootState, AppDispatch } from './store';
+import type { AppDispatch, RootState } from './store';
 import { saveState } from './utils';
 
 /**
@@ -14,19 +15,17 @@ export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
 /**
- * Hook to store root state in local storage when it unmounts
+ * Hook to store root state in local storage when it unmounts.
+ * It also dispatches the action to set the display of the message informing the user that the state has been saved.
  */
 export function useSaveState() {
   const state = useAppSelector(state => state);
-  const stateRef = useRef(state);
-
-  useEffect(() => {
-    stateRef.current = state;
-  }, [state]);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     return () => {
-      saveState(stateRef.current);
+      const hasStateBeenSaved: boolean = saveState(state);
+      dispatch({ type: SET_DISPLAY, payload: hasStateBeenSaved, field: 'displayStateHasBeenSaved' });
     };
   }, []);
 }
