@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from '@react-pdf/renderer';
+import { Image, StyleSheet, Text, View } from '@react-pdf/renderer';
 import { Builder } from 'modules/pages/builder/builder.reducer';
 import { propStyles } from "../utils/styles/interfaces/prop-styles.interface";
 
@@ -48,7 +48,6 @@ function createComponentStyles(propStyles: propStyles) {
     containerPhoto: {
       width: 75,
       height: 75,
-      backgroundColor: propStyles.primaryColor,
       marginBottom: propStyles.dividerSpace / 3
     },
     containerName: {
@@ -74,10 +73,15 @@ function HeaderOne({ state, propStyles }: { state: Builder, propStyles: propStyl
   return (
     <View style={styles.wrapper}>
       <View style={styles.containerLeft}>
-        <View style={styles.containerPhoto}></View>
+
+        <View style={styles.containerPhoto}>
+          {state.personal.photoURL !== '' && <Image src={state.personal.photoURL} />}
+        </View>
+
         {state.personal.profession !== '' && <View style={styles.containerProfession}>
           {profession.map((word, index) => <Text key={index} style={styles.subTitle}>{word + ' '}</Text>)}
         </View>}
+
         {state.personal.mobile !== '' && <Text style={styles.textDetails}>{state.personal.mobile}</Text>}
         {state.personal.email !== '' && <Text style={styles.textDetails}>{state.personal.email}</Text>}
         {state.personal.address !== '' && <Text style={styles.textDetails}>{state.personal.address}</Text>}
