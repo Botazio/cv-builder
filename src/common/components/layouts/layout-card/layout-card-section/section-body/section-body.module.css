@@ -3,6 +3,6 @@
   display: flex;
   flex-direction: column;
 }
-p {
+.container p {
   margin: 0;
 }

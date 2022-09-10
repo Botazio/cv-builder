@@ -1,4 +1,4 @@
-import PrivacyCookiesPolicyPage from 'modules/pages/legal/privacy-cookies-policy-page';
+import LegalPage from 'modules/pages/legal/legal-page';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
@@ -29,7 +29,7 @@ root.render(
             <Route path="download" element={<DownloadPage />} />
           </Route>
           <Route path="legal">
-            <Route path="privacy-cookies-policy" element={<PrivacyCookiesPolicyPage />} />
+            <Route path="privacy-cookies-policy" element={<LegalPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

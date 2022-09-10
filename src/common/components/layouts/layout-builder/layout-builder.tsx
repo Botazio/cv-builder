@@ -1,3 +1,4 @@
+import BuilderWrapper from 'common/components/organisms/builder-wrapper/builder-wrapper';
 import SpaceDivider from '../../atoms/dividers/space-divider/space-divider';
 import ProgressBar from '../../organisms/progress-bar/progress-bar';
 import LayoutCard from '../layout-card/layout-card';
@@ -7,16 +8,18 @@ import LayoutCard from '../layout-card/layout-card';
   */
 export default function LayoutBuilder({ header, children }: { header?: React.ReactNode, children?: React.ReactNode; }) {
   return (
-    <LayoutCard
-      header={
-        <>
-          <SpaceDivider />
-          <ProgressBar />
-          <SpaceDivider />
-          {header}
-        </>
-      }>
-      {children}
-    </LayoutCard>
+    <BuilderWrapper>
+      <LayoutCard
+        header={
+          <>
+            <SpaceDivider />
+            <ProgressBar />
+            <SpaceDivider />
+            {header}
+          </>
+        }>
+        {children}
+      </LayoutCard>
+    </BuilderWrapper>
   );
 }

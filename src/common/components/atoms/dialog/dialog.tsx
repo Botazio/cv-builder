@@ -6,6 +6,7 @@ interface DialogInterface {
   active: boolean,
   setActive: Function,
   type?: string,
+  closeOnOutsideClick?: boolean,
   children?: React.ReactNode,
 }
 
@@ -13,7 +14,14 @@ interface DialogInterface {
  * Displays a modal with the children inside
  */
 
-function Dialog({ active, setActive, type = 'primary', children }: DialogInterface) {
+function Dialog({ active, setActive, type = 'primary', closeOnOutsideClick = true, children }: DialogInterface) {
+
+  const handleOutsideClick = () => {
+    if (closeOnOutsideClick) {
+      setActive(false);
+    }
+  };
+
   return ReactDOM.createPortal(
     <div
       className={cn({
@@ -21,7 +29,7 @@ function Dialog({ active, setActive, type = 'primary', children }: DialogInterfa
         [styles.active]: active,
         [styles.inactive]: !active,
       })}
-      onClick={() => setActive(false)}>
+      onClick={() => handleOutsideClick()}>
       <div
         className={cn({
           [styles.content]: true,

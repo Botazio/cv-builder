@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import builderReducer from 'modules/pages/builder/builder.reducer';
+import { legalReducer } from 'modules/pages/legal/legal.reducer';
 import { getPersistedState } from './utils';
 
 export const store = configureStore({
   reducer: {
-    builder: builderReducer
+    builder: builderReducer,
+    legal: legalReducer
   },
   preloadedState: getPersistedState()
 });
