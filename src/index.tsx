@@ -1,5 +1,6 @@
 import ScrollToTop from 'common/components/molecules/scroll-to-top/scroll-to-top';
 import LegalPage from 'modules/pages/legal/legal-page';
+import NotFound from 'modules/pages/not-found/not-found';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
@@ -33,6 +34,7 @@ root.render(
           <Route path="legal">
             <Route path="privacy-cookies-policy" element={<LegalPage />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </Provider>

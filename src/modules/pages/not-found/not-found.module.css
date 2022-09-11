@@ -1,0 +1,18 @@
+.container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--secondary-font-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.container>h1 {
+  padding-right: calc(var(--divider-space) / 2);
+  border-right: 2px solid var(--secondary-font-color);
+}
+.container>h3 {
+  padding-left: calc(var(--divider-space) / 2);
+}
