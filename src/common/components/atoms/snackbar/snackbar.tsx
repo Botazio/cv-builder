@@ -19,13 +19,15 @@ export default function SnackBar({ value, active, setActive, type = 'success', s
     if (active) {
       setTimeout(() => {
         setActive(false);
-      }, 3000);
+      }, 2000);
     }
 
     return () => {
       clearTimeout();
     };
   }, [active]);
+
+  if (!active) return;
 
   return ReactDOM.createPortal(
     <div className={cn({
@@ -36,7 +38,15 @@ export default function SnackBar({ value, active, setActive, type = 'success', s
     })}>
       {startIcon}
       <span>{value}</span>
-      <CloseRoundedIcon />
+      <div className={cn({
+        [styles.close_icon]: true,
+        [styles.close_icon_info]: type === 'info',
+        [styles.close_icon_success]: type === 'success',
+        [styles.close_icon_error]: type === 'error',
+      })}
+        onClick={() => setActive(false)}>
+        <CloseRoundedIcon />
+      </div>
     </div>,
     document.getElementById('root')
   );

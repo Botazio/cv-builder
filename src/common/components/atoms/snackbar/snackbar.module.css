@@ -12,6 +12,9 @@
   box-shadow: var(--custom-box-shadow);
   animation: 0.4s ease-out forwards slide-up;
 }
+.container>span {
+  margin-left: calc(var(--divider-space) / 3);
+}
 .success {
   background-color: var(--success);
   color: var(--success-font-color);
@@ -23,6 +26,24 @@
 .info {
   background-color: var(--primary);
   color: var(--primary-font-color);
+}
+.close_icon {
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: var(--divider-space);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close_icon_success:hover {
+  background-color: var(--success-hover)
+}
+.close_icon_error:hover {
+  background-color: var(--danger-hover)
+}
+.close_icon_info:hover {
+  background-color: var(--primary-hover)
 }
 
 @-webkit-keyframes slide-up {

@@ -22,6 +22,8 @@ function Dialog({ active, setActive, type = 'primary', closeOnOutsideClick = tru
     }
   };
 
+  if (!active) return;
+
   return ReactDOM.createPortal(
     <div
       className={cn({

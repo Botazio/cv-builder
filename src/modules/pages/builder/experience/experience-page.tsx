@@ -16,7 +16,7 @@ function ExperiencePage() {
         <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
       </Link>
       <SpaceDivider variant="small" />
-      <Link to="/builder/personal">
+      <Link to={"/builder/personal"} state="hello">
         <BackButton />
       </Link>
     </LayoutBuilder>

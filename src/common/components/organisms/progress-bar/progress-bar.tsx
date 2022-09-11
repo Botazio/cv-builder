@@ -18,9 +18,14 @@ export default function ProgressBar() {
     setActive(url);
   }, [url]);
 
+  const location = {
+    pathname: "/builder/personal",
+    state: "hello",
+  };
+
   return (
     <div className={styles.container}>
-      <Link to="/builder/personal">
+      <Link to={location}>
         <SwitchLight isActive={active === "/builder/personal"} title="Personal">
           <PersonRoundedIcon fontSize="medium" />
         </SwitchLight>
