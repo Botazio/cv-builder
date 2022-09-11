@@ -19,6 +19,11 @@
   --secondary-hover: #dddddd;
   --secondary-transparent: rgba(255, 255, 255, 0.2);
 
+  --success: #00C48C;
+  --success-font-color: white;
+  --success-hover: #00B27E;
+  --success-transparent: rgba(0, 196, 140, 0.1);
+
   --danger: #FE4256;
   --danger-font-color: white;
   --danger-hover: #FFBABD;
