@@ -14,11 +14,12 @@ export const useAppDispatch = () => useDispatch<AppDispatch>();
  */
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
+
 /**
  * Hook to store root state in local storage when it unmounts.
  * It also dispatches the action to set the display of the message informing the user that the state has been saved.
  */
-export function useSaveState() {
+export function useSaveStateWhenUnmounts() {
   const state = useAppSelector(state => state);
   const dispatch = useAppDispatch();
 

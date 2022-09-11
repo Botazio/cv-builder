@@ -1,11 +1,11 @@
-import { useSaveState } from 'state/hooks';
+import { useSaveStateWhenUnmounts } from 'state/hooks';
 
 /**
  * Wrapper that saves the redux state to local storage when the component unmounts.
  */
 export default function SaveStateWrapper({ children }) {
 
-  useSaveState();
+  useSaveStateWhenUnmounts();
 
   return (
     <>{children}</>
