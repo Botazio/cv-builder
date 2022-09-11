@@ -1,4 +1,5 @@
 import LegalPage from 'modules/pages/legal/legal-page';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import {
@@ -16,20 +17,22 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="builder">
-          <Route path="personal" element={<PersonalPage />} />
-          <Route path="experience" element={<ExperiencePage />} />
-          <Route path="template" element={<TemplatePage />} />
-          <Route path="download" element={<DownloadPage />} />
-        </Route>
-        <Route path="legal">
-          <Route path="privacy-cookies-policy" element={<LegalPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </Provider>
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="builder">
+            <Route path="personal" element={<PersonalPage />} />
+            <Route path="experience" element={<ExperiencePage />} />
+            <Route path="template" element={<TemplatePage />} />
+            <Route path="download" element={<DownloadPage />} />
+          </Route>
+          <Route path="legal">
+            <Route path="privacy-cookies-policy" element={<LegalPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
 );

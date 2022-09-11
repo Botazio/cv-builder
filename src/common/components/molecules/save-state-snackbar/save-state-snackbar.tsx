@@ -4,24 +4,24 @@ import { SET_DISPLAY } from 'modules/pages/builder/display.actions';
 import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
+import { BUILDER_LOCATION_STATE } from '../builder-link/builder-link';
 
 
 /**
  * Snackbar that shows a message when the form information is saved.
  * It also reads from the router to know when to show the snackbar.
+ * This is when the user is switching between the builder pages.
  */
 export default function SaveStateSnackBar() {
   const [active, setActive] = useState<boolean>();
 
-  const location = useLocation();
-
-  console.log(location);
+  const locationState: any = useLocation().state;
 
   const state = useAppSelector(state => state.builder.display);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (state.displayStateHasBeenSaved) {
+    if (state.displayStateHasBeenSaved && locationState === BUILDER_LOCATION_STATE) {
       setActive(true);
       dispatch({ type: SET_DISPLAY, payload: false, field: "displayStateHasBeenSaved" });
     }

@@ -4,7 +4,7 @@ import SpaceDivider from "common/components/atoms/dividers/space-divider/space-d
 import LayoutBuilder from "common/components/layouts/layout-builder/layout-builder";
 import LayoutCardBody from 'common/components/layouts/layout-card/layout-card-body/layout-card-body';
 import LayoutCardHeader from 'common/components/layouts/layout-card/layout-card-header/layout-card-header';
-import { Link } from "react-router-dom";
+import BuilderLink from 'common/components/molecules/builder-link/builder-link';
 import PersonalForm from "./personal-form/personal-form";
 
 function PersonalPage() {
@@ -17,9 +17,9 @@ function PersonalPage() {
 
       <SpaceDivider variant="large" />
 
-      <Link to="/builder/experience">
+      <BuilderLink to="/builder/experience">
         <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon fontSize="small" />} />
-      </Link>
+      </BuilderLink>
 
     </LayoutBuilder >
   );

@@ -5,6 +5,7 @@ import SpaceDivider from 'common/components/atoms/dividers/space-divider/space-d
 import LayoutBuilder from 'common/components/layouts/layout-builder/layout-builder';
 import LayoutCardBody from 'common/components/layouts/layout-card/layout-card-body/layout-card-body';
 import LayoutCardHeader from 'common/components/layouts/layout-card/layout-card-header/layout-card-header';
+import BuilderLink from 'common/components/molecules/builder-link/builder-link';
 import { Link } from 'react-router-dom';
 import ContainerTemplateCards from './container-template-cards/container-template-cards';
 
@@ -29,9 +30,9 @@ export default function TemplatePage() {
 
       <SpaceDivider variant="small" />
 
-      <Link to="/builder/experience">
+      <BuilderLink to="/builder/experience">
         <BackButton />
-      </Link>
+      </BuilderLink>
 
     </LayoutBuilder>
   );
