@@ -1,3 +1,4 @@
+import ScrollToTop from 'common/components/molecules/scroll-to-top/scroll-to-top';
 import LegalPage from 'modules/pages/legal/legal-page';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -20,6 +21,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="builder">
