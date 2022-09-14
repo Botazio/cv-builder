@@ -4,7 +4,7 @@ import { SET_DISPLAY } from 'modules/pages/builder/display.actions';
 import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
-import { BUILDER_LOCATION_STATE } from '../builder-link/builder-link';
+import { BUILDER_LOCATION_STATE } from '../../builder-link/builder-link';
 
 
 /**
