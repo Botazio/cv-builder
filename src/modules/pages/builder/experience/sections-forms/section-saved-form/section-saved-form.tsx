@@ -3,6 +3,7 @@ import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import LineDivider from 'common/components/atoms/dividers/line-divider/line-divider';
+import SaveStateButtonWrapper from 'common/components/molecules/save-state/save-state-button-wrapper/save-state-button-wrapper';
 import { useAppDispatch } from 'state/hooks';
 import { IterativeExperienceSections } from '../../experience-sections.enum';
 import { DELETE_FORM, MOVE_FORM_DOWN, MOVE_FORM_UP, UPDATE_FORM } from '../../experience.actions';
@@ -31,19 +32,21 @@ export default function SectionSavedForm({ id, title, description, elementID, se
           <p className={styles.description}>{description ? description : ""}</p>
         </div>
 
-        <div className={styles.buttons}>
-          <div onClick={() => dispatch({ type: DELETE_FORM, payload: elementID, section: sectionCode })}>
-            <CloseRoundedIcon />
-          </div>
-          <div onClick={() => dispatch({ type: UPDATE_FORM, payload: elementID, section: sectionCode })}>
+        <div className={styles.buttons_container}>
+          <SaveStateButtonWrapper>
+            <button onClick={() => dispatch({ type: DELETE_FORM, payload: elementID, section: sectionCode })}>
+              <CloseRoundedIcon />
+            </button>
+          </SaveStateButtonWrapper>
+          <button onClick={() => dispatch({ type: UPDATE_FORM, payload: elementID, section: sectionCode })}>
             <EditRoundedIcon />
-          </div>
-          <div onClick={() => dispatch({ type: MOVE_FORM_UP, payload: elementID, section: sectionCode })}>
+          </button>
+          <button onClick={() => dispatch({ type: MOVE_FORM_UP, payload: elementID, section: sectionCode })}>
             <KeyboardArrowUpRoundedIcon />
-          </div>
-          <div onClick={() => dispatch({ type: MOVE_FORM_DOWN, payload: elementID, section: sectionCode })}>
+          </button>
+          <button onClick={() => dispatch({ type: MOVE_FORM_DOWN, payload: elementID, section: sectionCode })}>
             <KeyboardArrowDownRoundedIcon />
-          </div>
+          </button>
         </div>
 
       </div>

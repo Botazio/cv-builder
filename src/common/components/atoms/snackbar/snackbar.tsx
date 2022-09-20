@@ -1,6 +1,7 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import cn from 'classnames';
-import { useEffect } from "react";
+import { SnackBarDisplayState } from 'modules/pages/builder/display-utils';
+import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styles from './snackbar.module.css';
 
@@ -8,18 +9,22 @@ interface SnackBarInterface {
   value: string,
   active: boolean,
   setActive: Function,
-  type?: 'success' | 'error' | 'info',
+  type?: SnackBarDisplayState["type"],
   startIcon?: React.ReactNode,
 }
 
 
 export default function SnackBar({ value, active, setActive, type = 'success', startIcon }: SnackBarInterface) {
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>();
 
   useEffect(() => {
     if (active) {
-      setTimeout(() => {
+      const id = setTimeout(() => {
         setActive(false);
       }, 2000);
+      setTimeoutId(id);
+    } else {
+      clearTimeout(timeoutId);
     }
 
     return () => {

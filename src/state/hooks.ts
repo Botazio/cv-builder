@@ -1,4 +1,4 @@
-import { SET_DISPLAY } from 'modules/pages/builder/display.actions';
+import { SET_DISPLAY_SNACKBAR } from 'modules/pages/builder/display.actions';
 import { useEffect } from 'react';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import type { AppDispatch, RootState } from './store';
@@ -26,7 +26,7 @@ export function useSaveStateWhenUnmounts() {
   useEffect(() => {
     return () => {
       const hasStateBeenSaved: boolean = saveState(state);
-      dispatch({ type: SET_DISPLAY, payload: hasStateBeenSaved, field: 'displayStateHasBeenSaved' });
+      dispatch({ type: SET_DISPLAY_SNACKBAR, payload: hasStateBeenSaved, field: 'displayStateHasBeenSaved' });
     };
   }, []);
 }

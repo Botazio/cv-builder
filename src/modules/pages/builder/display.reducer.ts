@@ -1,13 +1,18 @@
 import produce from 'immer';
-import { DISPLAYactions, SET_DISPLAY } from './display.actions';
+import { SnackBarDisplayState } from './display-utils';
+import { DISPLAYactions, RESET_DISPLAY_SNACKBAR, SET_DISPLAY_SNACKBAR } from './display.actions';
 
 
 export interface Display {
-  displayStateHasBeenSaved: boolean;
+  snackBar: SnackBarDisplayState;
 };
 
 const initialState: Display = {
-  displayStateHasBeenSaved: false,
+  snackBar: {
+    display: false,
+    value: '',
+    type: 'success',
+  },
 };
 
 /**
@@ -19,9 +24,16 @@ const initialState: Display = {
  */
 export function displayReducer(state = initialState, action: DISPLAYactions) {
   switch (action.type) {
-    case SET_DISPLAY: {
+    case SET_DISPLAY_SNACKBAR: {
       const nextState = produce(state, draft => {
-        draft[action.field] = action.payload;
+        draft["snackBar"] = action.payload;
+      });
+
+      return nextState;
+    }
+    case RESET_DISPLAY_SNACKBAR: {
+      const nextState = produce(state, draft => {
+        draft["snackBar"] = initialState.snackBar;
       });
 
       return nextState;

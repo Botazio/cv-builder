@@ -8,23 +8,24 @@
 .info {
   margin-right: var(--divider-space);
 }
-.info > h4 {
+.info>h4 {
   margin: 5px 0px;
 }
-.info > p {
+.info>p {
   margin: 5px 0px;
 }
-.buttons {
+.buttons_container {
   display: flex;
   align-items: center;
 }
-.buttons > div {
+.buttons_container button {
+  all: unset;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   margin-left: 5px;
 }
-.buttons > div:hover {
+.buttons_container button:hover {
   background-color: var(--input-field-background);
 }
 .divider {

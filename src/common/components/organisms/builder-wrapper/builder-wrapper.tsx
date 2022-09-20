@@ -1,5 +1,5 @@
+import SaveStateSnackBar from "common/components/molecules/builder-snackbar/builder-snackbar";
 import ConditionsDialog from "common/components/molecules/conditions-dialog/conditions-dialog";
-import SaveStateSnackBar from "common/components/molecules/save-state/save-state-snackbar/save-state-snackbar";
 import SaveStateWrapper from "common/components/molecules/save-state/save-state-wrapper/save-state-wrapper";
 
 
