@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import type { AppDispatch, RootState } from './store';
-import { saveStateAndDisplaySnackBar } from './utils';
+import { saveStateAndDispatchSnackBarDisplay } from './utils';
 
 /**
  * Hook to access the dispatch function inside the reducer
@@ -24,7 +24,7 @@ export function useSaveStateWhenUnmounts() {
 
   useEffect(() => {
     return () => {
-      saveStateAndDisplaySnackBar(state, dispatch);
+      saveStateAndDispatchSnackBarDisplay(state, dispatch);
     };
   }, []);
 }

@@ -36,7 +36,7 @@ const snackBarStateHasBeenSaved: SnackBarDisplayState = {
   type: "success"
 };
 
-export function saveStateAndDisplaySnackBar(state: RootState, dispatch: Dispatch<SetDisplaySnackBar>) {
+export function saveStateAndDispatchSnackBarDisplay(state: RootState, dispatch: Dispatch<SetDisplaySnackBar>) {
   const hasStateBeenSaved: boolean = saveState(state);
 
   if (hasStateBeenSaved) {

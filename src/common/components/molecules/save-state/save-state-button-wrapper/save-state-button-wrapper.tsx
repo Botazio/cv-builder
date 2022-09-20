@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "state/hooks";
-import { saveStateAndDisplaySnackBar } from "state/utils";
+import { saveStateAndDispatchSnackBarDisplay } from "state/utils";
 
 
 /**
@@ -12,7 +12,7 @@ export default function SaveStateButtonWrapper({ children }) {
   const dispatch = useAppDispatch();
 
   const handleClick = () => {
-    saveStateAndDisplaySnackBar(state, dispatch);
+    saveStateAndDispatchSnackBarDisplay(state, dispatch);
   };
 
   return (

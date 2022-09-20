@@ -1,4 +1,4 @@
-import SaveStateSnackBar from "common/components/molecules/builder-snackbar/builder-snackbar";
+import BuilderSnackBar from "common/components/molecules/builder-snackbar/builder-snackbar";
 import ConditionsDialog from "common/components/molecules/conditions-dialog/conditions-dialog";
 import SaveStateWrapper from "common/components/molecules/save-state/save-state-wrapper/save-state-wrapper";
 
@@ -16,7 +16,7 @@ export default function BuilderWrapper({ children }) {
         {children}
       </SaveStateWrapper>
 
-      <SaveStateSnackBar />
+      <BuilderSnackBar />
 
       <ConditionsDialog />
     </>
