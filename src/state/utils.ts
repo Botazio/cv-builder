@@ -1,4 +1,7 @@
 import { storageAvailable } from "common/utils/functions";
+import { SnackBarDisplayState } from "modules/pages/builder/display-utils";
+import { SetDisplaySnackBar, SET_DISPLAY_SNACKBAR } from "modules/pages/builder/display.actions";
+import { Dispatch } from "react";
 import { RootState } from "./store";
 
 const STORE: string = "cv_builder_store";
@@ -25,4 +28,18 @@ export function saveState(state: RootState): boolean {
   }
 
   return hasStateBeenSaved;
+}
+
+const snackBarStateHasBeenSaved: SnackBarDisplayState = {
+  display: true,
+  value: "Your information has been correctly saved",
+  type: "success"
+};
+
+export function saveStateAndDisplaySnackBar(state: RootState, dispatch: Dispatch<SetDisplaySnackBar>) {
+  const hasStateBeenSaved: boolean = saveState(state);
+
+  if (hasStateBeenSaved) {
+    dispatch({ type: SET_DISPLAY_SNACKBAR, payload: snackBarStateHasBeenSaved });
+  }
 }

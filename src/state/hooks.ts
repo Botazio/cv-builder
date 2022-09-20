@@ -1,8 +1,7 @@
-import { SET_DISPLAY_SNACKBAR } from 'modules/pages/builder/display.actions';
 import { useEffect } from 'react';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import type { AppDispatch, RootState } from './store';
-import { saveState } from './utils';
+import { saveStateAndDisplaySnackBar } from './utils';
 
 /**
  * Hook to access the dispatch function inside the reducer
@@ -25,8 +24,7 @@ export function useSaveStateWhenUnmounts() {
 
   useEffect(() => {
     return () => {
-      const hasStateBeenSaved: boolean = saveState(state);
-      dispatch({ type: SET_DISPLAY_SNACKBAR, payload: hasStateBeenSaved, field: 'displayStateHasBeenSaved' });
+      saveStateAndDisplaySnackBar(state, dispatch);
     };
   }, []);
 }

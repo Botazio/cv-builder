@@ -1,13 +1,6 @@
-import { SnackBarDisplayState } from "modules/pages/builder/display-utils";
-import { SET_DISPLAY_SNACKBAR } from "modules/pages/builder/display.actions";
 import { useAppDispatch, useAppSelector } from "state/hooks";
-import { saveState } from "state/utils";
+import { saveStateAndDisplaySnackBar } from "state/utils";
 
-const snackBarState: SnackBarDisplayState = {
-  display: true,
-  value: "Your information has been correctly saved",
-  type: "success"
-};
 
 /**
  * Wrapper around buttons that save the state of the application.
@@ -19,11 +12,7 @@ export default function SaveStateButtonWrapper({ children }) {
   const dispatch = useAppDispatch();
 
   const handleClick = () => {
-    const hasStateBeenSaved: boolean = saveState(state);
-
-    if (hasStateBeenSaved) {
-      dispatch({ type: SET_DISPLAY_SNACKBAR, payload: snackBarState });
-    }
+    saveStateAndDisplaySnackBar(state, dispatch);
   };
 
   return (
@@ -32,3 +21,5 @@ export default function SaveStateButtonWrapper({ children }) {
     </div>
   );
 }
+
+
