@@ -4,7 +4,7 @@ import SubmitButton from "common/components/atoms/buttons/submit-button/submit-b
 import SpaceDivider from "common/components/atoms/dividers/space-divider/space-divider";
 import LayoutBuilder from "common/components/layouts/layout-builder/layout-builder";
 import LayoutCardHeader from "common/components/layouts/layout-card/layout-card-header/layout-card-header";
-import BuilderLink from 'common/components/molecules/builder-link/builder-link';
+import SaveStateLink from 'common/components/molecules/save-state/save-state-link/save-state-link';
 import ExperienceForm from "./experience-form";
 
 function ExperiencePage() {
@@ -12,13 +12,13 @@ function ExperiencePage() {
     <LayoutBuilder header={<LayoutCardHeader title="Experience" />}>
       <ExperienceForm />
       <SpaceDivider variant="large" />
-      <BuilderLink to="/builder/template">
+      <SaveStateLink to="/builder/template">
         <SubmitButton value="Next" endIcon={<ArrowForwardIosRoundedIcon />} />
-      </BuilderLink>
+      </SaveStateLink>
       <SpaceDivider variant="small" />
-      <BuilderLink to={"/builder/personal"} state="hello">
+      <SaveStateLink to={"/builder/personal"}>
         <BackButton />
-      </BuilderLink>
+      </SaveStateLink>
     </LayoutBuilder>
   );
 }

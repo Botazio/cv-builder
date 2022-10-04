@@ -1,7 +1,7 @@
 import CreateRoundedIcon from '@mui/icons-material/CreateRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
-import BuilderLink from 'common/components/molecules/builder-link/builder-link';
+import SaveStateLink from 'common/components/molecules/save-state/save-state-link/save-state-link';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './progress-bar.module.css';
@@ -21,24 +21,24 @@ export default function ProgressBar() {
 
   return (
     <div className={styles.container}>
-      <BuilderLink to="/builder/personal">
+      <SaveStateLink to="/builder/personal">
         <SwitchLight isActive={active === "/builder/personal"} title="Personal">
           <PersonRoundedIcon fontSize="medium" />
         </SwitchLight>
-      </BuilderLink>
+      </SaveStateLink>
 
-      <BuilderLink to="/builder/experience">
+      <SaveStateLink to="/builder/experience">
         <SwitchLight isActive={active === "/builder/experience"} title="Experience">
           <WorkRoundedIcon fontSize="medium" />
         </SwitchLight>
-      </BuilderLink>
+      </SaveStateLink>
 
 
-      <BuilderLink to="/builder/template">
+      <SaveStateLink to="/builder/template">
         <SwitchLight isActive={active === "/builder/template"} title="Template">
           <CreateRoundedIcon fontSize="medium" />
         </SwitchLight>
-      </BuilderLink>
+      </SaveStateLink>
     </div>
   );
 }
