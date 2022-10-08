@@ -12,7 +12,7 @@ import styles from './photo-field.module.css';
 export default function PhotoField() {
   const [isEditorActive, setIsEditorActive] = useState<boolean>(false);
 
-  const photoURL = useAppSelector(state => state.builder.personal.photoURL);
+  const photoURL = useAppSelector(state => state.builder.personal.photoURL.value);
 
   return (
     <>

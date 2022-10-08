@@ -2,6 +2,7 @@ import { SnackBarDisplayState } from "./display-utils";
 
 export const SET_DISPLAY_SNACKBAR = '[DISPLAY] Display SnackBar';
 export const RESET_DISPLAY_SNACKBAR = '[DISPLAY] Reset Display SnackBar';
+export const SET_DISPLAY_REQUIRED_FIELDS_ERROR = '[DISPLAY] Set Display Required Fields Error';
 
 export class SetDisplaySnackBar {
   readonly type = SET_DISPLAY_SNACKBAR;
@@ -13,5 +14,10 @@ export class ResetDisplaySnackBar {
   constructor() { }
 }
 
+export class SetDisplayRequiredFieldsError {
+  readonly type = SET_DISPLAY_REQUIRED_FIELDS_ERROR;
+  constructor(public payload: boolean) { }
+}
 
-export type DISPLAYactions = SetDisplaySnackBar | ResetDisplaySnackBar;
+
+export type DISPLAYactions = SetDisplaySnackBar | ResetDisplaySnackBar | SetDisplayRequiredFieldsError;

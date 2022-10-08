@@ -18,7 +18,7 @@ import styles from './personal-form.module.css';
 export default function PersonalForm() {
   const [active, setActive] = useState(false);
 
-  const state = useAppSelector(state => state.builder.personal);
+  const state = useAppSelector(state => state.builder);
   const dispatch = useAppDispatch();
 
   return (
@@ -34,30 +34,36 @@ export default function PersonalForm() {
           <Grid container item xs={12} sm={8} spacing={2}>
 
             <Grid item xs={12} sm={6}>
-              <InputWrapper label="name" labelPlaceHolder="Name">
+              <InputWrapper label="name" labelPlaceHolder="Name*">
                 <TextField
                   name="name"
-                  value={state.name}
+                  value={state.personal.name.value}
+                  required={state.personal.name.required}
+                  displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "name" })}
                 />
               </InputWrapper>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <InputWrapper label="surname" labelPlaceHolder="Surname">
+              <InputWrapper label="surname" labelPlaceHolder="Surname*">
                 <TextField
                   name="surname"
-                  value={state.surname}
+                  value={state.personal.surname.value}
+                  required={state.personal.surname.required}
+                  displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "surname" })}
                 />
               </InputWrapper>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <InputWrapper label="profession" labelPlaceHolder="Profession">
+              <InputWrapper label="profession" labelPlaceHolder="Profession*">
                 <TextField
                   name="profession"
-                  value={state.profession}
+                  value={state.personal.profession.value}
+                  required={state.personal.profession.required}
+                  displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "profession" })}
                 />
               </InputWrapper>
@@ -67,7 +73,9 @@ export default function PersonalForm() {
               <InputWrapper label="tel" labelPlaceHolder="Telephone number">
                 <TextField
                   name="tel"
-                  value={state.mobile}
+                  value={state.personal.mobile.value}
+                  required={state.personal.mobile.required}
+                  displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "mobile" })}
                 />
               </InputWrapper>
@@ -77,7 +85,9 @@ export default function PersonalForm() {
               <InputWrapper label="email" labelPlaceHolder="Email">
                 <TextField
                   name="email"
-                  value={state.email}
+                  value={state.personal.email.value}
+                  required={state.personal.email.required}
+                  displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "email" })}
                 />
               </InputWrapper>
@@ -87,7 +97,9 @@ export default function PersonalForm() {
               <InputWrapper label="address" labelPlaceHolder="Address">
                 <TextField
                   name="address"
-                  value={state.address}
+                  value={state.personal.address.value}
+                  required={state.personal.address.required}
+                  displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "address" })}
                 />
               </InputWrapper>
@@ -101,7 +113,9 @@ export default function PersonalForm() {
                     <InputWrapper label="linkedin" labelPlaceHolder="LinkedIn">
                       <TextField
                         name="linkedin"
-                        value={state.linkedin}
+                        value={state.personal.linkedin.value}
+                        required={state.personal.linkedin.required}
+                        displayError={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "linkedin" })}
                       />
                     </InputWrapper>
@@ -111,7 +125,9 @@ export default function PersonalForm() {
                     <InputWrapper label="website" labelPlaceHolder="Website">
                       <TextField
                         name="website"
-                        value={state.website}
+                        value={state.personal.website.value}
+                        required={state.personal.website.required}
+                        displayError={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "website" })}
                       />
                     </InputWrapper>
@@ -121,7 +137,9 @@ export default function PersonalForm() {
                     <InputWrapper label="license" labelPlaceHolder="Driver's license">
                       <TextField
                         name="license"
-                        value={state.license}
+                        value={state.personal.license.value}
+                        required={state.personal.license.required}
+                        displayError={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "license" })}
                       />
                     </InputWrapper>
@@ -131,7 +149,9 @@ export default function PersonalForm() {
                     <InputWrapper label="nationality" labelPlaceHolder="Nationality">
                       <TextField
                         name="nationality"
-                        value={state.nationality}
+                        value={state.personal.nationality.value}
+                        required={state.personal.nationality.required}
+                        displayError={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "nationality" })}
                       />
                     </InputWrapper>

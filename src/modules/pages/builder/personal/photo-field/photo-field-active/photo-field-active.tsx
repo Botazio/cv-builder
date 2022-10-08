@@ -4,7 +4,7 @@ import { SET_FORM_FIELD } from '../../personal.actions';
 import styles from './photo-field-active.module.css';
 
 export default function PhotoFieldActive() {
-  const photoURL = useAppSelector(state => state.builder.personal.photoURL);
+  const photoURL = useAppSelector(state => state.builder.personal.photoURL.value);
   const dispatch = useAppDispatch();
 
   return (
