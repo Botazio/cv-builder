@@ -17,7 +17,6 @@ export function areRequiredFieldsPopulated(state: Personal): boolean {
   return areRequiredFieldsPopulated;
 };
 
-
 export function dispatchSnackbarMissingRequiredFields(dispatch: Dispatch<SetDisplaySnackBar>) {
   const snackBarMissingRequiredFields: SnackBarDisplayState = {
     display: true,

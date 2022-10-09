@@ -39,7 +39,7 @@ export default function PersonalForm() {
                   name="name"
                   value={state.personal.name.value}
                   required={state.personal.name.isRequired}
-                  displayError={state.display.displayRequiredFieldsError}
+                  error={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "name" })}
                 />
               </InputWrapper>
@@ -51,7 +51,7 @@ export default function PersonalForm() {
                   name="surname"
                   value={state.personal.surname.value}
                   required={state.personal.surname.isRequired}
-                  displayError={state.display.displayRequiredFieldsError}
+                  error={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "surname" })}
                 />
               </InputWrapper>
@@ -63,7 +63,7 @@ export default function PersonalForm() {
                   name="profession"
                   value={state.personal.profession.value}
                   required={state.personal.profession.isRequired}
-                  displayError={state.display.displayRequiredFieldsError}
+                  error={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "profession" })}
                 />
               </InputWrapper>
@@ -75,7 +75,7 @@ export default function PersonalForm() {
                   name="tel"
                   value={state.personal.mobile.value}
                   required={state.personal.mobile.isRequired}
-                  displayError={state.display.displayRequiredFieldsError}
+                  error={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "mobile" })}
                 />
               </InputWrapper>
@@ -87,7 +87,7 @@ export default function PersonalForm() {
                   name="email"
                   value={state.personal.email.value}
                   required={state.personal.email.isRequired}
-                  displayError={state.display.displayRequiredFieldsError}
+                  error={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "email" })}
                 />
               </InputWrapper>
@@ -99,7 +99,7 @@ export default function PersonalForm() {
                   name="address"
                   value={state.personal.address.value}
                   required={state.personal.address.isRequired}
-                  displayError={state.display.displayRequiredFieldsError}
+                  error={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "address" })}
                 />
               </InputWrapper>
@@ -115,7 +115,7 @@ export default function PersonalForm() {
                         name="linkedin"
                         value={state.personal.linkedin.value}
                         required={state.personal.linkedin.isRequired}
-                        displayError={state.display.displayRequiredFieldsError}
+                        error={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "linkedin" })}
                       />
                     </InputWrapper>
@@ -127,7 +127,7 @@ export default function PersonalForm() {
                         name="website"
                         value={state.personal.website.value}
                         required={state.personal.website.isRequired}
-                        displayError={state.display.displayRequiredFieldsError}
+                        error={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "website" })}
                       />
                     </InputWrapper>
@@ -139,7 +139,7 @@ export default function PersonalForm() {
                         name="license"
                         value={state.personal.license.value}
                         required={state.personal.license.isRequired}
-                        displayError={state.display.displayRequiredFieldsError}
+                        error={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "license" })}
                       />
                     </InputWrapper>
@@ -151,7 +151,7 @@ export default function PersonalForm() {
                         name="nationality"
                         value={state.personal.nationality.value}
                         required={state.personal.nationality.isRequired}
-                        displayError={state.display.displayRequiredFieldsError}
+                        error={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "nationality" })}
                       />
                     </InputWrapper>

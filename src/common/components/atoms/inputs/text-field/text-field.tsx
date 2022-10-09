@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import TextFieldError from '../text-field-error/text-field-error';
 import styles from './text-field.module.css';
 
@@ -6,7 +7,7 @@ interface TextFieldInterface {
   name: string;
   value: string;
   required?: boolean;
-  displayError?: boolean;
+  error?: boolean;
   handleChange?: any;
 }
 
@@ -14,7 +15,29 @@ interface TextFieldInterface {
 /**
  * Default text field.
  */
-export default function TextField({ name, value, required, displayError, handleChange }: TextFieldInterface) {
+export default function TextField({ name, value, required, error, handleChange }: TextFieldInterface) {
+  const [displayError, setDisplayError] = useState(false);
+  const [hasFieldBeenTouched, setHasFieldBeenTouched] = useState(false);
+
+  useEffect(() => {
+    if (!!value) {
+      setHasFieldBeenTouched(true);
+    }
+  }, [value]);
+
+  useEffect(() => {
+    if (!required) {
+      return;
+    }
+
+    if (value === '' && (error || hasFieldBeenTouched)) {
+      setDisplayError(true);
+    } else {
+      setDisplayError(false);
+    }
+
+  }, [error, hasFieldBeenTouched, required, value]);
+
 
   return (
     <div>
@@ -26,7 +49,7 @@ export default function TextField({ name, value, required, displayError, handleC
         type="text"
         name={name}
       />
-      {required && displayError && <TextFieldError value={value} />}
+      {displayError && <TextFieldError />}
     </div>
 
   );

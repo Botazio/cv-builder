@@ -4,7 +4,8 @@ import React from 'react';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
 
 /**
- * Component that validates the required fields of the personal form when the component loads.
+ * Wrapper expecting a Link component as a child. 
+ * It will check if all required fields are populated before allowing the user to navigate to the next page.
  * If there is a required field that is empty, it will display an snackbar with a error message.
  */
 export default function RequiredFieldsValidator({ children }: { children: React.ReactNode; }) {
