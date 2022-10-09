@@ -1,4 +1,8 @@
 import { storageAvailable } from "common/utils/functions";
+import { SnackBarDisplayState } from "modules/pages/builder/display-utils";
+import { SetDisplaySnackBar, SET_DISPLAY_SNACKBAR } from "modules/pages/builder/display.actions";
+import { Dispatch } from "react";
+import { RootState } from "./store";
 
 const STORE: string = "cv_builder_store";
 
@@ -11,8 +15,31 @@ export function getPersistedState() {
   }
 }
 
-export function saveState(state) {
+export function saveState(state: RootState): boolean {
+  let hasStateBeenSaved: boolean = false;
+
   if (storageAvailable('localStorage')) {
-    localStorage.setItem(STORE, JSON.stringify(state));
+    try {
+      localStorage.setItem(STORE, JSON.stringify(state));
+      hasStateBeenSaved = true;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  return hasStateBeenSaved;
+}
+
+export function saveStateAndDispatchSnackBarDisplay(state: RootState, dispatch: Dispatch<SetDisplaySnackBar>) {
+  const snackBarStateHasBeenSaved: SnackBarDisplayState = {
+    display: true,
+    value: "Your information has been correctly saved",
+    type: "success"
+  };
+
+  const hasStateBeenSaved: boolean = saveState(state);
+
+  if (hasStateBeenSaved) {
+    dispatch({ type: SET_DISPLAY_SNACKBAR, payload: snackBarStateHasBeenSaved });
   }
 }

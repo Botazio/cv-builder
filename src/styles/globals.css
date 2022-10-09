@@ -23,9 +23,8 @@ a {
   box-sizing: border-box;
   line-height: 19px;
   border-radius: var(--custom-border-radius);
-  font-size: 15px;
   font-family: var(--font-family);
-  cursor: pointer;
+  font-size: var(--btn-font-size);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +44,7 @@ a {
   padding: 14px 14px 14px 16px;
   box-sizing: border-box;
   line-height: 19px;
-  font-size: 15px;
+  font-size: var(--input-field-font-size);
   width: 100%;
   resize: none;
 }

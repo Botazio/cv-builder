@@ -1,9 +1,9 @@
-import styles from './back-button.module.css';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
+import styles from './back-button.module.css';
 
 /**
  * 
- * This component is used to navigate back in the form builder.
+ * Used to navigate back in the form builder.
  */
 export default function BackButton() {
   return (

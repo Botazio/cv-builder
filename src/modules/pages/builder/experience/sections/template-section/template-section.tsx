@@ -1,7 +1,7 @@
+import { Collapse } from '@mui/material';
+import SectionHeader from 'common/components/layouts/layout-card/layout-card-section/section-header/section-header';
 import FormFooter from 'common/components/molecules/form-footer/form-footer';
 import { useState } from 'react';
-import { Collapse } from '@mui/material';
-import SectionHeader from '../../sections-forms/section-header/section-header';
 
 interface TemplateInterface {
   children: React.ReactNode;

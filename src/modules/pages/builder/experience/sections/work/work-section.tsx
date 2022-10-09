@@ -1,12 +1,12 @@
-import WorkSectionForm from './work-section-form/work-section-form';
-import TemplateSection from '../template-section/template-section';
-import WorkOutlineRoundedIcon from '@mui/icons-material/WorkOutlineRounded';
-import { useAppDispatch, useAppSelector } from 'state/hooks';
-import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
-import { ADD_FORM } from '../../experience.actions';
+import WorkOutlineRoundedIcon from '@mui/icons-material/WorkOutlineRounded';
+import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
+import { useAppDispatch, useAppSelector } from 'state/hooks';
 import { IterativeExperienceSections } from '../../experience-sections.enum';
-import SavedForm from '../../saved-form/saved-form';
+import { ADD_FORM } from '../../experience.actions';
+import SectionSavedForm from '../../sections-forms/section-saved-form/section-saved-form';
+import TemplateSection from '../template-section/template-section';
+import WorkSectionForm from './work-section-form/work-section-form';
 
 
 export default function WorkSection() {
@@ -35,7 +35,7 @@ export default function WorkSection() {
           );
         } else {
           return (
-            <SavedForm
+            <SectionSavedForm
               key={element.id}
               title={element.title}
               description={(element.description.length > 30 ? element.description.slice(0, 30) + "..." : element.description)}

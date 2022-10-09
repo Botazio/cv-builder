@@ -1,4 +1,6 @@
-import PrivacyCookiesPolicyPage from 'modules/pages/legal/privacy-cookies-policy-page';
+import ScrollToTop from 'common/components/molecules/scroll-to-top/scroll-to-top';
+import LegalPage from 'modules/pages/legal/legal-page';
+import NotFound from 'modules/pages/not-found/not-found';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
@@ -20,6 +22,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="builder">
@@ -29,8 +32,9 @@ root.render(
             <Route path="download" element={<DownloadPage />} />
           </Route>
           <Route path="legal">
-            <Route path="privacy-cookies-policy" element={<PrivacyCookiesPolicyPage />} />
+            <Route path="privacy-cookies-policy" element={<LegalPage />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </Provider>

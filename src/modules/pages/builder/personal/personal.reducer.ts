@@ -2,39 +2,77 @@ import produce from 'immer';
 import { PERSONALactions, SET_FORM_FIELD } from "./personal.actions";
 
 
+export interface PersonalField {
+  value: string;
+  isRequired: boolean;
+}
+
 export interface Personal {
-  photoURL: string;
-  name: string;
-  surname: string;
-  profession: string;
-  mobile: string;
-  email: string;
-  address: string;
-  linkedin: string;
-  website: string;
-  license: string;
-  nationality: string;
+  photoURL: PersonalField;
+  name: PersonalField;
+  surname: PersonalField;
+  profession: PersonalField;
+  mobile: PersonalField;
+  email: PersonalField;
+  address: PersonalField;
+  linkedin: PersonalField;
+  website: PersonalField;
+  license: PersonalField;
+  nationality: PersonalField;
 };
 
 const initialState: Personal = {
-  photoURL: '',
-  name: '',
-  surname: '',
-  profession: '',
-  mobile: '',
-  email: '',
-  address: '',
-  linkedin: '',
-  website: '',
-  license: '',
-  nationality: '',
+  photoURL: {
+    value: '',
+    isRequired: false
+  },
+  name: {
+    value: '',
+    isRequired: true
+  },
+  surname: {
+    value: '',
+    isRequired: true
+  },
+  profession: {
+    value: '',
+    isRequired: true
+  },
+  mobile: {
+    value: '',
+    isRequired: false
+  },
+  email: {
+    value: '',
+    isRequired: false
+  },
+  address: {
+    value: '',
+    isRequired: false
+  },
+  linkedin: {
+    value: '',
+    isRequired: false
+  },
+  website: {
+    value: '',
+    isRequired: false
+  },
+  license: {
+    value: '',
+    isRequired: false
+  },
+  nationality: {
+    value: '',
+    isRequired: false
+  },
 };
 
 export function personalReducer(state = initialState, action: PERSONALactions) {
   switch (action.type) {
     case SET_FORM_FIELD: {
       const nextState = produce(state, draft => {
-        draft[action.field] = action.payload;
+        draft[action.field]['value'] = action.payload;
       });
 
       return nextState;

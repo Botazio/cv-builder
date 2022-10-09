@@ -1,5 +1,5 @@
+import { Image, StyleSheet, Text, View } from '@react-pdf/renderer';
 import { Builder } from 'modules/pages/builder/builder.reducer';
-import { StyleSheet, View, Text } from '@react-pdf/renderer';
 import { propStyles } from "../utils/styles/interfaces/prop-styles.interface";
 
 function createComponentStyles(propStyles: propStyles) {
@@ -40,14 +40,14 @@ function createComponentStyles(propStyles: propStyles) {
       width: '100%',
     },
     containerDescription: {
-      backgroundColor: propStyles.backgroundColor,
+      backgroundColor: propStyles.primaryColor,
+      color: propStyles.primaryFontColor,
       borderRadius: propStyles.borderRadius,
       padding: propStyles.dividerSpace / 3
     },
     containerPhoto: {
       width: 75,
       height: 75,
-      backgroundColor: propStyles.primaryColor,
       marginBottom: propStyles.dividerSpace / 3
     },
     containerName: {
@@ -68,27 +68,32 @@ function HeaderOne({ state, propStyles }: { state: Builder, propStyles: propStyl
 
   const styles = createComponentStyles(propStyles);
 
-  const profession = state.personal.profession.split(' ');
+  const profession = state.personal.profession.value.split(' ');
 
   return (
     <View style={styles.wrapper}>
       <View style={styles.containerLeft}>
-        <View style={styles.containerPhoto}></View>
-        {state.personal.profession !== '' && <View style={styles.containerProfession}>
+
+        <View style={styles.containerPhoto}>
+          {state.personal.photoURL.value !== '' && <Image src={state.personal.photoURL.value} />}
+        </View>
+
+        {state.personal.profession.value !== '' && <View style={styles.containerProfession}>
           {profession.map((word, index) => <Text key={index} style={styles.subTitle}>{word + ' '}</Text>)}
         </View>}
-        {state.personal.mobile !== '' && <Text style={styles.textDetails}>{state.personal.mobile}</Text>}
-        {state.personal.email !== '' && <Text style={styles.textDetails}>{state.personal.email}</Text>}
-        {state.personal.address !== '' && <Text style={styles.textDetails}>{state.personal.address}</Text>}
-        {state.personal.linkedin !== '' && <Text style={styles.textDetails}>{state.personal.linkedin}</Text>}
-        {state.personal.website !== '' && <Text style={styles.textDetails}>{state.personal.website}</Text>}
-        {state.personal.license !== '' && <Text style={styles.textDetails}>Driving license: {state.personal.license}</Text>}
+
+        {state.personal.mobile.value !== '' && <Text style={styles.textDetails}>{state.personal.mobile.value}</Text>}
+        {state.personal.email.value !== '' && <Text style={styles.textDetails}>{state.personal.email.value}</Text>}
+        {state.personal.address.value !== '' && <Text style={styles.textDetails}>{state.personal.address.value}</Text>}
+        {state.personal.linkedin.value !== '' && <Text style={styles.textDetails}>{state.personal.linkedin.value}</Text>}
+        {state.personal.website.value !== '' && <Text style={styles.textDetails}>{state.personal.website.value}</Text>}
+        {state.personal.license.value !== '' && <Text style={styles.textDetails}>Driving license: {state.personal.license.value}</Text>}
       </View>
 
       <View style={styles.containerRight}>
         <View style={styles.containerName}>
-          {state.personal.name !== '' && <Text style={styles.textName}>{state.personal.name}</Text>}
-          {state.personal.surname !== '' && <Text style={styles.textName}>{state.personal.surname}</Text>}
+          {state.personal.name.value !== '' && <Text style={styles.textName}>{state.personal.name.value}</Text>}
+          {state.personal.surname.value !== '' && <Text style={styles.textName}>{state.personal.surname.value}</Text>}
         </View>
         {state.experience.description !== '' && <View style={styles.containerDescription}>
           <Text style={styles.title}>About me</Text>

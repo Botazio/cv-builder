@@ -1,13 +1,13 @@
-import SectionBody from '../../../sections-forms/section-body/section-body';
 import { Grid } from '@mui/material';
 import InputWrapper from 'common/components/atoms/inputs/input-wrapper/input-wrapper';
-import TextField from 'common/components/atoms/inputs/text-field/text-field';
 import TextArea from 'common/components/atoms/inputs/text-area/text-area';
-import { Work } from '../work-utils';
+import TextField from 'common/components/atoms/inputs/text-field/text-field';
+import SectionBody from 'common/components/layouts/layout-card/layout-card-section/section-body/section-body';
 import { useAppDispatch } from 'state/hooks';
-import { SET_FORM_FIELD } from '../../../experience.actions';
 import { IterativeExperienceSections } from '../../../experience-sections.enum';
+import { SET_FORM_FIELD } from '../../../experience.actions';
 import SectionFormFooter from '../../../sections-forms/section-form-footer/section-form-footer';
+import { Work } from '../work-utils';
 
 export default function WorkSectionForm({ state }: { state: Work; }) {
 

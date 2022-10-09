@@ -1,6 +1,6 @@
+import { Document, Font, Page, StyleSheet, View } from '@react-pdf/renderer';
 import { TemplateTheme } from 'modules/cv-templates/templates/template-theme.interface';
 import { Builder } from 'modules/pages/builder/builder.reducer';
-import { Page, Font, Document, StyleSheet, View } from '@react-pdf/renderer';
 import BodyOne from '../../bodies/body-one';
 import HeaderOne from '../../headers/header-one';
 import { propStyles } from '../../utils/styles/interfaces/prop-styles.interface';
@@ -11,8 +11,6 @@ function createPropStyles(theme: TemplateTheme): propStyles {
     primaryFontColor: 'black',
     secondaryColor: theme.secondary,
     secondaryFontColor: 'black',
-    backgroundColor: '#C2FFAD',
-    backgroundFontColor: 'black',
     fontFamilyTitle: 'robotoTitle',
     fontSizeTitle: 16,
     fontFamilySubTitle: 'robotoTitle',

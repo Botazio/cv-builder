@@ -1,11 +1,11 @@
+import { StyleSheet, Text, View } from '@react-pdf/renderer';
 import { Builder } from 'modules/pages/builder/builder.reducer';
-import { StyleSheet, View, Text } from '@react-pdf/renderer';
-import { propStyles } from '../utils/styles/interfaces/prop-styles.interface';
-import { Reference } from 'modules/pages/builder/experience/sections/references/references-utils';
 import { Education } from 'modules/pages/builder/experience/sections/education/education-utils';
+import { Reference } from 'modules/pages/builder/experience/sections/references/references-utils';
 import { Work } from 'modules/pages/builder/experience/sections/work/work-utils';
 import { WordsSeparator } from '../utils/components/words-separator';
 import { createCommonStyles, mergeStyles } from '../utils/styles/functions';
+import { propStyles } from '../utils/styles/interfaces/prop-styles.interface';
 
 function createComponentStyles(propStyles: propStyles) {
   return StyleSheet.create({
@@ -50,7 +50,7 @@ export default function BodyOne({ state, propStyles }: { state: Builder, propSty
   );
 }
 
-// This component is to render single fields sections such as skills or languages.
+// Renders single fields sections such as skills or languages.
 function SingleFieldSection({ state, title, styles }) {
   return (
     state.elements.length > 0 && <View style={styles.containerWithBackground}>

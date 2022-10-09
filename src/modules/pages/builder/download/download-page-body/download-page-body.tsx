@@ -1,16 +1,20 @@
+
+import LayoutCardBody from 'common/components/layouts/layout-card/layout-card-body/layout-card-body';
 import React from 'react';
-import BuilderBodyContainer from 'common/components/layouts/layout-builder/layout-builder-body/layout-builder-body';
 import styles from './download-page-body.module.css';
 
+/**
+ * Wrapper for the body of the download page.
+ */
 export default function DownloadPageBody({ children }: { children: React.ReactNode; }) {
 
   return (
-    <BuilderBodyContainer>
+    <LayoutCardBody>
       <div className={styles.container}>
         <div className={styles.cv_preview}>
           {children}
         </div>
       </div>
-    </BuilderBodyContainer>
+    </LayoutCardBody>
   );
 }

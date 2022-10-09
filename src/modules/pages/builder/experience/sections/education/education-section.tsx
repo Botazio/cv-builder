@@ -1,12 +1,12 @@
-import TemplateSection from '../template-section/template-section';
-import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
-import EducationSectionForm from './education-section-form/education-section-form';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
+import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import OutlinedButton from 'common/components/atoms/buttons/outlined-button/outlined-button';
-import { IterativeExperienceSections } from '../../experience-sections.enum';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
-import SavedForm from '../../saved-form/saved-form';
+import { IterativeExperienceSections } from '../../experience-sections.enum';
 import { ADD_FORM } from '../../experience.actions';
+import SectionSavedForm from '../../sections-forms/section-saved-form/section-saved-form';
+import TemplateSection from '../template-section/template-section';
+import EducationSectionForm from './education-section-form/education-section-form';
 
 
 export default function EducationSection() {
@@ -35,7 +35,7 @@ export default function EducationSection() {
           );
         } else {
           return (
-            <SavedForm
+            <SectionSavedForm
               key={element.id}
               title={element.title}
               description={(element.description.length > 30 ? element.description.slice(0, 30) + "..." : element.description)}

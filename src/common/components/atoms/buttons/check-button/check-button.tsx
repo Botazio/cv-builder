@@ -1,10 +1,10 @@
-import { Checkbox } from '@mui/material';
-import styles from './check-button.module.css';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
+import { Checkbox } from '@mui/material';
+import styles from './check-button.module.css';
 
 /**
- * This component shows a check icon when active.
+ * Shows a check icon when active. Empty circle when inactive.
  */
 export default function CheckButton({ checked }: { checked: boolean; }) {
 

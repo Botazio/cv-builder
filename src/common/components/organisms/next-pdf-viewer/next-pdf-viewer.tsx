@@ -6,6 +6,9 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import styles from './next-pdf-viewer.module.css';
 
 
+/**
+ * Creates and displays a PDF template with the data from the builder form.
+ */
 export default function NextPDFViewer({ doc, width, height, setURL }: { doc: any; width?: number; height?: number; setURL?: Function; }) {
   const [instance, updateInstance] = usePDF({ document: doc });
 

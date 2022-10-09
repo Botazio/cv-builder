@@ -28,7 +28,7 @@ export default function Footer() {
       </div>
 
       <Link to="/legal/privacy-cookies-policy">
-        Privacy & Cookies Policy
+        Privacy & cookies policy
       </Link>
     </footer>
   );

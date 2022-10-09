@@ -4,6 +4,10 @@
   --font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
+  /* Font sizes */
+  --btn-font-size: 15px;
+  --input-field-font-size: 15px;
+
   /* Component colors */
   --primary: #006BE9;
   --primary-font-color: white;
@@ -15,9 +19,14 @@
   --secondary-hover: #dddddd;
   --secondary-transparent: rgba(255, 255, 255, 0.2);
 
+  --success: #00C48C;
+  --success-font-color: white;
+  --success-hover: #00B27E;
+  --success-transparent: rgba(0, 196, 140, 0.1);
+
   --danger: #FE4256;
   --danger-font-color: white;
-  --danger-hover: #FFBABD;
+  --danger-hover: #D9103B;
   --danger-transparent: #FFBABD;
 
   --disabled: #a5a5a5;
@@ -46,4 +55,5 @@
 
   --custom-box-shadow: 4px 4px 24px rgb(139 140 165 / 20%);
   --custom-border-radius: 12px;
+  --custom-transition-time: 0.25s;
 }

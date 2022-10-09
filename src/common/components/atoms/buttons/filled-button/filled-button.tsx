@@ -3,6 +3,9 @@ import { ButtonInterface } from '../button-interface';
 import styles from './filled-button.module.css';
 
 
+/**
+ * Default filled button.
+ */
 export default function FilledButton({ value, startIcon, endIcon, type = "primary", isActive = true, handleClick }: ButtonInterface) {
 
   return (

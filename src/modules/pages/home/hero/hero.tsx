@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import styles from './hero.module.css';
 import cn from 'classnames';
 import SubmitButton from "common/components/atoms/buttons/submit-button/submit-button";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import styles from './hero.module.css';
 
 
 /**
@@ -14,7 +14,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive(active => active + 1);
-    }, 2000);
+    }, 1000);
 
     return () => {
       clearInterval(interval);

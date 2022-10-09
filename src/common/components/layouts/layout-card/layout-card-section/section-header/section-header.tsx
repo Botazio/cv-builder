@@ -3,7 +3,7 @@ import styles from "./section-header.module.css";
 
 /**
  * 
- * This component displays a header for each section in the cv builder form
+ * Header for the different sections.
  */
 export default function SectionHeader({ icon, title, handleClick }: { icon?: React.ReactNode, title: string, handleClick: any; }) {
   return (
