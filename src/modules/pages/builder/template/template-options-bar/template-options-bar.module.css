@@ -1,0 +1,12 @@
+.outer_container {
+  padding: 0 var(--divider-space);
+}
+.inner_container {
+  padding: calc(var(--divider-space) / 2) 0;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.inner_container h4 {
+  margin: 0;
+}

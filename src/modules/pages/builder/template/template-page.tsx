@@ -8,6 +8,7 @@ import LayoutCardHeader from 'common/components/layouts/layout-card/layout-card-
 import SaveStateLink from 'common/components/molecules/save-state/save-state-link/save-state-link';
 import { Link } from 'react-router-dom';
 import ContainerTemplateCards from './container-template-cards/container-template-cards';
+import TemplateOptionsBar from './template-options-bar/template-options-bar';
 
 /**
   * Third page of the builder. Ask the user to select a template for the CV.
@@ -19,6 +20,7 @@ export default function TemplatePage() {
     <LayoutBuilder header={<LayoutCardHeader title="Template" />}>
 
       <LayoutCardBody>
+        <TemplateOptionsBar />
         <ContainerTemplateCards />
       </LayoutCardBody>
 
