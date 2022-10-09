@@ -24,6 +24,9 @@
   border-radius: 50%;
   cursor: pointer;
   margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .buttons_container button:hover {
   background-color: var(--input-field-background);

@@ -11,7 +11,6 @@ export class SetDisplaySnackBar {
 
 export class ResetDisplaySnackBar {
   readonly type = RESET_DISPLAY_SNACKBAR;
-  constructor() { }
 }
 
 export class SetDisplayRequiredFieldsError {
