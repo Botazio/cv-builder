@@ -1,4 +1,6 @@
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
+import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import SnackBar from "common/components/atoms/snackbar/snackbar";
 import { SnackBarDisplayState } from 'modules/pages/builder/display-utils';
 import { RESET_DISPLAY_SNACKBAR } from 'modules/pages/builder/display.actions';
@@ -44,13 +46,27 @@ export default function BuilderSnackBar() {
     }
   }, [state]);
 
+  const getStartIcon = () => {
+    switch (type) {
+      case 'success':
+        return <CheckRoundedIcon />;
+      case 'info':
+        return <InfoOutlinedIcon />;
+      case 'error':
+        return <ErrorOutlineRoundedIcon />;
+      default:
+        return null;
+    }
+  };
+
+
   return (
     <SnackBar
-      startIcon={<CheckRoundedIcon />}
+      startIcon={getStartIcon()}
       value={value}
       active={active}
       setActive={setActive}
       type={type}
     />
   );
-}
+};

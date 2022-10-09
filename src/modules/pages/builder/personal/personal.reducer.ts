@@ -2,9 +2,9 @@ import produce from 'immer';
 import { PERSONALactions, SET_FORM_FIELD } from "./personal.actions";
 
 
-interface PersonalField {
+export interface PersonalField {
   value: string;
-  required: boolean;
+  isRequired: boolean;
 }
 
 export interface Personal {
@@ -24,47 +24,47 @@ export interface Personal {
 const initialState: Personal = {
   photoURL: {
     value: '',
-    required: false
+    isRequired: false
   },
   name: {
     value: '',
-    required: true
+    isRequired: true
   },
   surname: {
     value: '',
-    required: true
+    isRequired: true
   },
   profession: {
     value: '',
-    required: true
+    isRequired: true
   },
   mobile: {
     value: '',
-    required: false
+    isRequired: false
   },
   email: {
     value: '',
-    required: false
+    isRequired: false
   },
   address: {
     value: '',
-    required: false
+    isRequired: false
   },
   linkedin: {
     value: '',
-    required: false
+    isRequired: false
   },
   website: {
     value: '',
-    required: false
+    isRequired: false
   },
   license: {
     value: '',
-    required: false
+    isRequired: false
   },
   nationality: {
     value: '',
-    required: false
+    isRequired: false
   },
 };
 

@@ -38,7 +38,7 @@ export default function PersonalForm() {
                 <TextField
                   name="name"
                   value={state.personal.name.value}
-                  required={state.personal.name.required}
+                  required={state.personal.name.isRequired}
                   displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "name" })}
                 />
@@ -50,7 +50,7 @@ export default function PersonalForm() {
                 <TextField
                   name="surname"
                   value={state.personal.surname.value}
-                  required={state.personal.surname.required}
+                  required={state.personal.surname.isRequired}
                   displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "surname" })}
                 />
@@ -62,7 +62,7 @@ export default function PersonalForm() {
                 <TextField
                   name="profession"
                   value={state.personal.profession.value}
-                  required={state.personal.profession.required}
+                  required={state.personal.profession.isRequired}
                   displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "profession" })}
                 />
@@ -74,7 +74,7 @@ export default function PersonalForm() {
                 <TextField
                   name="tel"
                   value={state.personal.mobile.value}
-                  required={state.personal.mobile.required}
+                  required={state.personal.mobile.isRequired}
                   displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "mobile" })}
                 />
@@ -86,7 +86,7 @@ export default function PersonalForm() {
                 <TextField
                   name="email"
                   value={state.personal.email.value}
-                  required={state.personal.email.required}
+                  required={state.personal.email.isRequired}
                   displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "email" })}
                 />
@@ -98,7 +98,7 @@ export default function PersonalForm() {
                 <TextField
                   name="address"
                   value={state.personal.address.value}
-                  required={state.personal.address.required}
+                  required={state.personal.address.isRequired}
                   displayError={state.display.displayRequiredFieldsError}
                   handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "address" })}
                 />
@@ -114,7 +114,7 @@ export default function PersonalForm() {
                       <TextField
                         name="linkedin"
                         value={state.personal.linkedin.value}
-                        required={state.personal.linkedin.required}
+                        required={state.personal.linkedin.isRequired}
                         displayError={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "linkedin" })}
                       />
@@ -126,7 +126,7 @@ export default function PersonalForm() {
                       <TextField
                         name="website"
                         value={state.personal.website.value}
-                        required={state.personal.website.required}
+                        required={state.personal.website.isRequired}
                         displayError={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "website" })}
                       />
@@ -138,7 +138,7 @@ export default function PersonalForm() {
                       <TextField
                         name="license"
                         value={state.personal.license.value}
-                        required={state.personal.license.required}
+                        required={state.personal.license.isRequired}
                         displayError={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "license" })}
                       />
@@ -150,7 +150,7 @@ export default function PersonalForm() {
                       <TextField
                         name="nationality"
                         value={state.personal.nationality.value}
-                        required={state.personal.nationality.required}
+                        required={state.personal.nationality.isRequired}
                         displayError={state.display.displayRequiredFieldsError}
                         handleChange={(e) => dispatch({ type: SET_FORM_FIELD, payload: e.target.value, field: "nationality" })}
                       />

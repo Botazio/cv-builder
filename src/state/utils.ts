@@ -30,13 +30,13 @@ export function saveState(state: RootState): boolean {
   return hasStateBeenSaved;
 }
 
-const snackBarStateHasBeenSaved: SnackBarDisplayState = {
-  display: true,
-  value: "Your information has been correctly saved",
-  type: "success"
-};
-
 export function saveStateAndDispatchSnackBarDisplay(state: RootState, dispatch: Dispatch<SetDisplaySnackBar>) {
+  const snackBarStateHasBeenSaved: SnackBarDisplayState = {
+    display: true,
+    value: "Your information has been correctly saved",
+    type: "success"
+  };
+
   const hasStateBeenSaved: boolean = saveState(state);
 
   if (hasStateBeenSaved) {
