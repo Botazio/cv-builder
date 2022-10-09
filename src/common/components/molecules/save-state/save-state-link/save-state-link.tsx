@@ -1,4 +1,4 @@
-import { Link, LinkProps } from "react-router-dom";
+import { Link, LinkProps, useLocation } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "state/hooks";
 import { saveStateAndDispatchSnackBarDisplay } from "state/utils";
 
@@ -13,8 +13,13 @@ export default function SaveStateLink(props: LinkProps) {
   const state = useAppSelector(state => state);
   const dispatch = useAppDispatch();
 
+  const { pathname } = useLocation();
+
   const handleClick = () => {
-    saveStateAndDispatchSnackBarDisplay(state, dispatch);
+    const isSamePath = pathname === props.to;
+    if (!isSamePath) {
+      saveStateAndDispatchSnackBarDisplay(state, dispatch);
+    }
   };
 
 

@@ -1,6 +1,7 @@
 import CreateRoundedIcon from '@mui/icons-material/CreateRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
+import RequiredFieldsValidator from 'common/components/molecules/required-fields-validator/required-fields-validator';
 import SaveStateLink from 'common/components/molecules/save-state/save-state-link/save-state-link';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -27,18 +28,22 @@ export default function ProgressBar() {
         </SwitchLight>
       </SaveStateLink>
 
-      <SaveStateLink to="/builder/experience">
-        <SwitchLight isActive={active === "/builder/experience"} title="Experience">
-          <WorkRoundedIcon fontSize="medium" />
-        </SwitchLight>
-      </SaveStateLink>
+      <RequiredFieldsValidator>
+        <SaveStateLink to="/builder/experience">
+          <SwitchLight isActive={active === "/builder/experience"} title="Experience">
+            <WorkRoundedIcon fontSize="medium" />
+          </SwitchLight>
+        </SaveStateLink>
+      </RequiredFieldsValidator>
 
 
-      <SaveStateLink to="/builder/template">
-        <SwitchLight isActive={active === "/builder/template"} title="Template">
-          <CreateRoundedIcon fontSize="medium" />
-        </SwitchLight>
-      </SaveStateLink>
+      <RequiredFieldsValidator>
+        <SaveStateLink to="/builder/template">
+          <SwitchLight isActive={active === "/builder/template"} title="Template">
+            <CreateRoundedIcon fontSize="medium" />
+          </SwitchLight>
+        </SaveStateLink>
+      </RequiredFieldsValidator>
     </div>
   );
 }
