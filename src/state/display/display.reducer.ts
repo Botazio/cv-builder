@@ -1,6 +1,6 @@
 import produce from 'immer';
 import { SnackBarDisplayState } from './display-utils';
-import { DISPLAYactions, RESET_DISPLAY_SNACKBAR, SET_DISPLAY_REQUIRED_FIELDS_ERROR, SET_DISPLAY_SNACKBAR } from './display.actions';
+import { DISPLAYactions, RESET_DISPLAY_SNACKBAR, SET_DISPLAY_REQUIRED_FIELDS_ERROR, SET_DISPLAY_SAMPLE_DATA_IN_TEMPLATES, SET_DISPLAY_SNACKBAR } from './display.actions';
 
 
 export interface Display {
@@ -20,7 +20,7 @@ const initialState: Display = {
 };
 
 /**
- * Controls the state of different UI components
+ * Controls the state of different UI components.
  * For example, the display of the "Information has been saved" message.
  */
 export function displayReducer(state = initialState, action: DISPLAYactions) {
@@ -42,6 +42,13 @@ export function displayReducer(state = initialState, action: DISPLAYactions) {
     case SET_DISPLAY_REQUIRED_FIELDS_ERROR: {
       const nextState = produce(state, draft => {
         draft["displayRequiredFieldsError"] = action.payload;
+      });
+
+      return nextState;
+    }
+    case SET_DISPLAY_SAMPLE_DATA_IN_TEMPLATES: {
+      const nextState = produce(state, draft => {
+        draft["displaySampleDataInTemplates"] = action.payload;
       });
 
       return nextState;

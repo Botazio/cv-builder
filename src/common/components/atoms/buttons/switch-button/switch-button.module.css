@@ -14,7 +14,7 @@
   background: var(--divider-secondary-color);
   border-radius: var(--custom-border-radius);
   position: relative;
-  transition: background-color .2s;
+  transition: background-color .15s;
 }
 
 .switch_knob {
@@ -24,7 +24,7 @@
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  transition: 0.2s;
+  transition: 0.15s;
   background: #fff;
   box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 }
