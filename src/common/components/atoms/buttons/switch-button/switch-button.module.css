@@ -10,7 +10,7 @@
   justify-content: space-between;
   cursor: pointer;
   width: 50px;
-  height: 25px;
+  height: 24px;
   background: var(--divider-secondary-color);
   border-radius: var(--custom-border-radius);
   position: relative;
@@ -20,9 +20,9 @@
 .switch_knob {
   position: absolute;
   top: 4px;
-  left: 5.5px;
-  width: 17px;
-  height: 17px;
+  left: 6px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   transition: 0.15s;
   background: #fff;
@@ -36,8 +36,7 @@
 }
 
 .switch_checkbox:checked+.switch_label .switch_knob {
-  left: calc(100% - 5.5px);
-  transform: translateX(-100%);
+  transform: translateX(22px);
 }
 
 .switch_checkbox:checked+.switch_label_primary {
