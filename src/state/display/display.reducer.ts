@@ -6,6 +6,7 @@ import { DISPLAYactions, RESET_DISPLAY_SNACKBAR, SET_DISPLAY_REQUIRED_FIELDS_ERR
 export interface Display {
   snackBar: SnackBarDisplayState;
   displayRequiredFieldsError: boolean;
+  displaySampleDataInTemplates: boolean;
 };
 
 const initialState: Display = {
@@ -14,15 +15,13 @@ const initialState: Display = {
     value: '',
     type: 'success',
   },
-  displayRequiredFieldsError: false
+  displayRequiredFieldsError: false,
+  displaySampleDataInTemplates: false,
 };
 
 /**
- * Part of the builder reducer. 
- * It controls the display of certain builder components. 
+ * Controls the state of different UI components
  * For example, the display of the "Information has been saved" message.
- * 
- * This reducer is necessary because the process occurs asynchronically across multiple pages.
  */
 export function displayReducer(state = initialState, action: DISPLAYactions) {
   switch (action.type) {

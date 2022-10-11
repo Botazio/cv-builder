@@ -1,9 +1,9 @@
 import { Dispatch } from "@reduxjs/toolkit";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { SetDisplaySnackBar, SET_DISPLAY_SNACKBAR } from "state/display/display.actions";
 import { useAppSelector } from "state/hooks";
-import { SnackBarDisplayState } from "../display-utils";
-import { SetDisplaySnackBar, SET_DISPLAY_SNACKBAR } from "../display.actions";
+import { SnackBarDisplayState } from "../../../../state/display/display-utils";
 import { Personal, PersonalField } from "./personal.reducer";
 
 export function areRequiredFieldsPopulated(state: Personal): boolean {

@@ -1,7 +1,7 @@
 import { storageAvailable } from "common/utils/functions";
-import { SnackBarDisplayState } from "modules/pages/builder/display-utils";
-import { SetDisplaySnackBar, SET_DISPLAY_SNACKBAR } from "modules/pages/builder/display.actions";
 import { Dispatch } from "react";
+import { SnackBarDisplayState } from "state/display/display-utils";
+import { SetDisplaySnackBar, SET_DISPLAY_SNACKBAR } from "./display/display.actions";
 import { RootState } from "./store";
 
 const STORE: string = "cv_builder_store";

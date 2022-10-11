@@ -1,8 +1,8 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import cn from 'classnames';
-import { SnackBarDisplayState } from 'modules/pages/builder/display-utils';
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
+import { SnackBarDisplayState } from 'state/display/display-utils';
 import styles from './snackbar.module.css';
 
 interface SnackBarInterface {
@@ -28,7 +28,7 @@ export default function SnackBar({ value, active, setActive, type = 'success', s
     }
 
     return () => {
-      clearTimeout();
+      clearTimeout(timeoutId);
     };
   }, [active]);
 

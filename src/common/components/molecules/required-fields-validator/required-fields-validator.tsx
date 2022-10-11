@@ -1,6 +1,6 @@
-import { SET_DISPLAY_REQUIRED_FIELDS_ERROR } from 'modules/pages/builder/display.actions';
 import { areRequiredFieldsPopulated, dispatchSnackbarMissingRequiredFields } from 'modules/pages/builder/personal/personal-utils';
 import React from 'react';
+import { SET_DISPLAY_REQUIRED_FIELDS_ERROR } from 'state/display/display.actions';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
 
 /**

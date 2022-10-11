@@ -2,9 +2,9 @@ import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import SnackBar from "common/components/atoms/snackbar/snackbar";
-import { SnackBarDisplayState } from 'modules/pages/builder/display-utils';
-import { RESET_DISPLAY_SNACKBAR } from 'modules/pages/builder/display.actions';
 import { useEffect, useState } from "react";
+import { SnackBarDisplayState } from 'state/display/display-utils';
+import { RESET_DISPLAY_SNACKBAR } from 'state/display/display.actions';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
 
 
@@ -16,7 +16,7 @@ export default function BuilderSnackBar() {
   const [value, setValue] = useState<string>();
   const [type, setType] = useState<SnackBarDisplayState["type"]>();
 
-  const state = useAppSelector(state => state.builder.display.snackBar);
+  const state = useAppSelector(state => state.display.snackBar);
   const dispatch = useAppDispatch();
 
   const displaySnackbar = () => {
