@@ -7,6 +7,7 @@ import TextArea from 'common/components/atoms/inputs/text-area/text-area';
 import SectionBody from 'common/components/layouts/layout-card/layout-card-section/section-body/section-body';
 import SectionFooter from 'common/components/layouts/layout-card/layout-card-section/section-footer/section-footer';
 import SectionHeader from 'common/components/layouts/layout-card/layout-card-section/section-header/section-header';
+import SaveStateButtonWrapper from 'common/components/molecules/save-state/save-state-button-wrapper/save-state-button-wrapper';
 import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from 'state/hooks';
 import { SET_DESCRIPTION } from '../../experience.actions';
@@ -34,7 +35,9 @@ export default function DescriptionSection() {
           <SectionFooter>
             <Grid container spacing={2} direction="row-reverse">
               <Grid item xs={12} sm={3}>
-                <OutlinedButton value="Save" startIcon={<SaveRoundedIcon />} type="primary" />
+                <SaveStateButtonWrapper>
+                  <OutlinedButton value="Save" startIcon={<SaveRoundedIcon />} type="primary" />
+                </SaveStateButtonWrapper>
               </Grid>
             </Grid>
           </SectionFooter>
