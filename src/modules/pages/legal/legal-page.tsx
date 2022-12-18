@@ -55,8 +55,7 @@ export default function PrivacyCookiesPolicyPage() {
           <SectionBody>
             <p>
               The app only uses one cookie to persist the form information.
-              <br /><br />
-              The one to persist the form information was put in place so you can leave or refresh the site and the information you entered previously will be saved.
+              It was put in place so you can leave or refresh the site and the information you entered previously will be saved.
               This way, you don't have to enter the same information twice!
               <br /><br />
               No third party cookies are used on this site.
@@ -68,7 +67,7 @@ export default function PrivacyCookiesPolicyPage() {
         <Collapse in={activeSections[2]}>
           <SectionBody>
             <p>
-              In case you accepted the conditions to use the app and you changed your mind about it, you can always remove the cookies using your browser options.
+              In case you accepted the conditions to use the app and you change your mind about it, you can always remove the cookies using your browser options.
               <br /><br />
               Once removed, the next time you connect to the app you will be asked again if you accept the conditions.
               <br /><br />
