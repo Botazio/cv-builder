@@ -1,9 +1,9 @@
-import { propStyles } from "../utils/styles/interfaces/prop-styles.interface";
+import { PropStyles } from "../utils/styles/interfaces/prop-styles.interface";
 
 /**
  * Styles for body-one component
  */
-export function createBodyOneStyles(propStyles: propStyles) {
+export function createBodyOneStyles(propStyles: PropStyles) {
   return {
     wrapper: {
       display: 'flex',

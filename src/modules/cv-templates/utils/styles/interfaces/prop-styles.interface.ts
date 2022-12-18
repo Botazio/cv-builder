@@ -3,7 +3,7 @@
  * This interface is used by every template component in cv templates as an argument.
  * This allows to modify and reuse components in different templates.
  */
-export interface propStyles {
+export interface PropStyles {
   primaryColor: string;
   primaryFontColor: string;
   secondaryColor: string;

@@ -16,7 +16,7 @@ export const SAMPLE_STATE: Builder = {
       "isRequired": true
     },
     "profession": {
-      "value": "Construction Professional ",
+      "value": "Construction Manager",
       "isRequired": true
     },
     "mobile": {
@@ -28,7 +28,7 @@ export const SAMPLE_STATE: Builder = {
       "isRequired": false
     },
     "address": {
-      "value": "City",
+      "value": "California",
       "isRequired": false
     },
     "linkedin": {
@@ -54,19 +54,19 @@ export const SAMPLE_STATE: Builder = {
       "activeElementID": "",
       "elements": [
         {
-          "id": "911048db-98af-4178-8054-9dbe99746bcd",
+          "id": "",
           "title": "General Manager",
           "location": "California",
-          "place": "Blair General Contracting",
+          "place": "Company Name",
           "startDate": "2009",
           "endDate": "Present",
           "description": "Responsible for all aspects of running a general contracting business. Perform all sales, marketing and business development activities. Perform contract labor and coordinate with subcontractors where necessary. Provide superior customer service to clients. Manage company finances and collect payment."
         },
         {
-          "id": "3893f8d2-d200-4bcf-8676-04bbf3c48a68",
+          "id": "",
           "title": "Project Superintendent ",
           "location": "California",
-          "place": "Kaiser Permanente",
+          "place": "Company Name",
           "startDate": "2008",
           "endDate": "2010",
           "description": "Managed all phases of construction projects including planning, communications, supervision, execution and completion. Ensured that projects were implemented effectively within cost, schedule, quality and safety parameters. Successfully oversaw a broad range of remodeling projects including emergency and operating rooms, offices, data centers as well as fire alarm (F/A) & security systems."
@@ -81,15 +81,15 @@ export const SAMPLE_STATE: Builder = {
       "activeElementID": "",
       "elements": [
         {
-          "id": "3fae1485-43f4-4ba2-ba92-b825599eddc0",
+          "id": "",
           "title": "Consulting"
         },
         {
-          "id": "f282ef9a-ca59-4f21-9e1e-3c7ab70c85ac",
+          "id": "",
           "title": "Customer Service"
         },
         {
-          "id": "4066b717-2d1e-457a-82d1-40f0f8d90281",
+          "id": "",
           "title": "Project Management "
         }
       ]
@@ -98,11 +98,11 @@ export const SAMPLE_STATE: Builder = {
       "activeElementID": "",
       "elements": [
         {
-          "id": "947b721d-b017-4451-83c7-98969071dbfd",
+          "id": "",
           "title": "English"
         },
         {
-          "id": "37bf7b6f-4b27-4a7d-ab24-c8dc54385a2a",
+          "id": "",
           "title": "Spanish"
         }
       ]
@@ -118,44 +118,18 @@ export const SAMPLE_STATE: Builder = {
       "rio-template": {
         "name": "rio-template",
         "activeTheme": {
-          "primary": "#B4FF9F",
-          "secondary": "blue"
+          "primary": "",
+          "secondary": ""
         },
-        "themes": [
-          {
-            "primary": "#B4FF9F",
-            "secondary": "blue"
-          },
-          {
-            "primary": "yellow",
-            "secondary": "red"
-          },
-          {
-            "primary": "purple",
-            "secondary": "grey"
-          }
-        ]
+        "themes": []
       },
       "toronto-template": {
         "name": "toronto-template",
         "activeTheme": {
-          "primary": "#B4FF9F",
-          "secondary": "blue"
+          "primary": "",
+          "secondary": ""
         },
-        "themes": [
-          {
-            "primary": "#B4FF9F",
-            "secondary": "blue"
-          },
-          {
-            "primary": "yellow",
-            "secondary": "red"
-          },
-          {
-            "primary": "purple",
-            "secondary": "grey"
-          }
-        ]
+        "themes": []
       }
     }
   }

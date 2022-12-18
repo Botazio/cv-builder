@@ -1,6 +1,6 @@
 import { StyleSheet } from '@react-pdf/renderer';
 import chroma from "chroma-js";
-import { propStyles } from './interfaces/prop-styles.interface';
+import { PropStyles } from './interfaces/prop-styles.interface';
 
 
 /**
@@ -18,7 +18,7 @@ export function mergeStyles(commonStyles, componentStyles) {
  * Creates common styles from prop styles.
  * 
  */
-export function createCommonStyles(propStyles: propStyles) {
+export function createCommonStyles(propStyles: PropStyles) {
   return StyleSheet.create({
     title: {
       fontFamily: propStyles.fontFamilyTitle,

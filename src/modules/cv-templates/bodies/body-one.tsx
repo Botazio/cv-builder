@@ -5,9 +5,9 @@ import { Reference } from 'modules/pages/builder/experience/sections/references/
 import { Work } from 'modules/pages/builder/experience/sections/work/work-utils';
 import { WordsSeparator } from '../utils/components/words-separator';
 import { createCommonStyles, mergeStyles } from '../utils/styles/functions';
-import { propStyles } from '../utils/styles/interfaces/prop-styles.interface';
+import { PropStyles } from '../utils/styles/interfaces/prop-styles.interface';
 
-function createComponentStyles(propStyles: propStyles) {
+function createComponentStyles(propStyles: PropStyles) {
   return StyleSheet.create({
     wrapper: {
       display: 'flex',
@@ -27,7 +27,7 @@ function createComponentStyles(propStyles: propStyles) {
   });
 }
 
-export default function BodyOne({ state, propStyles }: { state: Builder, propStyles: propStyles; }) {
+export default function BodyOne({ state, propStyles }: { state: Builder, propStyles: PropStyles; }) {
 
   const componentStyles = createComponentStyles(propStyles);
   const commonStyles = createCommonStyles(propStyles);
@@ -43,6 +43,7 @@ export default function BodyOne({ state, propStyles }: { state: Builder, propSty
 
       <View style={styles.containerRight}>
         <SingleFieldSection state={state.experience.skills} title='Skills' styles={styles} />
+        <View style={styles.divider} />
         <SingleFieldSection state={state.experience.languages} title='Languages' styles={styles} />
       </View>
 
@@ -76,6 +77,7 @@ function ReferencesSection({ state, title, styles }) {
             {el.mobile !== '' && <Text key={index} style={styles.textWithSpace}>{el.mobile}</Text>}
             {el.description !== '' && <Text key={index}>{el.description}</Text>}
           </View>
+          <View style={styles.divider} />
         </View>
       ))}
     </View>
@@ -84,23 +86,26 @@ function ReferencesSection({ state, title, styles }) {
 
 function MultiFieldSection({ state, title, styles }) {
   return (
-    state.elements.length > 0 && <View>
-      <Text style={styles.title}>{title}</Text>
-      {state.elements.map((el: Work | Education, index: number) => (
-        <View key={title + index}>
-          {(el.title !== '' || el.place !== '' || el.location !== '') &&
-            <Text style={[styles.textWithBackground, styles.subTitle]}>
-              <WordsSeparator words={[el.title, el.place, el.location]} divider={" - "} />
-            </Text>}
-          <View style={styles.containerWithIndentation}>
-            {(el.startDate !== '' || el.endDate !== '') &&
-              <Text style={styles.subTitle}>
-                <WordsSeparator words={[el.startDate, el.endDate]} divider={" - "} />
+    state.elements.length > 0 && (
+      <View>
+        <Text style={styles.title}>{title}</Text>
+        {state.elements.map((el: Work | Education, index: number) => (
+          <View key={title + index}>
+            {(el.title !== '' || el.place !== '' || el.location !== '') &&
+              <Text style={[styles.textWithBackground, styles.subTitle]}>
+                <WordsSeparator words={[el.title, el.place, el.location]} divider={" - "} />
               </Text>}
-            {el.description !== '' && <Text key={index}>{el.description}</Text>}
+            <View style={styles.containerWithIndentation}>
+              {(el.startDate !== '' || el.endDate !== '') &&
+                <Text style={styles.subTitle}>
+                  <WordsSeparator words={[el.startDate, el.endDate]} divider={" - "} />
+                </Text>}
+              {el.description !== '' && <Text key={index}>{el.description}</Text>}
+            </View>
+            <View style={styles.divider} />
           </View>
-        </View>
-      ))}
-    </View>
+        ))}
+      </View>
+    )
   );
 }

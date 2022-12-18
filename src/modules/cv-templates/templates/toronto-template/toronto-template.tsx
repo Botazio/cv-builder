@@ -1,11 +1,11 @@
-import { Document, Font, Page, StyleSheet, View } from '@react-pdf/renderer';
+import { Document, Page, StyleSheet, View } from '@react-pdf/renderer';
 import { TemplateTheme } from 'modules/cv-templates/templates/template-theme.interface';
 import { Builder } from 'modules/pages/builder/builder.reducer';
 import BodyOne from '../../bodies/body-one';
 import HeaderOne from '../../headers/header-one';
-import { propStyles } from '../../utils/styles/interfaces/prop-styles.interface';
+import { PropStyles } from '../../utils/styles/interfaces/prop-styles.interface';
 
-function createPropStyles(theme: TemplateTheme): propStyles {
+function createPropStyles(theme: TemplateTheme): PropStyles {
   return {
     primaryColor: theme.primary,
     primaryFontColor: 'black',
@@ -34,16 +34,6 @@ const templateStyles = StyleSheet.create({
     width: '100%',
     height: 30 * 2 / 3
   }
-});
-
-Font.register({
-  family: 'robotoText',
-  src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-medium-webfont.ttf",
-});
-
-Font.register({
-  family: 'robotoTitle',
-  src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-bold-webfont.ttf",
 });
 
 function TorontoTemplate({ state, theme }: { state: Builder; theme: TemplateTheme; }) {

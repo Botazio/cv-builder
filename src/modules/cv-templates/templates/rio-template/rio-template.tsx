@@ -4,9 +4,9 @@ import { getContrastColor } from 'modules/cv-templates/utils/styles/functions';
 import { Builder } from 'modules/pages/builder/builder.reducer';
 import BodyOne from '../../bodies/body-one';
 import HeaderOne from '../../headers/header-one';
-import { propStyles } from '../../utils/styles/interfaces/prop-styles.interface';
+import { PropStyles } from '../../utils/styles/interfaces/prop-styles.interface';
 
-function createPropStyles(theme: TemplateTheme): propStyles {
+function createPropStyles(theme: TemplateTheme): PropStyles {
   return {
     primaryColor: theme.primary,
     primaryFontColor: getContrastColor(theme.primary),

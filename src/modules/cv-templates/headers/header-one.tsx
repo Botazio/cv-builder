@@ -1,8 +1,8 @@
 import { Image, StyleSheet, Text, View } from '@react-pdf/renderer';
 import { Builder } from 'modules/pages/builder/builder.reducer';
-import { propStyles } from "../utils/styles/interfaces/prop-styles.interface";
+import { PropStyles } from "../utils/styles/interfaces/prop-styles.interface";
 
-function createComponentStyles(propStyles: propStyles) {
+function createComponentStyles(propStyles: PropStyles) {
   return StyleSheet.create({
     wrapper: {
       display: 'flex',
@@ -64,7 +64,7 @@ function createComponentStyles(propStyles: propStyles) {
   });
 }
 
-function HeaderOne({ state, propStyles }: { state: Builder, propStyles: propStyles; }) {
+function HeaderOne({ state, propStyles }: { state: Builder, propStyles: PropStyles; }) {
 
   const styles = createComponentStyles(propStyles);
 
