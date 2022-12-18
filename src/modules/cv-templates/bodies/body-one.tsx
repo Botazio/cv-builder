@@ -4,7 +4,6 @@ import { Education } from 'modules/pages/builder/experience/sections/education/e
 import { Reference } from 'modules/pages/builder/experience/sections/references/references-utils';
 import { Work } from 'modules/pages/builder/experience/sections/work/work-utils';
 import { WordsSeparator } from '../utils/components/words-separator';
-import { createCommonStyles, mergeStyles } from '../utils/styles/functions';
 import { PropStyles } from '../utils/styles/interfaces/prop-styles.interface';
 
 function createComponentStyles(propStyles: PropStyles) {
@@ -23,16 +22,55 @@ function createComponentStyles(propStyles: PropStyles) {
       display: 'flex',
       flexDirection: 'column',
       width: '35%'
+    },
+    containerWithBackground: {
+      backgroundColor: propStyles.primaryColor,
+      borderRadius: propStyles.borderRadius,
+      padding: propStyles.dividerSpace / 3,
+      color: propStyles.primaryFontColor
+    },
+    containerWithIndentation: {
+      marginLeft: propStyles.dividerSpace / 3
+    },
+    title: {
+      fontFamily: propStyles.fontFamilyTitle,
+      fontSize: propStyles.fontSizeTitle,
+      marginBottom: propStyles.marginTitle
+    },
+    subTitle: {
+      fontFamily: propStyles.fontFamilySubTitle,
+      fontSize: propStyles.fontSizeSubTitle,
+      marginBottom: propStyles.marginTitle
+    },
+    divider: {
+      width: '100%',
+      height: propStyles.dividerSpace * 2 / 3
+    },
+    defaultContainer: {
+      width: '100%',
+      display: 'flex'
+    },
+    textWithSpace: {
+      marginBottom: propStyles.marginTitle / 2
+    },
+    textWithBackground: {
+      backgroundColor: propStyles.primaryColor,
+      borderRadius: propStyles.borderRadius / 4,
+      padding: propStyles.dividerSpace / 6,
+      color: propStyles.primaryFontColor,
+    },
+    textWithIndentation: {
+      textIndent: propStyles.dividerSpace / 3
+    },
+    textItalic: {
+      fontStyle: 'italic'
     }
   });
 }
 
 export default function BodyOne({ state, propStyles }: { state: Builder, propStyles: PropStyles; }) {
 
-  const componentStyles = createComponentStyles(propStyles);
-  const commonStyles = createCommonStyles(propStyles);
-
-  const styles = mergeStyles(componentStyles, commonStyles);
+  const styles = createComponentStyles(propStyles);
 
   return (
     <View style={styles.wrapper}>
